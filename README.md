@@ -471,7 +471,7 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 <img width="340" height="260" alt="Image" src="https://github.com/user-attachments/assets/fedcfce4-9335-4db3-9a95-fba6fbe8c92f" />
 
 <p align="left">
-  <img src="README_images/auto_weight.png" alt="自動ウェイト" width="720">
+  <img width="1406" height="958" alt="Image" src="https://github.com/user-attachments/assets/ecde6c2a-a6d8-4069-81aa-55582c799c53" />
 </p>
 
 `自動ウェイト` は、選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。  
