@@ -102,6 +102,8 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 **個/ 頂点 / 合計**
 
+<img width="149" height="30" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
+
 <p align="center">
   <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/f5ad3907-33bc-41d5-955b-076b19e9cca0" />
 </p>
@@ -133,6 +135,8 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 ### ロック/無視/強制表示
 
+<img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
+
 <p align="left">
   <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/6f039b46-b268-4342-bc9c-e141dbe91b19" />
 </p>
@@ -146,6 +150,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 ### 入力モード/スライダーと数値欄
 
+<img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
 
 <p align="left">
   <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/82048644-d3f9-4210-9808-25a44b92cd93" />
@@ -161,6 +166,10 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 ### プリセットボタン
 
+<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
+
+<img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
+
 <p align="left">
   <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/a501fa2d-d46e-4c87-83d1-8c776b5c6b5e" />
 </p>
@@ -171,6 +180,8 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 プリセット値はアドオンプリファレンスで変更できます。
 
 ## 表示タブ
+
+<img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
 
 <p align="left">
   <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/5a7eba2d-79fc-47c2-8886-716c0944f700" />
@@ -185,6 +196,8 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 ## 表示補助
 
+<img width="510" height="24" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
+
 <p align="left">
   <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/0e0321b1-cfe7-4349-8e19-69f92cde56e0" />
 </p>
@@ -195,6 +208,8 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - `オーバーレイ` : Blender の `Vertex Group Weights` 表示を切り替えます。
 - `骨ハイ` : 選択列に対応するボーンを GPU オーバーレイ独自の表示でハイライトします。
 - `マテリ` : ウェイトをマテリアルカラー風に表示する補助機能を切り替えます。
+- `マテリ`の横の`…` で色相/彩度/輝度/マテリアルモード用のマテリアル変更のオンオフが設定できます。
+- ※`マテリ`表示は動作が重くなるため推奨していません。
 
 <p align="center">
   <img src="README_images/display_tools.gif" alt="表示補助の動作" width="720">
@@ -219,7 +234,9 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 <img width="519" height="26" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
 </p>
 ↑ここで決めた値が整理実行での基準になります。
+
 チェックを入れた項目はアドオンで値を変更する際に自動で整理されるようになります。
+
 ※自動整理は確実ではないため最後に確認をして違反整理などの実行を推奨します。
 
 
@@ -232,12 +249,6 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 GPU オーバーレイから、ビューポート上で使う TPWE 独自のウェイトブラシを開始できます。  
 ブラシは編集モードとウェイトペイントモードの両方で使用できます。
 
-### ブラシを使う前に
-
-1. GPU オーバーレイの列ヘッダーをクリックして、編集したい頂点グループを選択列にします。
-2. 必要に応じて `マスク` を ON にし、現在選択中の頂点だけを編集対象にします。
-3. `通常`、`スムーズ`、`グラデ`、`投げ縄` から使いたいブラシを選びます。
-4. ビューポート上で左ドラッグしてウェイトを編集します。
 
 ブラシ中は `F` でサイズ変更、`Tab` / `Q` / `Esc` で元のツールへ戻れます。  
 ツールヘッダーでは、サイズ、選択マスク、通常量、スムーズの強さ、グラデ値、投げ縄値などを調整できます。
