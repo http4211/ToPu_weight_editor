@@ -1,3 +1,4 @@
+
 # ToPu_weight_editor
 
 <p align="center">
@@ -46,7 +47,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img width="1248" height="793" alt="Image" src="https://github.com/user-attachments/assets/261f5837-6e54-40e8-8517-1a6fee956175" />
+  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/a6ffe6e3-5d04-4055-a0e4-d09f344b04cc" />
 </p>
 
 ### ショートカットで起動
