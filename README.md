@@ -364,7 +364,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
 
 <p align="left">
-  <img src="README_images/mirror_settings.png" alt="ミラー実行設定" width="720">
+  <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
 </p>
 
 ## コピー / 貼り付け / 転送
