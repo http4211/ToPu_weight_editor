@@ -103,7 +103,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 **個/ 頂点 / 合計**
 
 <p align="center">
-  <img src="README_images/weight_grid.png" alt="頂点番号 / 行*" width="720">
+  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/f5ad3907-33bc-41d5-955b-076b19e9cca0" />
 </p>
 
 - `個` ヘッダーをクリックすると、対象の行の値がロックされます。
@@ -188,7 +188,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ## 表示補助
 
 <p align="left">
-  <img src="README_images/display_tools.png" alt="表示補助ボタン" width="720">
+  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/0e0321b1-cfe7-4349-8e19-69f92cde56e0" />
 </p>
 
 - `モディ` : 対象メッシュの Armature モディファイア表示を切り替えます。
