@@ -134,7 +134,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ### ロック/無視/強制表示
 
 <p align="left">
-  <img src="README_images/locks_and_ignore.png" alt="ロックと無視" width="720">
+  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/6f039b46-b268-4342-bc9c-e141dbe91b19" />
 </p>
 
 - `ロック` は、選択列を編集できない状態にします。
