@@ -1,8 +1,7 @@
-
 # ToPu_weight_editor
 
 <p align="center">
-  <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
+  <img src="README_images/Main.png" alt="ToPu_weight_editor GPU Overlay" width="720">
 </p>
 
 ToPu_weight_editor は、Blender 上でスキンウェイトを確認・編集するためのアドオンです。  
@@ -33,11 +32,18 @@ N パネルを何度も開き直さず、モデルを見ながらウェイトを
 
 Blender の `編集 > プリファレンス > アドオン` を開き、`ディスクからインストール` で配布 ZIP を選択します。
 
+<p align="left">
+  <img src="README_images/install_addon.png" alt="アドオンのインストール" width="720">
+</p>
+
 ### 2. アドオンを有効化
 
 アドオン一覧で `ToPu_weight_editor` を有効化します。  
-有効化すると、3D ビューのサイドバーに `TPWE` タブツールヘッダーにアイコンボタンが追加されます。
+有効化すると、3D ビューのサイドバーに `TPWE` タブが追加されます。
 
+<p align="left">
+  <img src="README_images/enable_addon.png" alt="アドオンの有効化" width="720">
+</p>
 
 ## 起動方法
 
@@ -47,7 +53,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/a6ffe6e3-5d04-4055-a0e4-d09f344b04cc" />
+  <img src="README_images/open_gpu_overlay.png" alt="ツールヘッダーからGPUオーバーレイを起動" width="720">
 </p>
 
 ### ショートカットで起動
