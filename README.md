@@ -479,8 +479,13 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 
 GPU オーバーレイの列ヘッダーを右クリックすると、頂点グループ間の転送メニューを開けます。
 
+<img width="205" height="125" alt="Image" src="https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db" />
+
+<img width="517" height="246" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
+
+
 <p align="left">
-  <img src="README_images/column_transfer_menu.png" alt="列右クリックのウェイト転送" width="720">
+  <img width="571" height="1024" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
 </p>
 
 - `転送元に指定` : 右クリックした列を転送元にします。
@@ -489,10 +494,6 @@ GPU オーバーレイの列ヘッダーを右クリックすると、頂点グ�
 - `コピー` / `移行` / `置換` などの処理方法を選べます。
 - 対象範囲は、グループ全体または選択頂点から選べます。
 - 複数ペアを登録して、同じ処理方法でまとめて転送できます。
-
-<p align="left">
-  <img src="README_images/column_transfer_dialog.png" alt="複数ウェイト転送ダイアログ" width="720">
-</p>
 
 
 ## N パネル
