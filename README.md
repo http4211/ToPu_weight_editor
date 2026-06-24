@@ -144,20 +144,16 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - `Alt + Click` で対象の状態をすべて解除します。
 
 
-## 数値編集
+### 入力モード/スライダーと数値欄
+
 
 <p align="left">
-  <img src="README_images/value_editing.png" alt="GPUオーバーレイの数値編集" width="720">
+  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/82048644-d3f9-4210-9808-25a44b92cd93" />
 </p>
-
-### 入力モード
 
 - `Abs` : 入力した値で置き換えます。
 - `Add` : 現在値に加算します。負の値で減算できます。
 - `Add%` : 現在値に対して割合で加算します。
-
-### スライダーと数値欄
-
 - スライダーをドラッグすると、選択列へ値を即時適用します。
 - 数値欄をクリックすると、キーボードから直接入力できます。
 - 数値欄の上でホイールすると、値を少しずつ変更できます。
@@ -204,10 +200,10 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
   <img src="README_images/display_tools.gif" alt="表示補助の動作" width="720">
 </p>
 
-## 整理 / 検証
+## 整理 /自動整理(基準)
 
 <p align="left">
-  <img src="README_images/cleanup_tools.png" alt="整理と検証" width="720">
+  <img width="192" height="117" alt="Image" src="https://github.com/user-attachments/assets/13d54963-ecdb-4838-b3fe-1aef5015a16b" />
 </p>
 
 - `正規化` : 選択頂点のウェイト合計を 1.0 に整えます。
@@ -216,8 +212,15 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - `閾値` : 指定値以下の弱いウェイトを 0 にします。
 - `違反整理` : 正規化、小数点、閾値、影響数の設定を使ってまとめて整理します。
 - `グループ削除` : 未使用の頂点グループを削除します。
+- オブジェクトモードで実行した場合、そのオブジェクトの頂点全てに実行します。
 
-合計ヘッダーの警告をクリックすると、影響数や合計値に問題がある頂点を優先して表示できます。
+
+<p align="left">
+<img width="519" height="26" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
+</p>
+↑ここで決めた値が整理実行での基準になります。
+チェックを入れた項目はアドオンで値を変更する際に自動で整理されるようになります。
+※自動整理は確実ではないため最後に確認をして違反整理などの実行を推奨します。
 
 <p align="center">
   <img src="README_images/cleanup_tools.gif" alt="違反整理の動作" width="720">
