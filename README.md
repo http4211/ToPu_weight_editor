@@ -465,17 +465,26 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 
 ## 自動ウェイト
 
+
+<img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
+
+<img width="340" height="260" alt="Image" src="https://github.com/user-attachments/assets/fedcfce4-9335-4db3-9a95-fba6fbe8c92f" />
+
 <p align="left">
   <img src="README_images/auto_weight.png" alt="自動ウェイト" width="720">
 </p>
 
 `自動ウェイト` は、選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。  
+親子関係を維持しながら実行でき、またリンクオブジェクトがある場合、自動でローカル化できます。  
+選択頂点の部位だけを部分的に自動ウェイトでウェイト付けすることなどが可能です。  
+
 詳細設定では、Blender 公式の自動ウェイトと、独自ボクセル拡散方式を切り替えられます。
 
-独自方式では、解像度、最大影響数、スムーズ、範囲補正プロキシなどを調整できます。
+独自方式では、解像度、最大影響数、スムーズ、範囲補正プロキシなどを調整できます。  
+非常に重いのですが、メッシュの表裏など関係なく、空間をボックス上にしてウェイト付けを行っているため複雑なモデルでも綺麗にウェイトが付きやすいです。
 
 
-### 列右クリックのウェイト転送
+## 列右クリックのウェイト転送
 
 
 <img width="517" height="246" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
