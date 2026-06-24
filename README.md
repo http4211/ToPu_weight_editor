@@ -32,18 +32,11 @@ N パネルを何度も開き直さず、モデルを見ながらウェイトを
 
 Blender の `編集 > プリファレンス > アドオン` を開き、`ディスクからインストール` で配布 ZIP を選択します。
 
-<p align="left">
-  <img src="README_images/install_addon.png" alt="アドオンのインストール" width="720">
-</p>
-
 ### 2. アドオンを有効化
 
 アドオン一覧で `ToPu_weight_editor` を有効化します。  
-有効化すると、3D ビューのサイドバーに `TPWE` タブが追加されます。
+有効化すると、3D ビューのサイドバーに `TPWE` タブツールヘッダーにアイコンボタンが追加されます。
 
-<p align="left">
-  <img src="README_images/enable_addon.png" alt="アドオンの有効化" width="720">
-</p>
 
 ## 起動方法
 
