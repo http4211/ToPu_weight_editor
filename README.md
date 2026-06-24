@@ -345,11 +345,11 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### スムーズ化
 
-選択頂点のウェイトを周囲へなじませます。
-稼働方式を 高速/表面/ボリューム
-詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。
+選択頂点のウェイトを周囲へなじませます。  
+詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。  
 稼働方式は 高速/表面/ボリューム　の三つから選択できます。
 
+<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
 
 <img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
