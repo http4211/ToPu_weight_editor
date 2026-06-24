@@ -1,4 +1,4 @@
-ToPu_weight_editor
+# ToPu_weight_editor
 
 <p align="center">
   <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
@@ -381,6 +381,16 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
   <img src="README_images/brush_tools.gif" alt="ブラシ操作" width="720">
 </p>
 
+
+
+
+## 編集
+
+<p align="left">
+  <img width="98" height="109" alt="Image" src="https://github.com/user-attachments/assets/b5a71567-3cdc-4ca8-b371-c59428e4c4a8" />
+</p>
+
+
 ## X 方向の頂点選択
 
 <p align="left">
@@ -390,12 +400,6 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 GPU オーバーレイから、アーマチュア原点を基準に `x-側` または `x+側` の頂点を選択できます。  
 アーマチュアがない場合は、各オブジェクト原点を基準にします。中心線上の頂点は選択しません。
 
-
-## スムーズ化 / ミラー
-
-<p align="left">
-  <img width="98" height="109" alt="Image" src="https://github.com/user-attachments/assets/b5a71567-3cdc-4ca8-b371-c59428e4c4a8" />
-</p>
 
 ### スムーズ化
 
