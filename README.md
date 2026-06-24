@@ -1,7 +1,7 @@
 # ToPu_weight_editor
 
 <p align="center">
-  <img src="README_images/Main.png" alt="ToPu_weight_editor GPU Overlay" width="720">
+  <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
 </p>
 
 ToPu_weight_editor は、Blender 上でスキンウェイトを確認・編集するためのアドオンです。  
@@ -32,18 +32,12 @@ N パネルを何度も開き直さず、モデルを見ながらウェイトを
 
 Blender の `編集 > プリファレンス > アドオン` を開き、`ディスクからインストール` で配布 ZIP を選択します。
 
-<p align="left">
-  <img src="README_images/install_addon.png" alt="アドオンのインストール" width="720">
-</p>
 
 ### 2. アドオンを有効化
 
 アドオン一覧で `ToPu_weight_editor` を有効化します。  
 有効化すると、3D ビューのサイドバーに `TPWE` タブが追加されます。
 
-<p align="left">
-  <img src="README_images/enable_addon.png" alt="アドオンの有効化" width="720">
-</p>
 
 ## 起動方法
 
@@ -53,7 +47,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img src="README_images/open_gpu_overlay.png" alt="ツールヘッダーからGPUオーバーレイを起動" width="720">
+  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/a6ffe6e3-5d04-4055-a0e4-d09f344b04cc" />
 </p>
 
 ### ショートカットで起動
@@ -84,14 +78,14 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ### 全体レイアウト
 
 <p align="center">
-  <img src="README_images/gpu_overlay_layout.png" alt="GPUオーバーレイ全体" width="720">
+  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/2c00a2ab-1461-4fc6-a30c-f74f1a06eb48" />
 </p>
 
 - 上部の `ドラッグで移動` をドラッグすると、GPU オーバーレイの位置を動かせます。
 - 右上のリサイズハンドルをドラッグすると、表示サイズを変更できます。
 - `グリッド表示` で選択頂点のウェイト表を表示します。
 - 歯車ボタンからアドオンプリファレンスを開けます。
-- 行数・列数は GPU オーバーレイ上の表示数コントロール、またはホイール操作で調整できます。
+- 行数・列数は スクロールバー、またはホイール操作で調整できます。
 
 ### ウェイトグリッド
 
@@ -104,21 +98,32 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 **列ヘッダー**
 
+<p align="center">
+  <img src="README_images/weight_grid.png" alt="列ヘッダー*" width="720">
+</p>
+
 - 列ヘッダーをクリックすると、その列が選択列になります。
-- 同じ列をもう一度クリックすると、選択列を解除できます。
 - `Shift + 列クリック` で、その頂点グループに値が入っている頂点をまとめて選択します。
 - `Ctrl + 列クリック` で、現在選択中の頂点の中から、その列に値が入っている頂点だけを残します。
 - 列ヘッダーを右クリックすると、ウェイト転送メニューを開けます。
 
 **頂点番号 / 行**
 
-- 頂点番号をクリックすると、その頂点行を GPU オーバーレイ上で選択します。
+<p align="center">
+  <img src="README_images/weight_grid.png" alt="頂点番号 / 行*" width="720">
+</p>
+
+- 頂点番号をクリックすると、その頂点行をビュー上でハイライト表示され、グリッド上で常に表示状態になります。
 - `Shift` / `Ctrl + 頂点番号クリック` で、行選択を追加・解除できます。
 - 頂点番号をドラッグすると、複数の頂点行を範囲選択できます。
 - 左上の行ヘッダーをクリックすると、現在表示中の頂点行をまとめて選択できます。
 - `Alt + 行ヘッダークリック` で、行選択を解除できます。
 
 **セル**
+
+<p align="center">
+  <img src="README_images/weight_grid.png" alt="セル*" width="720">
+</p>
 
 - セルをクリックすると、そのセルの数値を直接入力できます。`Enter` で確定、`Esc` でキャンセルします。
 - 複数セルを選択している場合は、入力値を選択セルへまとめて適用できます。
@@ -127,11 +132,6 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - セルをドラッグして範囲選択できます。`Shift` / `Ctrl` を押しながら操作すると、選択セルの追加・解除ができます。
 - 選択セルがある状態でスライダーやプリセットを使うと、選択列全体ではなく選択セルを優先して編集します。
 
-**スクロール / ページ**
-
-- 縦スクロールバーで表示頂点を移動できます。
-- 横スクロールバーで表示列を移動できます。
-- `前へ` / `次へ` ボタンで頂点ページや列ページを切り替えられます。
 
 <p align="center">
   <img src="README_images/cell_edit.gif" alt="セル編集" width="720">
