@@ -256,6 +256,8 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### 通常ブラシ
 
+<img width="436" height="27" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
+
 <p align="left">
   <img src="README_images/brush_normal.png" alt="通常ブラシ" width="720">
 </p>
@@ -272,6 +274,8 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### スムーズブラシ
 
+<img width="625" height="29" alt="Image" src="https://github.com/user-attachments/assets/52c425a0-aeec-4080-9798-5170c5fdb615" />
+
 <p align="left">
   <img src="README_images/brush_smooth.png" alt="スムーズブラシ" width="720">
 </p>
@@ -284,6 +288,8 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 - 塗り跡が硬い部分、段差が出た部分、ミラー後の境界を整える用途に向いています。
 
 ### グラデーションブラシ
+
+<img width="640" height="24" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
 
 <p align="left">
   <img src="README_images/brush_gradient.png" alt="グラデーションブラシ" width="720">
@@ -298,10 +304,11 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 - `放射` : ドラッグ開始点を中心に、外側へ向かって弱くなる放射状のグラデーションを作ります。
 - `線放射` : ドラッグした線を基準に、線方向と反対方向へ広がるグラデーションを作ります。
 - `減衰` では値の落ち方を切り替えられます。`リニア` は均等、`スムーズ` は自然なS字、`球状` は柔らかめ、`ルート` は開始側を広め、`シャープ` は開始側から強めに落ちます。
-- `カスタム` 減衰では `カスタム指数` で落ち方を調整できます。`1` がリニア、`2` 以上で急減衰、`1` 未満で緩やかになります。
-- 袖口、スカート、髪束、補助ボーンの影響を段階的に入れたい場面に向いています。
+- `カスタム` 減衰では `カスタム指数` で`0.1~8`の間で落ち方を調整できます。`1` がリニア、`2` 以上で急減衰、`1` 未満で緩やかになります。
 
 ### 投げ縄ブラシ
+
+<img width="384" height="27" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
 
 <p align="left">
   <img src="README_images/brush_lasso.png" alt="投げ縄ブラシ" width="720">
