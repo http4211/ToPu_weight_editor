@@ -393,8 +393,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ## X 方向の頂点選択
 
+<img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+
 <p align="left">
-  <img src="README_images/x_side_select.png" alt="X方向の頂点選択" width="720">
+  <img width="1304" height="758" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
 </p>
 
 GPU オーバーレイから、アーマチュア原点を基準に `x-側` または `x+側` の頂点を選択できます。  
