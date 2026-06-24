@@ -113,10 +113,12 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - `個/頂点`を`alt+クリック`すると全ての対象の状態が解除されます。
 - `合計`ヘッダーをクリックすると、影響数や合計値に問題がある頂点を優先して表示できます。
 
+
+
 **セル**
 
 <p align="center">
-  <img src="README_images/weight_grid.png" alt="セル*" width="720">
+  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/2d4be17e-96a1-443c-9c19-bc25459d68d0" />
 </p>
 
 - セルをクリックすると、そのセルの数値を直接入力できます。`Enter` で確定、セルを`右クリック`でキャンセル/セルの選択を解除。
