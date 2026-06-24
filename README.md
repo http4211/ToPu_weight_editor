@@ -1,4 +1,4 @@
-<img width="322" height="170" alt="image" src="https://github.com/user-attachments/assets/e37b7c24-01ae-424c-9c47-f0a63bf13ce5" /># ToPu_weight_editor
+ToPu_weight_editor
 
 <p align="center">
   <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
@@ -349,7 +349,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。  
 稼働方式は 高速/表面/ボリューム　の三つから選択できます。
 
-<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
+
 
 <img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
@@ -362,7 +362,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 選択頂点の反転位置を参照し、反対側の頂点からウェイトを持ってきます。  
 `_L` / `_R` などの左右名も入れ替えて適用できます。
 
-詳細設定では、ミラー方向、基準空間、検索距離、左右ワードセットを調整できます。
+詳細設定では、ミラー方向、基準空間、検索距離、左右ワードセットを調整できます。  
+左右ワードセットはアドオンプリファレンスからでも設定できます。  
+
+<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
 
 <img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
 
