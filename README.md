@@ -166,7 +166,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ### プリセットボタン
 
 <p align="left">
-  <img src="README_images/presets.png" alt="プリセットボタン" width="720">
+  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/a501fa2d-d46e-4c87-83d1-8c776b5c6b5e" />
 </p>
 
 `0`、`0.1`、`0.25`、`0.5`、`0.75`、`0.9`、`1` のプリセットをワンクリックで適用できます。  
@@ -177,7 +177,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ## 表示タブ
 
 <p align="left">
-  <img src="README_images/grid_tabs.png" alt="All Deform Other タブ" width="720">
+  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/5a7eba2d-79fc-47c2-8886-716c0944f700" />
 </p>
 
 - `All` : ボーン列と非ボーン頂点グループ列を表示します。
