@@ -453,7 +453,7 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 <img width="165" height="108" alt="Image" src="https://github.com/user-attachments/assets/ef71a5b2-b587-4898-bbdc-6eb6a670ac43" />
 
 <p align="left">
-  <img src="README_images/copy_paste_transfer.png" alt="コピー 貼り付け 転送" width="720">
+  <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
 </p>
 
 - `頂点コピー` : 現在アクティブに選択している一つの頂点ウェイトをコピーします。
