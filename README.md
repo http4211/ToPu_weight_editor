@@ -370,11 +370,11 @@ GPU オーバーレイの列ヘッダーを右クリックすると、頂点グ�
 
 ## 骨取得 / 骨トランスフォーム
 
-<p align="left">
-  <img src="README_images/bone_pick_transform.png" alt="骨取得と骨トランスフォーム" width="720">
-</p>
-
 ### 骨取得
+
+<p align="left">
+  <img src="README_images/bone_pick.png" alt="骨取得" width="720">
+</p>
 
 `骨取得` を使うと、ビューポート上のボーンをクリックして、そのボーン名の頂点グループ列を選択できます。  
 GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` からも骨取得を開始できます。
@@ -387,8 +387,17 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 
 ### 骨トランスフォーム
 
+<p align="left">
+  <img src="README_images/bone_transform_panel.png" alt="骨トランスフォーム" width="720">
+</p>
+
 選択列に対応する骨がある場合、GPU オーバーレイ上で骨の `位置`、`回転`、`スケール` を確認・編集できます。
 
+- 左端の `↱` ボタンで、ビューポート上の右ドラッグ編集を ON / OFF できます。
+- `↱` が ON のとき、ビューポート上で右ドラッグすると、現在選択している骨トランスフォーム値を画面方向に合わせて変更できます。
+- 右ドラッグ中に `Shift` を押すと微調整、`Ctrl` を押すと大きめの変更になります。
+- 右ドラッグを OFF にしたい場合は、もう一度 `↱` をクリックします。
+- 右ドラッグは、モデルを見ながらポーズを少し動かしてウェイトの効き方を確認したいときに使います。
 - `位` : Location を編集します。
 - `回` : Rotation を編集します。
 - `ス` : Scale を編集します。
@@ -397,7 +406,6 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 - `Shift + ドラッグ` で微調整、`Ctrl + ドラッグ` で大きく変更できます。
 - `↺` で現在の骨を元の値へ戻します。
 - `Alt + ↺` で変更した全ボーンを元の値へ戻します。
-- `右ドラッグ` で骨トランスフォームを変えるモードも切り替えられます。
 
 <p align="center">
   <img src="README_images/bone_transform.gif" alt="骨トランスフォームの動作" width="720">
@@ -493,8 +501,9 @@ copy_paste_transfer.gif
 column_transfer_menu.png
 column_transfer_dialog.png
 auto_weight.png
-bone_pick_transform.png
+bone_pick.png
 bone_pick.gif
+bone_transform_panel.png
 bone_transform.gif
 x_side_select.png
 n_panel.png
