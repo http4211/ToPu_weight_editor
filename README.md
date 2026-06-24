@@ -391,7 +391,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 </p>
 
 
-## X 方向の頂点選択
+### X 方向の頂点選択
 
 <img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
 
@@ -405,11 +405,6 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 
 ### スムーズ化
 
-選択頂点のウェイトを周囲へなじませます。  
-詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。  
-稼働方式は 高速/表面/ボリューム　の三つから選択できます。
-
-
 
 <img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
@@ -417,13 +412,13 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
   <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
 </p>
 
+選択頂点のウェイトを周囲へなじませます。  
+詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。  
+稼働方式は 高速/表面/ボリューム　の三つから選択できます。
+
+
 ### ミラー実行
 
-選択頂点の反転位置を参照し、反対側の頂点からウェイトを持ってきます。  
-`_L` / `_R` などの左右名も入れ替えて適用できます。
-
-詳細設定では、ミラー方向、基準空間、検索距離、左右ワードセットを調整できます。  
-左右ワードセットはアドオンプリファレンスからでも設定できます。  
 
 <img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
 
@@ -433,7 +428,19 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
   <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
 </p>
 
+選択頂点の反転位置を参照し、反対側の頂点からウェイトを持ってきます。  
+`_L` / `_R` などの左右名も入れ替えて適用できます。
+
+詳細設定では、ミラー方向、基準空間、検索距離、左右ワードセットを調整できます。  
+左右ワードセットはアドオンプリファレンスからでも設定できます。  
+
+
+
 ### レスト位置変更
+
+<p align="left">
+  <img width="1302" height="768" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+</p>
 
 `レスト位置変更` は、現在のポーズを新しいレストポーズとして適用する機能です。
 
@@ -441,21 +448,32 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 - ボーン配置を調整した後、その状態を新しいレスト姿勢にしたい場合に使用します。
 - 実行前にバックアップを取ることをおすすめします。
 
-## コピー / 貼り付け / 転送
+## ウェイトコピー
+
+<img width="165" height="108" alt="Image" src="https://github.com/user-attachments/assets/ef71a5b2-b587-4898-bbdc-6eb6a670ac43" />
 
 <p align="left">
   <img src="README_images/copy_paste_transfer.png" alt="コピー 貼り付け 転送" width="720">
 </p>
 
-- `頂点コピー` : 現在の頂点ウェイトをコピーします。
+- `頂点コピー` : 現在アクティブに選択している一つの頂点ウェイトをコピーします。
 - `頂点貼付` : コピーした頂点ウェイトを選択頂点へ貼り付けます。
 - `近接コピー` : 選択頂点の位置とウェイトを保存します。
 - `近接貼付` : 近接コピー元から、貼り付け先に近いウェイトを転送します。
 - `オブジェクト転送` : 選択順の最後に選択したアクティブオブジェクトから、他の選択オブジェクトへ最近傍でウェイトを転送します。
+                      （少し重いですが、通常の転送に比べ面ベースで転送するためローポリでも比較的きれいに転送されます。）
 
-<p align="center">
-  <img src="README_images/copy_paste_transfer.gif" alt="コピーと転送の動作" width="720">
+## 自動ウェイト
+
+<p align="left">
+  <img src="README_images/auto_weight.png" alt="自動ウェイト" width="720">
 </p>
+
+`自動ウェイト` は、選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。  
+詳細設定では、Blender 公式の自動ウェイトと、独自ボクセル拡散方式を切り替えられます。
+
+独自方式では、解像度、最大影響数、スムーズ、範囲補正プロキシなどを調整できます。
+
 
 ### 列右クリックのウェイト転送
 
@@ -476,21 +494,11 @@ GPU オーバーレイの列ヘッダーを右クリックすると、頂点グ�
   <img src="README_images/column_transfer_dialog.png" alt="複数ウェイト転送ダイアログ" width="720">
 </p>
 
-## 自動ウェイト
-
-<p align="left">
-  <img src="README_images/auto_weight.png" alt="自動ウェイト" width="720">
-</p>
-
-`自動ウェイト` は、選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。  
-詳細設定では、Blender 公式の自動ウェイトと、独自ボクセル拡散方式を切り替えられます。
-
-独自方式では、解像度、最大影響数、スムーズ、範囲補正プロキシなどを調整できます。
 
 ## N パネル
 
 <p align="left">
-  <img src="README_images/n_panel.png" alt="Nパネル" width="720">
+  <img width="274" height="1141" alt="Image" src="https://github.com/user-attachments/assets/610a168d-f1e8-44fa-a1be-e26c0a79dce3" />
 </p>
 
 基本操作は GPU オーバーレイから行えますが、N パネルにも同じ処理へアクセスするためのボタンがあります。
@@ -505,7 +513,7 @@ GPU オーバーレイの列ヘッダーを右クリックすると、頂点グ�
 ## クイックパイメニュー
 
 <p align="left">
-  <img src="README_images/pie_menu.png" alt="クイックパイメニュー" width="720">
+  <img width="1119" height="528" alt="Image" src="https://github.com/user-attachments/assets/84eed356-69b6-45c2-beee-6696df63a906" />
 </p>
 
 デフォルトでは `6` キーで従来のクイックパイメニューを開けます。  
