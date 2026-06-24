@@ -351,7 +351,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
 <p align="left">
-  <img src="README_images/smooth_settings.png" alt="スムーズ化設定" width="720">
+  <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
 </p>
 
 ### ミラー実行
