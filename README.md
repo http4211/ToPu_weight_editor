@@ -340,13 +340,15 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 ## スムーズ化 / ミラー
 
 <p align="left">
-  <img src="README_images/smooth_mirror.png" alt="スムーズ化とミラー" width="720">
+  <img width="98" height="109" alt="Image" src="https://github.com/user-attachments/assets/b5a71567-3cdc-4ca8-b371-c59428e4c4a8" />
 </p>
 
 ### スムーズ化
 
 選択頂点のウェイトを周囲へなじませます。  
 詳細設定では、スムーズの強さ、回数、実行後の整理方法を調整できます。
+
+<img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
 <p align="left">
   <img src="README_images/smooth_settings.png" alt="スムーズ化設定" width="720">
@@ -358,6 +360,8 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 `_L` / `_R` などの左右名も入れ替えて適用できます。
 
 詳細設定では、ミラー方向、基準空間、検索距離、左右ワードセットを調整できます。
+
+<img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
 
 <p align="left">
   <img src="README_images/mirror_settings.png" alt="ミラー実行設定" width="720">
