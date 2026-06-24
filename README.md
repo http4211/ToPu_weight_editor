@@ -46,7 +46,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img src="README_images/open_gpu_overlay.png" alt="ツールヘッダーからGPUオーバーレイを起動" width="720">
+  [<img src="README_images/open_gpu_overlay.png" alt="ツールヘッダーからGPUオーバーレイを起動" width="720">](https://github.com/user-attachments/assets/e943beda-b050-4207-bfe5-552b26ab64bb)
 </p>
 
 ### ショートカットで起動
