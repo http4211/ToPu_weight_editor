@@ -250,6 +250,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### 通常ブラシ
 
+<p align="left">
+  <img src="README_images/brush_normal.png" alt="通常ブラシ" width="720">
+</p>
+
 `通常` は、選択列のウェイトをブラシで加算 / 減算する基本ブラシです。
 
 - 左ドラッグで選択列へ加算します。
@@ -262,6 +266,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### スムーズブラシ
 
+<p align="left">
+  <img src="README_images/brush_smooth.png" alt="スムーズブラシ" width="720">
+</p>
+
 `スムーズ` は、選択列のウェイトを周囲の頂点になじませるブラシです。
 
 - 左ドラッグした周辺のウェイトをなめらかにします。
@@ -270,6 +278,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 - 塗り跡が硬い部分、段差が出た部分、ミラー後の境界を整える用途に向いています。
 
 ### グラデーションブラシ
+
+<p align="left">
+  <img src="README_images/brush_gradient.png" alt="グラデーションブラシ" width="720">
+</p>
 
 `グラデ` は、ドラッグ方向に沿ってウェイトのグラデーションを作るブラシです。
 
@@ -285,6 +297,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### 投げ縄ブラシ
 
+<p align="left">
+  <img src="README_images/brush_lasso.png" alt="投げ縄ブラシ" width="720">
+</p>
+
 `投げ縄` は、囲んだ範囲を指定値で塗るブラシです。
 
 - 左ドラッグで範囲を囲むと、その内側へ `投げ縄値` を適用します。
@@ -292,6 +308,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 - 広い範囲を一気に 0、0.5、1.0 などへそろえたい場面に向いています。
 
 ### 選択マスク
+
+<p align="left">
+  <img src="README_images/brush_mask.png" alt="選択マスク" width="720">
+</p>
 
 `マスク` を ON にすると、ブラシの影響先を現在選択中の頂点だけに制限します。
 
@@ -500,6 +520,11 @@ cleanup_tools.png
 cleanup_tools.gif
 brush_tools.png
 brush_tools.gif
+brush_normal.png
+brush_smooth.png
+brush_gradient.png
+brush_lasso.png
+brush_mask.png
 smooth_mirror.png
 smooth_settings.png
 mirror_settings.png
