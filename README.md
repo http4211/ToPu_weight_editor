@@ -47,7 +47,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/a6ffe6e3-5d04-4055-a0e4-d09f344b04cc" />
+  <img width="1248" height="792" alt="Image" src="https://github.com/user-attachments/assets/9f516332-ec05-4e6f-876a-9fbfc639fd63" />
 </p>
 
 ### ショートカットで起動
@@ -78,7 +78,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 ### 全体レイアウト
 
 <p align="center">
-  <img width="624" height="397" alt="Image" src="https://github.com/user-attachments/assets/2c00a2ab-1461-4fc6-a30c-f74f1a06eb48" />
+  <img width="960" height="742" alt="Image" src="https://github.com/user-attachments/assets/b38098bf-e7df-4099-95cc-69d2ce2da191" />
 </p>
 
 - 上部の `ドラッグで移動` をドラッグすると、GPU オーバーレイの位置を動かせます。
