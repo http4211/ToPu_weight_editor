@@ -485,7 +485,10 @@ GPU オーバーレイから、アーマチュア原点を基準に `x-側` ま�
 <p align="left">
   <img width="571" height="1024" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
 </p>
+
+
 GPU オーバーレイの列ヘッダーを右クリックすると、頂点グループ間の転送メニューを開けます。
+
 
 
 - `転送元に指定` : 右クリックした列を転送元にします。
