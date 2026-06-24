@@ -259,7 +259,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="436" height="27" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
 
 <p align="left">
-  <img src="README_images/brush_normal.png" alt="通常ブラシ" width="720">
+  <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
 </p>
 
 `通常` は、選択列のウェイトをブラシで加算 / 減算する基本ブラシです。
@@ -277,7 +277,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="625" height="29" alt="Image" src="https://github.com/user-attachments/assets/52c425a0-aeec-4080-9798-5170c5fdb615" />
 
 <p align="left">
-  <img src="README_images/brush_smooth.png" alt="スムーズブラシ" width="720">
+  <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
 </p>
 
 `スムーズ` は、選択列のウェイトを周囲の頂点になじませるブラシです。
@@ -292,7 +292,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="640" height="24" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
 
 <p align="left">
-  <img src="README_images/brush_gradient.png" alt="グラデーションブラシ" width="720">
+  <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
 </p>
 
 `グラデ` は、ドラッグ方向に沿ってウェイトのグラデーションを作るブラシです。
@@ -311,7 +311,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <img width="384" height="27" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
 
 <p align="left">
-  <img src="README_images/brush_lasso.png" alt="投げ縄ブラシ" width="720">
+  <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
 </p>
 
 `投げ縄` は、囲んだ範囲を指定値で塗るブラシです。
@@ -323,7 +323,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 ### 選択マスク
 
 <p align="left">
-  <img src="README_images/brush_mask.png" alt="選択マスク" width="720">
+  <img width="1208" height="772" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
 </p>
 
 `マスク` を ON にすると、ブラシの影響先を現在選択中の頂点だけに制限します。
