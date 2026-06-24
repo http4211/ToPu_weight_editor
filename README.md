@@ -1,7 +1,7 @@
 # ToPu_weight_editor
 
 <p align="center">
-  <img src="README_images/Main.png" alt="ToPu_weight_editor GPU Overlay" width="720">
+  <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
 </p>
 
 ToPu_weight_editor は、Blender 上でスキンウェイトを確認・編集するためのアドオンです。  
