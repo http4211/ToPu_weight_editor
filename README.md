@@ -1,4 +1,4 @@
-# ToPu_weight_editor
+<img width="322" height="170" alt="image" src="https://github.com/user-attachments/assets/e37b7c24-01ae-424c-9c47-f0a63bf13ce5" /># ToPu_weight_editor
 
 <p align="center">
   <img width="663" height="601" alt="Image" src="https://github.com/user-attachments/assets/606d5cb3-e8ab-49b4-b5fd-49a571b353ac" />
@@ -345,8 +345,11 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### スムーズ化
 
-選択頂点のウェイトを周囲へなじませます。  
-詳細設定では、スムーズの強さ、回数、実行後の整理方法を調整できます。
+選択頂点のウェイトを周囲へなじませます。
+稼働方式を 高速/表面/ボリューム
+詳細設定では、稼働方式、スムーズの強さ、回数、実行後の整理方法を調整できます。
+稼働方式は 高速/表面/ボリューム　の三つから選択できます。
+
 
 <img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
