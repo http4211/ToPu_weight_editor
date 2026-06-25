@@ -101,7 +101,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 <img width="149" height="30" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
 
 <p align="center">
-  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/f7cb13e9-7c26-41e1-940a-8ba1be68b235" />
+  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
 </p>
 
 - `個` ヘッダーをクリックすると、対象の行の値がロックされます。
