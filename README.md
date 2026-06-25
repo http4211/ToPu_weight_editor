@@ -23,7 +23,7 @@ Softimage 風のウェイト編集をベースに、3D ビュー上へ表示さ�
 外部ウィンドウではなく Blender の 3D ビュー上に GPU オーバーレイを描画して動作します。
 追加の UI ライブラリは不要です。
 
-一部の古い CPU・GPU 環境では、Blender のグラフィックス API が `Vulkan` に設定されている場合、GPU オーバーレイの描画パフォーマンスが低下することを確認しています。  
+一部の古い CPU・GPU 環境では、Blender のグラフィックス API が `Vulkan` に設定されている場合、パフォーマンスが低下することを確認しています。  
 その場合は、Blender のグラフィックス API を `OpenGL` に変更することで改善する場合があります。
 
 ## インストール
@@ -162,15 +162,15 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 - 数値欄の上でホイールすると、値を少しずつ変更できます。
 - `適用` ボタンで、数値欄の値を選択頂点の現在列に適用します。
 
-- `Ctrl + ホイール` で選択頂点に選択列のウェイトを加算 / 減算できます。
-- `Ctrl + Shift + ホイール` でより細かい単位で加算 / 減算できます。
+- `Ctrl + ホイール` で選択頂点に選択列のウェイトを加算 / 減算できます。(スライダーのモードには影響されません)
+- `Ctrl + Shift + ホイール` でより細かい単位で加算 / 減算できます。(スライダーのモードには影響されません)
 - ホイールによる増減量は、アドオンプリファレンスから自由に変更できます。
 
 ### プリセットボタン
 
-<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
-
 <img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
+
+<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
 
 <p align="left">
   <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
