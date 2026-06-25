@@ -213,8 +213,10 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 
 ### 骨トランスフォーム
 
+<img width="532" height="28" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
+
 <p align="left">
-  <img src="README_images/bone_transform_panel.png" alt="骨トランスフォーム" width="720">
+  <img width="1314" height="756" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
 </p>
 
 選択列に対応する骨がある場合、GPU オーバーレイ上で骨の `位置`、`回転`、`スケール` を確認・編集できます。
@@ -233,9 +235,6 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 - `↺` で現在の骨を元の値へ戻します。
 - `Alt + ↺` で変更した全ボーンを元の値へ戻します。
 
-<p align="center">
-  <img src="README_images/bone_transform.gif" alt="骨トランスフォームの動作" width="720">
-</p>
 
 
 ## 表示タブ
