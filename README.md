@@ -149,7 +149,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 <img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
 
 <p align="left">
-  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/82048644-d3f9-4210-9808-25a44b92cd93" />
+  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
 </p>
 
 - `Abs` : 入力した値で置き換えます。
