@@ -134,7 +134,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 <img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
 
 <p align="left">
-  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/6f039b46-b268-4342-bc9c-e141dbe91b19" />
+  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
 </p>
 
 - `ロック` は、選択列を編集できない状態にします。
