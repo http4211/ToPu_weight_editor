@@ -116,7 +116,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 **セル**
 
 <p align="center">
-  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/2d4be17e-96a1-443c-9c19-bc25459d68d0" />
+  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/0e67cbac-d21a-4e63-b162-80bec8d0efb4" />
 </p>
 
 - セルをクリックすると、そのセルの数値を直接入力できます。`Enter` で確定、セルを`右クリック`でキャンセル/セルの選択を解除。
