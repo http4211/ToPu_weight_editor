@@ -69,16 +69,12 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 6. セル、スライダー、数値欄、プリセットボタン、ブラシ、スムーズ、でウェイトを調整します。
 7. 最後に `正規化`、`小数点`、`影響数`、`閾値`、`違反整理` でウェイトを整えます。
 
-<p align="center">
-  <img src="README_images/quick_start.gif" alt="GPUオーバーレイの基本操作" width="720">
-</p>
-
 ## GPU オーバーレイ
 
 ### 全体レイアウト
 
 <p align="center">
-  <img width="960" height="742" alt="Image" src="https://github.com/user-attachments/assets/b38098bf-e7df-4099-95cc-69d2ce2da191" />
+  <img width="960" height="742" alt="Image" src="https://github.com/user-attachments/assets/cfed90dc-1609-49cb-912e-18e6a7f3e460" />
 </p>
 
 - 上部の `ドラッグで移動` をドラッグすると、GPU オーバーレイの位置を動かせます。
