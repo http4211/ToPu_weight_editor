@@ -183,6 +183,10 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 ### 骨取得
 
+<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+
+<img width="339" height="195" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
+
 <p align="left">
   <img src="README_images/bone_pick.png" alt="骨取得" width="720">
 </p>
