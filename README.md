@@ -238,7 +238,7 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 <img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
 
 <p align="left">
-  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/5a7eba2d-79fc-47c2-8886-716c0944f700" />
+  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
 </p>
 
 - `すべて` : ボーン列と非ボーン頂点グループ列を表示します。
