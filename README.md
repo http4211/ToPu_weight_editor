@@ -88,7 +88,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 **列ヘッダー**
 
 <p align="center">
-  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e54a9a40-b01d-45a8-bbc6-93e508451b45" />
+  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
 </p>
 
 - 列ヘッダーをクリックすると、その列が選択列になります。
