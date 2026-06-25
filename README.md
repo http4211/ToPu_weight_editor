@@ -47,7 +47,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 もう一度押すと閉じられます。
 
 <p align="center">
-  <img width="1248" height="792" alt="Image" src="https://github.com/user-attachments/assets/9f516332-ec05-4e6f-876a-9fbfc639fd63" />
+  <img width="1248" height="792" alt="Image" src="https://github.com/user-attachments/assets/3948c27f-098b-4f10-9b65-1c2aa2b9dd14" />
 </p>
 
 ### ショートカットで起動
