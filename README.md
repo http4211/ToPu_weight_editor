@@ -179,22 +179,33 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 
 プリセット値はアドオンプリファレンスで変更できます。
 
-## 骨取得 / 骨トランスフォーム
+## 骨取得 / 骨トランスフォーム/最大ウェイト列を追従
 
-### 骨取得
-
-<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+### 骨取得/最大ウェイト列を追従
 
 <img width="339" height="195" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
 
+<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+
+
+
 <p align="left">
-  <img src="README_images/bone_pick.png" alt="骨取得" width="720">
+  <img width="1218" height="758" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
 </p>
 
 `骨取得` を使うと、ビューポート上のボーンをクリックして、そのボーン名の頂点グループ列を選択できます。  
 GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` からも骨取得を開始できます。
 
 除外ワードを設定すると、`IK`、`FK`、`twist` などを含むボーンを骨取得の候補から外せます。
+
+ 
+ `▣↖`がオンの場合選択頂点が変化した時、選択範囲で最もウェイト値が高い頂点グループ列を自動選択します。  
+ 頻繁に頂点を切り替えながら主影響ボーンを確認する作業に向きます。
+
+
+
+
+
 
 <p align="center">
   <img src="README_images/bone_pick.gif" alt="骨取得の動作" width="720">
