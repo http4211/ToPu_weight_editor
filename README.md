@@ -254,7 +254,7 @@ GPU オーバーレイ表示中は、デフォルトで `Alt + 右クリック` 
 <img width="510" height="24" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
 
 <p align="left">
-  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/0e0321b1-cfe7-4349-8e19-69f92cde56e0" />
+  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
 </p>
 
 - `モディ` : 対象メッシュの Armature モディファイア表示を切り替えます。
