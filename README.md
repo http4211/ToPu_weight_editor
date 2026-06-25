@@ -559,57 +559,6 @@ GPU オーバーレイを閉じている状態でも、表示 / 更新、イン�
 一部のショートカットはプリファレンスで ON / OFF を切り替えられます。
 
 <p align="left">
-  <img src="README_images/shortcut_preferences.png" alt="ショートカット設定" width="720">
+  <img width="432" height="1047" alt="Image" src="https://github.com/user-attachments/assets/5bac5b98-8968-4f9c-9abd-93796713896f" />
 </p>
 
-## 補足
-
-- GPU オーバーレイのグリッドは、基本的に選択頂点を対象に表示します。
-- 重いメッシュでは、必要な頂点だけを選択してから `グリッド表示` を使うと軽く扱えます。
-- ロック列、無視列、行ロックは、編集・正規化・整理の結果に影響します。
-- マテリアル風ウェイト表示と Blender 標準の Vertex Group Weights 表示は、表示状態に応じて切り替えて使えます。
-- 画像や GIF は `README_images/` フォルダに配置してください。
-
-<!--
-README_images に後から配置する想定の画像一覧:
-
-Main.png
-install_addon.png
-enable_addon.png
-open_gpu_overlay.png
-quick_start.gif
-gpu_overlay_layout.png
-weight_grid.png
-cell_edit.gif
-locks_and_ignore.png
-value_editing.png
-presets.png
-grid_tabs.png
-display_tools.png
-display_tools.gif
-cleanup_tools.png
-cleanup_tools.gif
-brush_tools.png
-brush_tools.gif
-brush_normal.png
-brush_smooth.png
-brush_gradient.png
-brush_lasso.png
-brush_mask.png
-smooth_mirror.png
-smooth_settings.png
-mirror_settings.png
-copy_paste_transfer.png
-copy_paste_transfer.gif
-column_transfer_menu.png
-column_transfer_dialog.png
-auto_weight.png
-bone_pick.png
-bone_pick.gif
-bone_transform_panel.png
-bone_transform.gif
-x_side_select.png
-n_panel.png
-pie_menu.png
-shortcut_preferences.png
--->
