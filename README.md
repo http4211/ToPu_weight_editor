@@ -167,7 +167,7 @@ GPU オーバーレイを閉じるときは `W`、または `Esc` を使いま�
 <img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
 
 <p align="left">
-  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/a501fa2d-d46e-4c87-83d1-8c776b5c6b5e" />
+  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
 </p>
 
 `0`、`0.1`、`0.25`、`0.5`、`0.75`、`0.9`、`1` のプリセットをワンクリックで適用できます。  
