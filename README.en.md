@@ -113,7 +113,7 @@ Two icon buttons are then added to the 3D View tool header.
 | Window icon | Open / close the dedicated Weight Editor window |
 
 <p align="center">
-  <img width="1248" height="792" alt="Image" src="https://github.com/user-attachments/assets/3948c27f-098b-4f10-9b65-1c2aa2b9dd14" />
+  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
 </p>
 
 The tool-header buttons can be hidden with `Show GPU Overlay Button in Tool Header` in the add-on preferences.
