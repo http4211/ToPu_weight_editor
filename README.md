@@ -147,7 +147,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ### 全体レイアウト
 
 <p align="center">
-  <img width="960" height="742" alt="Image" src="https://github.com/user-attachments/assets/cfed90dc-1609-49cb-912e-18e6a7f3e460" />
+  <img width="589" height="653" alt="image" src="https://github.com/user-attachments/assets/d8064441-2909-41a7-8118-2e52b6f28461" />
 </p>
 
 上から順に、次の要素で構成されています。
