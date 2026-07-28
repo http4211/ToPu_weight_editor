@@ -145,7 +145,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ### Overall layout
 
 <p align="center">
-  <img width="960" height="742" alt="Image" src="https://github.com/user-attachments/assets/cfed90dc-1609-49cb-912e-18e6a7f3e460" />
+  <img width="591" height="651" alt="image" src="https://github.com/user-attachments/assets/6e99de70-2fb1-4dcf-acc1-f8b4eafee4ce" />
 </p>
 
 From top to bottom:
