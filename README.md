@@ -450,7 +450,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### スムーズブラシ
 
-<img width="625" height="29" alt="Image" src="https://github.com/user-attachments/assets/52c425a0-aeec-4080-9798-5170c5fdb615" />
+<img width="719" height="31" alt="image" src="https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587" />
 
 <p align="left">
   <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
@@ -762,7 +762,8 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 HUD 倍率は `0.50〜4.00` の範囲でカスタム値を直接入力でき、HUD 上の倍率ボタンと連動して保存されます。
 
 <p align="left">
-  <img width="432" height="1047" alt="Image" src="https://github.com/user-attachments/assets/5bac5b98-8968-4f9c-9abd-93796713896f" />
+  <img width="560" height="1046" alt="image" src="https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81" />
+　<img width="559" height="363" alt="image" src="https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34" />
 </p>
 
 <!-- スクリーンショット: カラーテーマ設定と UI 倍率設定 -->
