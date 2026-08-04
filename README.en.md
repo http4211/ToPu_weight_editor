@@ -127,6 +127,8 @@ Use `Ctrl + W` or `Esc` to close it.
 
 ## Quick start
 
+<img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/a41b97bf-3498-440c-a7c0-42683ccf2585" />
+
 https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 1. Select a mesh that is bound to an armature.
