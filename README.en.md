@@ -11,9 +11,9 @@
 ToPu_weight_editor (extension name: **ToPu:Weight Editor**) is a Blender add-on for reviewing and editing skin weights.
 Based on Softimage-style weight editing, it puts numeric weight editing, normalization, cleanup, smoothing, mirroring, copy & paste, transfer, bone picking, and display helpers into a single **GPU overlay** drawn directly in the 3D View.
 
-No external window and no extra UI library are used. Everything is drawn with Blender's built-in GPU module.
+No external UI framework or extra Python package is used. The add-on runs with Blender's built-in GPU drawing and Blender-native areas/windows.
 
-> **This document describes version 1.5.26.**
+> **This document describes version 1.5.112.**
 > The legacy N-panel (sidebar) and the quick Pie Menu that existed up to the 1.4 series have been removed; all operations now live in the GPU overlay.
 > The overlay shortcut also changed from `W` to `Ctrl + W`.
 
@@ -46,7 +46,7 @@ No external window and no extra UI library are used. Everything is drawn with Bl
 - [Weight snapshots](#weight-snapshots)
 - [Weight-color preview](#weight-color-preview)
 - [Multi-object editing](#multi-object-editing)
-- [Dedicated Weight Editor window](#dedicated-weight-editor-window)
+- [Dedicated area / Weight Editor window](#dedicated-area--weight-editor-window)
 - [Add-on preferences](#add-on-preferences)
 - [Shortcuts](#shortcuts)
 - [Changes made to the blend file](#changes-made-to-the-blend-file)
@@ -72,14 +72,14 @@ No external window and no extra UI library are used. Everything is drawn with Bl
 - Two automatic weighting methods: Blender's built-in automatic weights and a dedicated voxel diffusion method (Voxel Heat Skinning)
 - Weight snapshots saved by name inside the blend file
 - Weight-color preview
-- A **dedicated Weight Editor window** separate from the 3D View
+- A **ToPu Weight Editor area** available as a Blender editor type, plus a **dedicated Weight Editor window** separate from the 3D View
 - Simultaneous editing of several meshes, with vertex-group selection sync
 - Japanese / English UI (follows Blender's language setting, or can be forced)
 
 ### Center L/R balancing in mirror and cleanup
 
-Selected-vertex mirroring and whole-object mirroring automatically balance the L/R weights of vertices on the center axis.
-`Normalize`, `Clean Decimals`, `Threshold Cleanup`, `Limit Influences` and `Fix Violations` also preserve center-axis L/R symmetry: decimal rounding and influence-limit selection treat an editable L/R pair as a single symmetric unit.
+With the default settings, selected-vertex and whole-object mirroring automatically balance the L/R weights of vertices on the center axis. Turn off `Balance Center L/R Weights` in Mirror Details to skip only that balancing step.
+`Normalize`, `Clean Decimals`, `Threshold Cleanup`, `Limit Influences` and `Fix Violations` preserve an editable center-axis L/R pair when it was equal before the operation. Intentionally asymmetric pairs remain asymmetric. Decimal rounding and influence-limit selection treat an equal L/R pair as one symmetric unit.
 
 ---
 
@@ -88,7 +88,7 @@ Selected-vertex mirroring and whole-object mirroring automatically balance the L
 - **Blender 4.2 LTS or newer**
 
 No additional Python packages need to be installed. The add-on only uses modules bundled with Blender.
-NumPy is used when Blender provides it; otherwise a main-thread scalar fallback is used.
+NumPy is used when Blender provides it; otherwise a main-thread scalar fallback is used. Voxel Heat's dense NumPy path has an estimated 384 MiB working-memory limit and switches to the lower-memory scalar path if the limit or an allocation is exceeded.
 
 On some older CPU/GPU setups, performance can drop when Blender's graphics backend is set to `Vulkan`.
 Switching the backend to `OpenGL` may improve it.
@@ -166,7 +166,7 @@ From top to bottom:
 
 - Drag `Drag to Move` at the top to move the overlay.
 - Drag any of the four corners to resize it.
-- Row and column counts can be adjusted with the scrollbars or the mouse wheel.
+- The visible row and column capacity follows the actual drawable size of the HUD or dedicated area. Use the scrollbars or mouse wheel to move through the remaining rows and columns.
 
 ### Header row
 
@@ -178,10 +178,10 @@ From top to bottom:
 | `↶` | Restore all weights of the target object from a saved snapshot. |
 | `🗑` | Delete an unnecessary saved snapshot from the list. |
 | `⚙` | Open this add-on's preferences. |
-| `×1` | Cycles `×1` → `×1.5` → `×2`. `Shift + Click` lets you enter a custom scale from `0.50` to `4.00`. |
+| `AUTO ×1` | Cycles `Auto` → `×1` → `×1.5` → `×2`. `Shift + Click` lets you enter a custom scale from `0.50` to `4.00`. |
 | `×` | Close the GPU overlay. |
 
-The 3D View HUD scale and the dedicated window HUD scale are stored separately and reused the next time each HUD opens.
+The 3D View HUD scale and the dedicated area/window HUD scale are stored separately and reused the next time each HUD opens. `Auto` follows Blender's UI scale and the available drawing area.
 
 <!-- Screenshot: header row (move handle through close button) -->
 
@@ -217,6 +217,7 @@ The 3D View HUD scale and the dedicated window HUD scale are stored separately a
 - Hold `Shift` / `Ctrl` while clicking or dragging to add to or remove from the row selection.
 - When some vertices have a total-value or influence-count problem, the `Sum` header changes to `Sum ⚠`. While violation-only view is active it reads `Viol. Only`.
 - Violation-only view covers violations across every page, not just the current one.
+- In violation-only view, the `Vertex` and `L` header actions also target only the displayed violation vertices.
 
 **Cells**
 
@@ -228,8 +229,9 @@ The 3D View HUD scale and the dedicated window HUD scale are stored separately a
 - Starting the input with `+` `-` `*` `/` makes it a relative operation on the current value (for example `*0.5` or `+0.1`).
 - With several cells selected, the entered value is applied to all of them at once.
 - Drag across cells to select a range. `Shift + Drag` adds to the selection, `Ctrl + Drag` removes from it.
-- When a cell selection exists, the slider and presets edit those cells instead of the whole selected column.
-- Clicking an empty part of the grid clears the cell selection.
+- While a cell selection remains, every value-changing operation—including the slider, wheel adjustment, presets and `Apply`—prioritizes the selected cells over the live mesh selection.
+- Cell selections survive paging, scrolling, visible row/column-count changes and selected-column changes. They become invalid when the actual mesh vertex-selection scope changes.
+- Right-clicking an empty part of the grid clears the remaining cell selection. A left click is consumed as a grid-background action and does not pass through to the 3D View.
 
 <p align="center">
   <img src="README_images/cell_edit.gif" alt="Cell editing" width="720">
@@ -252,9 +254,9 @@ The tabs below the grid choose which columns are shown.
 Per-tab options:
 
 - `Ignore Non-Bone Columns` — an `All` tab option. Automatically marks non-bone vertex groups as ignored so they stay out of totals, normalization and cleanup.
-- `Always Show` — an `Other` tab option. Always shows non-bone vertex-group columns that already exist.
-- `Allow >1` — an `Other` tab option. When on, Other columns are not treated as violations even when the total exceeds 1, and they are not normalized even when Normalize is on.
-- `Hidden Words` — hides the specified characters from displayed column names only. Actual vertex group names are not changed.
+- `Always Show` — an `Other` tab option. Always shows existing non-bone vertex-group columns even when the selected vertices contain no values for them.
+- `Allow >1` — an `Other` tab option. When on, Other columns are not treated as violations when their total is 1 or more, and they are not normalized even when Normalize is on.
+- `Hidden Words` — hides specified words from the group-name display in the grid to make names shorter. Actual vertex group names are not changed.
 
 ### Lock / Ignore / Force Show
 
@@ -268,6 +270,7 @@ Per-tab options:
 - `Ignore` — excludes the column from totals, normalization and cleanup. On the `Other` tab this is handled as an Other-specific ignore state.
 - `Force Show` — keeps a column in the grid even when its weights are zero.
 - `Shift + Click` applies the action to every column except the selected one.
+- `Ctrl + Force Show` opens a text filter. Comma-separated fragments force-show every partially matching group, while columns force-shown manually stay enabled.
 - `Alt + Click` clears the state everywhere.
 
 ### Input mode, slider and value field
@@ -288,7 +291,7 @@ The leftmost button cycles the input mode through `ABS` → `ADD` → `ADD%`.
 
 Usage:
 
-- Dragging the slider applies the value to the selected column immediately.
+- Dragging the slider normally applies values to the target in real time. With **10,000 or more target vertices**, only the displayed value and handle update during the drag; the weights are committed when the slider is released and confirmed.
 - Click the value field to type a value from the keyboard.
 - Scroll the wheel over the value field to nudge the value.
 - `Apply` applies the value field to the current column of the selected vertices.
@@ -342,6 +345,7 @@ Preset values can be changed in the add-on preferences.
 - While the GPU overlay is open, `Alt + Right Click` also starts bone picking by default.
 - `Shift + Click` on the `Pick Bone` button toggles that `Alt + Right Click` shortcut on and off.
 - The `…` button next to it opens the excluded-word and shortcut settings. Excluded words keep bones containing `IK`, `FK`, `twist` and similar out of the pick candidates.
+- Bones hidden through Bone Collections are also excluded. Bones matching the excluded words are temporarily hidden only while the picker is active, then restored exactly after confirm or cancel.
 
 When `▣↖` is on, changing the vertex selection automatically selects the vertex-group column with the highest weight in that selection.
 This suits workflows where you switch vertices often to check the dominant influence bone.
@@ -405,7 +409,7 @@ When the selected column matches a bone, its `Location`, `Rotation` and `Scale` 
 | --- | --- |
 | `Normalize` | Normalizes the weight total of the selected vertices to 1.0. |
 | `Clean Decimals` | Rounds weight values to the configured number of digits. |
-| `Threshold Cleanup` | Zeroes weights below the threshold. |
+| `Threshold Cleanup` | Zeroes weights at or below the threshold. |
 | `Limit Influences` | Brings each vertex within the maximum influence count. |
 | `Fix Violations` | Applies normalize, decimals, threshold and influence-count settings together. |
 | `Unused` | Deletes unused vertex groups. |
@@ -413,7 +417,7 @@ When the selected column matches a bone, its `Location`, `Rotation` and `Scale` 
 
 - The `…` next to `Stepped` sets the step size.
 - Run in Object Mode, these act on every vertex of the object.
-- All of them preserve center-axis L/R symmetry.
+- They preserve editable center-axis L/R pairs that were already equal; intentionally asymmetric pairs remain asymmetric.
 
 The reference values come from [Auto-cleanup reference values](#auto-cleanup-reference-values).
 
@@ -445,6 +449,7 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 - Left-drag adds to the selected column.
 - `Ctrl + Left-drag` subtracts.
 - `Shift + Left-drag` temporarily smooths instead.
+- `Ctrl + Shift + Left-drag` spreads surrounding influences.
 - `Normal Amount` sets how much one stroke changes.
 - `Constant Paint` — avoids over-layering when the same vertex is hit repeatedly during one drag. Good for adding a precise amount.
 - `Stack Paint` — adds/subtracts `Normal Amount` every time the brush touches a vertex. Good for building up gradually.
@@ -460,6 +465,8 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 `Smoothing` blends the selected column with the surrounding vertices.
 
 - Left-drag smooths the weights around the cursor.
+- `Shift + Left-drag` smears the weights like a fingertip tool.
+- `Ctrl + Left-drag` spreads surrounding influences. `Ctrl` takes priority.
 - `Strength` controls how far values move toward their neighbours.
 - `Iterations` controls how many smoothing passes run.
 - When an ignored column is selected, only that ignored column is processed.
@@ -549,9 +556,10 @@ Without an armature, each object's own origin is used.
 
 Blends the weights of the selected vertices into their surroundings.
 
-- `Shift + Click` — boundary smoothing.
-- `Ctrl + Click` — repairs abnormal weights to match the unselected surroundings.
-- The `…` next to it opens the detail settings: method, smoothing strength, iterations, and the cleanup applied afterwards.
+- Plain click — smooths the selected vertices.
+- `Shift + Click` — automatically smooths the full weight range of the selected column plus one outer ring. The detail settings can limit this to selected vertices only.
+- `Ctrl + Click` — repairs abnormal weights using the unselected surroundings as the reference. `Ctrl` takes priority.
+- The `…` next to it opens the detail settings: range, method, iterations, and the cleanup applied afterwards.
 - The method can be `Fast`, `Surface` or `Volume`.
 
 ### Mirror
@@ -569,6 +577,10 @@ Left/right names such as `_L` / `_R` are swapped as well, and the L/R weights of
 
 - `Ctrl + Click` — opens the direction and whole-object mirror settings.
 - The `…` next to it opens the detail settings: mirror direction, reference space, search distance, center tolerance and the left/right word sets.
+- With direction set to `Auto`, Edit Mode uses the side of the actual mesh selection. If both sides are selected or the side cannot be determined, it does not use the active vertex or selection counts; it uses the direction in Mirror Details.
+- If the direction in Mirror Details is itself `Auto`, a mixed-side selection keeps the established per-destination-vertex Auto behavior.
+- On asymmetric geometry, adaptive matching can project the reflected position onto the source surface and interpolate the nearby triangle's weights. Exact symmetric points keep the fast nearest-vertex path, and adaptive matching can be disabled in the details.
+- `Balance Center L/R Weights` is on by default. Turning it off skips only center-vertex averaging.
 - Left/right word sets can also be configured in the add-on preferences.
 - Whole-object mirroring has a selected-only option.
 
@@ -621,6 +633,7 @@ Because it transfers per face rather than per vertex, results stay relatively cl
 
 The detail settings cover method, interpolation, Robust inpainting and finishing options.
 `Robust Weight Inpainting` fills in unmatched areas during the transfer.
+`Clothing Inner-Side Mode` uses source normals and a bounded distance to prioritize inner-shell candidates, then fills unmatched areas from destination topology. `Near Paste` also uses the saved Object Weight Copy interpolation, distance and clothing-inner settings.
 
 If a destination has no Armature modifier, one can be added automatically (on by default; it can be disabled in the Object Weight Copy settings).
 
@@ -721,7 +734,7 @@ The `…` next to it configures hue / saturation / value and whether materials a
 
 ## Multi-object editing
 
-When several meshes are in Edit Mode at once, the grid footer shows a multi-edit indicator (`複数編集: N obj`) and the vertices of all of them are handled together.
+When several meshes are in Edit Mode at once, the grid footer shows the current column, selected-vertex count and a multi-edit indicator (`N obj`), and the vertices of all objects are handled together.
 
 A `Sync Selection` button is also added to `Properties > Object Data > Vertex Groups`.
 When it is on, the vertex-group selection is synchronized across the objects being multi-edited.
@@ -730,14 +743,16 @@ When it is on, the vertex-group selection is synchronized across the objects bei
 
 ---
 
-## Dedicated Weight Editor window
+## Dedicated area / Weight Editor window
 
-The window icon in the tool header opens the same editor in a separate Blender window.
+Choose `ToPu Weight Editor` from Blender's normal editor-type selector to turn any area into a dedicated weight-editing area. The area is stored with its screen/workspace in the `.blend`, and its HUD display is restored when the file is opened.
 
-- It uses a lightweight Texture Node Editor as its drawing surface.
+- The GPU HUD provides the same operations as the 3D View version. `Clean View` hides the header, toolbar, sidebar and other editor chrome together; click it again to restore the previous layout.
+- Only one HUD is interactive at a time. Another `ToPu Weight Editor` area shows `Make This the Main Area`, allowing it to adopt the HUD. If no HUD is active, use `Open ToPu Weight Editor`.
+- The window icon in the tool header can also open/close the same dedicated area in a separate Blender window.
 - Blender and the operating system manage the window size and placement; adjust the GPU UI separately with the HUD scale button.
-- Its viewport display toggles (`Modifier`, `Rest`, `In Front`, `Overlay`, and so on) target the 3D View that opened it.
-- The `×` in the header closes the window.
+- Its viewport display toggles (`Modifier`, `Rest`, `In Front`, `Overlay`, and so on) target the 3D View that opened the dedicated window.
+- In the dedicated window, the `×` in the header closes the window.
 
 <!-- Screenshot: dedicated Weight Editor window -->
 
@@ -751,16 +766,17 @@ Open them with the `⚙` button in the GPU overlay, or from `Edit > Preferences 
 | --- | --- |
 | `Display Language` | `Auto` / `Japanese` / `English`. Auto follows Blender's language setting. |
 | `Display Settings` | Whether the GPU overlay button is shown in the tool header. |
-| `GPU Overlay UI Scale` | Separate scales for the `3D View HUD` and the `Dedicated Window HUD`. |
+| `GPU Overlay UI Scale` | Separate automatic and manual scales for the `3D View HUD` and the `Dedicated Area / Window HUD`. |
 | `GPU Overlay UI Style` | `Slightly Round UI Corners` — draws HUD elements with subtle rounded corners closer to Blender UI. |
 | `GPU Overlay Color Theme` | `Built-in Set` (20 palettes) and `User Sets`. Import / export of color presets. |
 | `GPU Overlay Preset Values` | Changes the values of the preset buttons. |
 | `Scroll Step` | Step sizes for `Ctrl + Wheel` and `Ctrl + Shift + Wheel`. |
 | Left/right word sets | Word pairs used to infer left/right names during mirroring. |
-| `Additional Shortcuts (Default OFF)` | Enables the optional shortcuts. |
+| `Additional Shortcuts` | Smooth Weights and Pick Influence are off by default; HUD-only bone picking is on by default. |
 | `Shortcut Settings` | Review and change the registered keymap items. |
+| `Bulk Weight and Mirror Debug` | Prints timing for Scroll, Slider, Preset and Apply, plus mirror source/destination details, to the console. Direct cell entry is not measured. |
 
-HUD scale accepts a custom value between `0.50` and `4.00`, stored in sync with the HUD scale buttons.
+`Auto` scale follows Blender's UI scale and the available drawing area. Turn Auto off to enter a manual value from `0.50` to `4.00`; it is stored in sync with the HUD scale buttons. In the 3D View, automatic corner resizing can shrink the HUD as far as `0.25` when necessary.
 
 <p align="left">
   <img width="432" height="1047" alt="Image" src="https://github.com/user-attachments/assets/5bac5b98-8968-4f9c-9abd-93796713896f" />
@@ -795,6 +811,7 @@ It reads or writes an external file only when the user explicitly chooses `Impor
 
 Some features intentionally modify the current blend file:
 
+- **ToPu Weight Editor areas/windows** store the dedicated-window marker and editor type in Blender Screen/Workspace data. No operating-system window position or runtime pointer is stored.
 - **Weight snapshots** are compressed and stored in Blender Text datablocks. Large snapshots increase the `.blend` file size.
 - **Bone-transform undo data** also creates internal Text datablocks, and obsolete anchors are removed automatically.
 - **Weight-color preview** creates a uniquely named, add-on-owned color attribute. Material slots are only replaced when `Replace Materials` is explicitly enabled.
