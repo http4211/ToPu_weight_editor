@@ -97,11 +97,17 @@ Switching the backend to `OpenGL` may improve it.
 
 ## Installation
 
-### 1. Install the ZIP
+### 1. Download
+
+[**⬇ Download ToPu Weight Editor (GitHub Releases)**](https://github.com/http4211/ToPu_weight_editor/releases)
+
+Open the Releases page and download the distribution ZIP from `Assets` under the latest version.
+
+### 2. Install the ZIP
 
 Open `Edit > Preferences > Add-ons`, choose `Install from Disk`, and select the distributed ZIP.
 
-### 2. Enable the add-on
+### 3. Enable the add-on
 
 Enable `ToPu:Weight Editor` in the add-on list.
 Two icon buttons are then added to the 3D View tool header.
@@ -123,6 +129,16 @@ Two icon buttons are then added to the 3D View tool header.
 
 The tool-header buttons can be hidden with `Show GPU Overlay Button in Tool Header` in the add-on preferences.
 
+### By switching an area
+
+You can also start the editor by changing any Blender area to the dedicated `ToPu Weight Editor` editor type.
+
+1. Open the **Editor Type** selector at the upper-left of any area.
+2. Choose `ToPu Weight Editor` from the editor list.
+3. If the HUD is already active somewhere else, click `Make This the Main Area` in the new area.
+
+The converted area is stored with its screen/workspace in the `.blend`. To restore the previous editor, use the same Editor Type selector and choose the 3D View or another editor.
+
 ### With the shortcut
 
 `Ctrl + W` toggles the GPU overlay by default.
@@ -137,7 +153,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 1. Select a mesh that is bound to an armature.
 2. Enter Edit Mode or Weight Paint Mode.
 3. Select the vertices you want to edit.
-4. Open the GPU overlay from the tool header icon or with `Ctrl + W`.
+4. Open the GPU overlay from the tool-header icon, with `Ctrl + W`, or by switching an area to `ToPu Weight Editor`.
 5. Turn on `Grid Display` in the overlay.
 6. Click a column header to choose the vertex group to edit.
 7. Adjust weights with cells, the slider, the value field, preset buttons or brushes.
