@@ -56,6 +56,11 @@ No external window and no extra UI library are used. Everything is drawn with Bl
 
 ## Features
 
+<p align="center">
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/a41b97bf-3498-440c-a7c0-42683ccf2585" />
+</p>
+
+
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
 - List selected vertices in a lightweight cell grid and adjust values while watching the 3D View
 - Intuitive editing through cells, slider, presets and brushes
@@ -126,8 +131,6 @@ Use `Ctrl + W` or `Esc` to close it.
 ---
 
 ## Quick start
-
-<img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/a41b97bf-3498-440c-a7c0-42683ccf2585" />
 
 https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
