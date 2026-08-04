@@ -129,6 +129,8 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 
 ## クイックスタート
 
+<img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/860738be-4d6e-4588-8930-3e91fd7d8ddc" />
+
 https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 1. アーマチュアにバインドされたメッシュを選択します。
