@@ -114,6 +114,12 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 ---
 
 ## 起動方法
+<p align="center">
+  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+</p>
+<p align="center">
+  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+</p>
 
 ### ツールヘッダーから起動
 
@@ -124,9 +130,7 @@ Blender の `編集 > プリファレンス > アドオン` を開き、`ディ�
 | アーマチュアアイコン | 3D ビュー上に GPU オーバーレイを表示 / 非表示 |
 | ウィンドウアイコン | 専用ウェイトエディタウィンドウを開く / 閉じる |
 
-<p align="center">
-  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
-</p>
+
 
 ツールヘッダーのボタンは、アドオンプリファレンスの `ツールヘッダーにGPUオーバーレイボタンを表示` で非表示にできます。
 
@@ -660,7 +664,8 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 <img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
 
-<img width="340" height="260" alt="Image" src="https://github.com/user-attachments/assets/fedcfce4-9335-4db3-9a95-fba6fbe8c92f" />
+<img width="438" height="332" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
+
 
 <p align="left">
   <img width="1406" height="958" alt="Image" src="https://github.com/user-attachments/assets/ecde6c2a-a6d8-4069-81aa-55582c799c53" />
