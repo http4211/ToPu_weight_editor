@@ -421,7 +421,7 @@ When the selected column matches a bone, its `Location`, `Rotation` and `Scale` 
 ## Cleanup
 
 <p align="left">
-  <img width="192" height="117" alt="Image" src="https://github.com/user-attachments/assets/13d54963-ecdb-4838-b3fe-1aef5015a16b" />
+  <img width="188" height="112" alt="image" src="https://github.com/user-attachments/assets/946e636f-8162-4b77-9f79-58ce49000510" />
 </p>
 
 | Button | Action |
