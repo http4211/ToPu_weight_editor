@@ -425,7 +425,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ## 整理
 
 <p align="left">
-  <img width="192" height="117" alt="Image" src="https://github.com/user-attachments/assets/13d54963-ecdb-4838-b3fe-1aef5015a16b" />
+  <img width="188" height="111" alt="image" src="https://github.com/user-attachments/assets/2b5f0b8b-ccc2-4990-9883-d3e8e2c873cb" />
 </p>
 
 | ボタン | 動作 |
