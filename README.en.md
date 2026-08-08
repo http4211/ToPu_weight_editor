@@ -115,6 +115,12 @@ Two icon buttons are then added to the 3D View tool header.
 ---
 
 ## Opening the editor
+<p align="center">
+  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+</p>
+<p align="center">
+  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+</p>
 
 ### From the tool header
 
@@ -123,9 +129,6 @@ Two icon buttons are then added to the 3D View tool header.
 | Armature icon | Show / hide the GPU overlay in the 3D View |
 | Window icon | Open / close the dedicated Weight Editor window |
 
-<p align="center">
-  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
-</p>
 
 The tool-header buttons can be hidden with `Show GPU Overlay Button in Tool Header` in the add-on preferences.
 
@@ -655,9 +658,9 @@ If a destination has no Armature modifier, one can be added automatically (on by
 
 ### Auto Weight
 
-<img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
+<img width="576" height="310" alt="image" src="https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393" />
 
-<img width="340" height="260" alt="Image" src="https://github.com/user-attachments/assets/fedcfce4-9335-4db3-9a95-fba6fbe8c92f" />
+<img width="433" height="326" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
 
 <p align="left">
   <img width="1406" height="958" alt="Image" src="https://github.com/user-attachments/assets/ecde6c2a-a6d8-4069-81aa-55582c799c53" />
