@@ -1,7 +1,8 @@
 # ToPu_weight_editor
 
 <p align="center">
-  <img width="591" height="651" alt="image" src="https://github.com/user-attachments/assets/6e99de70-2fb1-4dcf-acc1-f8b4eafee4ce" />
+  <img width="611" height="807" alt="image" src="https://github.com/user-attachments/assets/e69834b9-3d6d-47b2-b239-baccc06b948f" />
+
 </p>
 
 <p align="center">
