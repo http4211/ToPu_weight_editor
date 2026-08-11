@@ -614,6 +614,9 @@ This suits workflows where you switch vertices often to check the dominant influ
 
 <img width="157" height="28" alt="image" src="https://github.com/user-attachments/assets/1abf4eb8-5e6b-46e5-8fb4-13e5b1e48628" />
 
+<img width="399" height="195" alt="image" src="https://github.com/user-attachments/assets/997d4dac-03f2-4866-a578-2b15df0007d8" />
+
+
 <p align="left">
   <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
 </p>
