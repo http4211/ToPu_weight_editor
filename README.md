@@ -163,6 +163,11 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 ### ヘッダー行
 
+<p align="left">
+  <img width="500" height="33" alt="image" src="https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc" />
+</p>
+
+
 | 表示 | 動作 |
 | --- | --- |
 | `ドラッグで移動` | ドラッグで GPU オーバーレイの位置を移動します。 |
@@ -178,6 +183,10 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 <!-- スクリーンショット: ヘッダー行（移動ハンドル〜閉じるボタン） -->
 ## ウェイトスナップショット
+
+<p align="left">
+  <img width="69" height="28" alt="image" src="https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80" />
+</p>
 
 ヘッダー行の `▣` `↶` `🗑` で、ウェイトの一時保存と復元ができます。
 
@@ -215,7 +224,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ## 編集
 
 <p align="left">
-  <img width="98" height="109" alt="Image" src="https://github.com/user-attachments/assets/b5a71567-3cdc-4ca8-b371-c59428e4c4a8" />
+  <img width="97" height="110" alt="image" src="https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de" />
 </p>
 
 `編集` セクションには、見出し行の `x-` / `x+` と、`スムーズ化` / `ミラー実行` / `骨作成` / `レストポーズ適用` があります。
@@ -609,6 +618,7 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 ### ロック / 無視 / 強制表示
 
 <img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
+<img width="393" height="187" alt="image" src="https://github.com/user-attachments/assets/fccbf13f-6dc1-4dc8-97e1-cae4aaf6f785" />
 
 <p align="left">
   <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
@@ -623,13 +633,16 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 ## グリッド操作 / 下部タブ
 
 ### ウェイトグリッド
+<p align="center">
+  <img width="568" height="469" alt="image" src="https://github.com/user-attachments/assets/40de6855-7302-4185-94f1-ff64e53639f7" />
+</p>
 
 **列ヘッダー**
 
 <p align="center">
   <img width="202" height="122" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
 
-  <img width="606" height="695" alt="image" src="https://github.com/user-attachments/assets/e6d70e61-65d4-4f3b-a29d-7550103f1233" />
+  <img width="425" height="33" alt="image" src="https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a" />
 </p>
 
 - 列ヘッダーをクリックすると、その列が選択列になります。
@@ -675,9 +688,12 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 <p align="center">
   <img src="README_images/cell_edit.gif" alt="セル編集" width="720">
 </p>
-### 表示タブ
 
-<img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
+**表示タブ**
+
+<p align="left">
+  <img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
+</p>
 
 <p align="left">
   <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
