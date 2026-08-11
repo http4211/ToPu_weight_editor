@@ -75,11 +75,6 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - A **ToPu Weight Editor area** available as a Blender editor type, plus a **dedicated Weight Editor window** separate from the 3D View
 - Japanese / English UI (follows Blender's language setting, or can be forced)
 
-### Center L/R balancing in mirror and cleanup
-
-With the default settings, selected-vertex and whole-object mirroring automatically balance the L/R weights of vertices on the center axis. Turn off `Balance Center L/R Weights` in Mirror Details to skip only that balancing step.
-`Normalize`, `Clean Decimals`, `Threshold Cleanup`, `Limit Influences` and `Fix Violations` preserve an editable center-axis L/R pair when it was equal before the operation. Intentionally asymmetric pairs remain asymmetric. Decimal rounding and influence-limit selection treat an equal L/R pair as one symmetric unit.
-
 ---
 ## Requirements
 
@@ -271,6 +266,12 @@ Left/right names such as `_L` / `_R` are swapped as well, and the L/R weights of
 - Left/right word sets can also be configured in the add-on preferences.
 - Whole-object mirroring has a selected-only option.
 
+#### Center L/R Balancing
+
+With the default settings, selected-vertex and whole-object mirroring automatically balance the L/R weights of vertices on the center axis. Turn off `Balance Center L/R Weights` in Mirror Details to skip only that balancing step.
+
+`Normalize`, `Clean Decimals`, `Threshold Cleanup`, `Limit Influences` and `Fix Violations` preserve an editable center-axis L/R pair when it was equal before the operation. Intentionally asymmetric pairs remain asymmetric. Decimal rounding and influence-limit selection treat an equal L/R pair as one symmetric unit.
+
 ### Bone Creation
 
 `Bone Creation` creates a bone chain from edge loops or an edge ring selected in Mesh Edit Mode.
@@ -353,15 +354,19 @@ The detail settings switch between Blender's built-in automatic weights and the 
 
 | Item | Description |
 | --- | --- |
-| `Voxel Resolution` | Voxels along the longest axis. Controls quality, speed and memory. |
-| `Diffuse Loops` | Total diffusion passes are resolution × loops. Higher is smoother but heavier. |
-| `Diffuse Falloff` | Higher values reduce distant bone influence and create tighter, more local weights. |
-| `Smoothing Passes` | Post-process smoothing passes. Higher values spread the blend farther. |
-| `Sample Rays` | Ray samples used for solidification. More samples are more robust on non-watertight meshes. |
-| `Detect Solidify` | Solidifies thin outfits and shells. When on, all bones must be inside the character volume. |
-| `Use Half CPU Cores` | Compatibility setting that keeps CPU usage lower. |
+| `Voxel Heat Resolution` | Number of voxels along the longest axis. Higher values preserve more detail but increase processing time and memory use. |
+| `Diffuse Loops` | Total diffusion passes are resolution × loops. Higher values propagate heat more smoothly but take longer. |
+| `Occupied Cell Dilation` | Expands surface voxels to prevent broken propagation on thin outfits and non-watertight meshes. Set it to `0` if weights leak across touching parts. |
+| `Diffuse Falloff` | Higher values reduce distant-bone contribution more strongly, producing tighter and more local weights. |
+| `Distance Falloff` | Controls how sharply voxel distance is converted into initial heat. Higher values favor nearby bones more strongly. |
+| `Detect Solidify` | Gives thin outfits and shells volume. When enabled, occupied-cell dilation is at least 1 and all bones must be inside the character volume. |
+| `Solid Votes` | Number of axis-inside tests required to classify an interior cell. `2` is majority voting, `1` is broader and `3` is stricter. |
+| `Maximum Influences` | Maximum number of bones assigned to one vertex. The default is `4`. |
+| `Smoothing` / `Smoothing Passes` | Smooths boundaries along real mesh edges after automatic weighting. The defaults are ON and `5` passes; higher values spread the blend farther. |
+| `Range Proxy (Object)` | Uses visible meshes only to correct occupied cells, radii and calculation range. Weights are still written only to selected meshes. The default is OFF. |
+| `Range Proxy (Edit)` | For partial weighting, uses unselected vertices and meshes sharing the armature as calculation proxies. Weights are still written only to selected vertices. The default is ON. |
 
-The method is heavy, but because it voxelizes the space regardless of mesh front/back faces, it tends to produce clean weights even on complex models.
+Voxel Heat Skinning generates weights from a volumetric voxel distance field and heat diffusion, with guards that suppress leakage into nearby parts. Processing time depends especially on resolution, `Diffuse Loops`, occupied-cell dilation and target vertex count, and Blender may remain unavailable until the operation finishes.
 
 **Use Specified Bones Only**
 
