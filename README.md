@@ -363,13 +363,12 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 ### 自動ウェイト
 
-<img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
-
-<img width="438" height="332" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
-
-
 <p align="left">
-  <img width="1406" height="958" alt="Image" src="https://github.com/user-attachments/assets/ecde6c2a-a6d8-4069-81aa-55582c799c53" />
+
+  <img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
+
+  <img width="438" height="332" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
+
 </p>
 
 `自動ウェイト` は、選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。
