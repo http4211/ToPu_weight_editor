@@ -547,6 +547,10 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 
 ### ウェイトカラープレビュー
 
+<p align="center">
+  <img width="332" height="259" alt="image" src="https://github.com/user-attachments/assets/c92a022d-92b4-486b-990c-a56aa7ea6098" />
+</p>
+
 表示補助行の `マテリ` で、ウェイトをカラー表示するプレビューを切り替えます。
 横の `…` から、色相 / 彩度 / 輝度と、マテリアル置換のオン / オフを設定できます。
 
