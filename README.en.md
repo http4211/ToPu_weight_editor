@@ -110,7 +110,7 @@ Two icon buttons are then added to the 3D View tool header.
   <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
 </p>
 <p align="center">
-  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+  <img width="230" height="28" alt="image" src="https://github.com/user-attachments/assets/4303fa20-bf9e-4f50-bdae-3d7d5c8e28ea" />
 </p>
 
 ### From the tool header
@@ -612,7 +612,7 @@ This suits workflows where you switch vertices often to check the dominant influ
 
 ### Lock / Ignore / Force Show
 
-<img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
+<img width="157" height="28" alt="image" src="https://github.com/user-attachments/assets/1abf4eb8-5e6b-46e5-8fb4-13e5b1e48628" />
 
 <p align="left">
   <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
@@ -641,7 +641,7 @@ This suits workflows where you switch vertices often to check the dominant influ
 
 **L / Vertex / Sum**
 
-<img width="149" height="30" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
+<img width="111" height="33" alt="image" src="https://github.com/user-attachments/assets/7af6fa19-7275-46ae-972a-25e2ab45ceb2" />
 
 <p align="center">
   <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
@@ -677,11 +677,13 @@ This suits workflows where you switch vertices often to check the dominant influ
 <p align="center">
   <img src="README_images/cell_edit.gif" alt="Cell editing" width="720">
 </p>
+
 ### Column tabs
 
-<img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
-
 <p align="left">
+
+  <img width="562" height="31" alt="image" src="https://github.com/user-attachments/assets/9a6f941e-05c7-4855-812e-7f618001c662" />
+  
   <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
 </p>
 
