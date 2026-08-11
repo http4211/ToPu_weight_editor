@@ -671,17 +671,20 @@ GPU オーバーレイから、ビューポート上で使う TPWE 独自のウ�
 ## グリッド操作 / 下部タブ
 
 ### ウェイトグリッド
-<p align="center">
-  <img width="568" height="469" alt="image" src="https://github.com/user-attachments/assets/40de6855-7302-4185-94f1-ff64e53639f7" />
-</p>
+
 
 **列ヘッダー**
 
-<p align="center">
-  <img width="202" height="122" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
 
   <img width="425" height="33" alt="image" src="https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a" />
+
+<p align="center">
+  
+  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
+  
 </p>
+
+  <img width="202" height="122" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
 
 - 列ヘッダーをクリックすると、その列が選択列になります。
 - `Shift + 列クリック` で、その頂点グループに値が入っている頂点をまとめて選択します。
