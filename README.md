@@ -297,6 +297,10 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 ### 骨作成
 
+<p align="left">
+  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+</p>
+
 `骨作成` は、メッシュの編集モードで選択した辺ループまたは辺リングから骨列を作成する機能です。
 
 - 通常クリックでは、選択辺を自動判定したあと、実行前の確認ダイアログを開きます。
