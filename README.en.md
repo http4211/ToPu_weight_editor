@@ -209,7 +209,7 @@ When the selected column matches a bone, its `Location`, `Rotation` and `Scale` 
 ## Edit
 
 <p align="left">
-  <img width="98" height="109" alt="Image" src="https://github.com/user-attachments/assets/b5a71567-3cdc-4ca8-b371-c59428e4c4a8" />
+  <img width="107" height="114" alt="image" src="https://github.com/user-attachments/assets/c63dd83d-edeb-476b-8a78-c8a682264b16" />
 </p>
 
 The `Edit` section holds `x-` / `x+` on its title row, plus `Smooth Weights`, `Mirror`, `Bone Creation` and `Apply Rest Pose`.
@@ -230,7 +230,7 @@ Without an armature, each object's own origin is used.
 
 ### Smooth Weights
 
-<img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
+<img width="299" height="230" alt="image" src="https://github.com/user-attachments/assets/df0b567d-c156-4139-9d88-2e4b572a6dcd" />
 
 <p align="left">
   <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
@@ -246,9 +246,9 @@ Blends the weights of the selected vertices into their surroundings.
 
 ### Mirror
 
-<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
+<img width="478" height="454" alt="image" src="https://github.com/user-attachments/assets/ab59df15-6f02-46ab-9c79-0ed322987407" />
 
-<img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
+<img width="339" height="288" alt="image" src="https://github.com/user-attachments/assets/ba82830e-3339-474e-87a3-989f86abf288" />
 
 <p align="left">
   <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
@@ -274,6 +274,10 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 
 ### Bone Creation
 
+<p align="left">
+  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+</p>
+
 `Bone Creation` creates a bone chain from edge loops or an edge ring selected in Mesh Edit Mode.
 
 - A regular click analyzes the selected edges and opens a confirmation dialog before creating anything.
@@ -298,7 +302,8 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 ---
 ## Weight Copy
 
-<img width="165" height="108" alt="Image" src="https://github.com/user-attachments/assets/ef71a5b2-b587-4898-bbdc-6eb6a670ac43" />
+<img width="189" height="113" alt="image" src="https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1" />
+
 
 <p align="left">
   <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
@@ -340,10 +345,6 @@ If a destination has no Armature modifier, one can be added automatically (on by
 
 <img width="433" height="326" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
 
-<p align="left">
-  <img width="1406" height="958" alt="Image" src="https://github.com/user-attachments/assets/ecde6c2a-a6d8-4069-81aa-55582c799c53" />
-</p>
-
 `Auto Weight` binds the selected meshes to an armature and assigns automatic weights.
 It can keep existing parent relationships, and linked objects can be localized automatically.
 It can also weight only the part covered by the current vertex selection.
@@ -381,7 +382,7 @@ When `Use Specified Bones Only` is on, automatic weighting is restricted to the 
 ## Brushes
 
 <p align="left">
-  <img width="192" height="111" alt="Image" src="https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3" />
+  <img width="187" height="111" alt="image" src="https://github.com/user-attachments/assets/64ef486e-415f-48ef-8e13-97b9cac42136" />
 </p>
 
 The overlay can start the add-on's own weight brushes, used directly in the viewport.
@@ -393,7 +394,7 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 
 ### Normal brush
 
-<img width="436" height="27" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
+<img width="539" height="29" alt="image" src="https://github.com/user-attachments/assets/9d3ade5f-ecc5-4456-babc-703c9596b5ec" />
 
 <p align="left">
   <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
@@ -411,7 +412,7 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 
 ### Smoothing brush
 
-<img width="625" height="29" alt="Image" src="https://github.com/user-attachments/assets/52c425a0-aeec-4080-9798-5170c5fdb615" />
+<img width="787" height="29" alt="image" src="https://github.com/user-attachments/assets/47dadabd-d050-464c-95d4-e702ca28b778" />
 
 <p align="left">
   <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
@@ -429,7 +430,7 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 
 ### Gradient brush
 
-<img width="640" height="24" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
+<img width="707" height="26" alt="image" src="https://github.com/user-attachments/assets/ea890ba2-f618-4a65-98df-af87c8946b0c" />
 
 <p align="left">
   <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
@@ -448,7 +449,7 @@ The tool header exposes size, selection mask, normal amount, smoothing strength,
 
 ### Lasso brush
 
-<img width="384" height="27" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
+<img width="407" height="28" alt="image" src="https://github.com/user-attachments/assets/a9f066a5-c5c9-4e4d-9bf8-93cdc9dc093d" />
 
 <p align="left">
   <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
@@ -503,7 +504,7 @@ The reference values come from [Auto-cleanup reference values](#auto-cleanup-ref
 ---
 ## Display helpers
 
-<img width="510" height="24" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
+<img width="524" height="24" alt="image" src="https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020" />
 
 <p align="left">
   <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
@@ -527,7 +528,7 @@ The reference values come from [Auto-cleanup reference values](#auto-cleanup-ref
 ### Auto-cleanup reference values
 
 <p align="left">
-<img width="519" height="26" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
+  <img width="512" height="24" alt="image" src="https://github.com/user-attachments/assets/610329e6-337a-4cb1-aea2-13453394c95f" />
 </p>
 
 `Normalize`, `Decimals`, `Threshold` and `Influence Count`. The values set here are the reference used by the [Cleanup](#cleanup) buttons.
@@ -542,7 +543,7 @@ The reference values come from [Auto-cleanup reference values](#auto-cleanup-ref
 
 ### Preset buttons
 
-<img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
+<img width="492" height="101" alt="image" src="https://github.com/user-attachments/assets/11f48284-8a22-4133-b3e9-a97db0e69445" />
 
 <img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
 
@@ -556,7 +557,7 @@ In `Add` / `Add%` mode, `Shift + Click` applies the negative value.
 Preset values can be changed in the add-on preferences.
 ### Input mode, slider and value field
 
-<img width="431" height="156" alt="Image" src="https://github.com/user-attachments/assets/3ff92ec4-e965-47e9-a535-421889cac398" />
+<img width="494" height="158" alt="image" src="https://github.com/user-attachments/assets/c3a9a157-9ab5-4a09-a081-183b39b28a99" />
 
 <img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
 
@@ -584,7 +585,7 @@ Usage:
 
 ### Pick Bone / follow the peak column
 
-<img width="339" height="195" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
+<img width="338" height="197" alt="image" src="https://github.com/user-attachments/assets/3f38bdb8-8fc5-48c9-ae62-89f9627bb8ee" />
 
 <img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
 
@@ -698,13 +699,14 @@ Per-tab options:
 - `Hidden Words` — hides specified words from the group-name display in the grid to make names shorter. Actual vertex group names are not changed.
 ### Column right-click weight transfer
 
-<img width="517" height="246" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
-
-<img width="205" height="125" alt="Image" src="https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db" />
-
 <p align="left">
-  <img width="571" height="1024" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
+  
+  <img width="515" height="246" alt="image" src="https://github.com/user-attachments/assets/08b1ca77-55aa-438a-bb2d-dab1ee1afd59" />
+
+  <img width="577" height="835" alt="image" src="https://github.com/user-attachments/assets/a38e5d23-7c4a-4102-971a-b54873d67845" />
+
 </p>
+
 
 Right-clicking a column header in the GPU overlay opens the vertex-group transfer menu.
 
@@ -777,7 +779,12 @@ Open them with the `⚙` button in the GPU overlay, or from `Edit > Preferences 
 `Auto` scale follows Blender's UI scale and the available drawing area. Turn Auto off to enter a manual value from `0.50` to `4.00`; it is stored in sync with the HUD scale buttons. In the 3D View, automatic corner resizing can shrink the HUD as far as `0.25` when necessary.
 
 <p align="left">
-  <img width="432" height="1047" alt="Image" src="https://github.com/user-attachments/assets/5bac5b98-8968-4f9c-9abd-93796713896f" />
+  
+  <img width="600" height="1113" alt="image" src="https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71" />
+
+  <img width="590" height="359" alt="image" src="https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30" />
+
+
 </p>
 
 <!-- Screenshot: color theme settings and UI scale settings -->
