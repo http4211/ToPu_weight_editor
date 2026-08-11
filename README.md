@@ -308,7 +308,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ---
 ## ウェイトコピー
 
-<img width="165" height="108" alt="Image" src="https://github.com/user-attachments/assets/ef71a5b2-b587-4898-bbdc-6eb6a670ac43" />
+<img width="152" height="109" alt="image" src="https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5" />
 
 <p align="left">
   <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
