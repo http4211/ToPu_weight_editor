@@ -55,7 +55,7 @@ No external UI framework or extra Python package is used. The add-on runs with B
 ## Features
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/a2a0c44a-340a-4d4b-856b-fca37bce31dd" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/dff69772-33ea-47ba-b2e9-2990c6e058fb" />
 </p>
 
 
