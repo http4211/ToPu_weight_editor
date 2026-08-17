@@ -14,7 +14,7 @@ Based on Softimage-style weight editing, it puts numeric weight editing, normali
 
 No external UI framework or extra Python package is used. The add-on runs with Blender's built-in GPU drawing and Blender-native areas/windows.
 
-> **This document describes version 1.5.121.**
+> **This document describes version 1.5.155.**
 > The legacy N-panel (sidebar) and the quick Pie Menu that existed up to the 1.4 series have been removed; all operations now live in the GPU overlay.
 > The overlay shortcut also changed from `W` to `Ctrl + W`.
 
@@ -26,6 +26,7 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Opening the editor](#opening-the-editor)
+  - [Dedicated area / Weight Editor window](#dedicated-area--weight-editor-window)
 - [Quick start](#quick-start)
 - [GPU overlay](#gpu-overlay)
   - [Header row](#header-row)
@@ -37,14 +38,13 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - [Brushes](#brushes)
 - [Cleanup](#cleanup)
 - [Display helpers](#display-helpers)
+  - [Weight-color preview](#weight-color-preview)
 - [Edit Settings](#edit-settings)
 - [Presets, Input & Apply](#presets-input--apply)
 - [Special Group Selection](#special-group-selection)
 - [Column State & Visibility](#column-state--visibility)
 - [Grid Controls & Bottom Tabs](#grid-controls--bottom-tabs)
-- [Weight-color preview](#weight-color-preview)
 - [Multi-object editing](#multi-object-editing)
-- [Dedicated area / Weight Editor window](#dedicated-area--weight-editor-window)
 - [Add-on preferences](#add-on-preferences)
 - [Shortcuts](#shortcuts)
 - [Changes made to the blend file](#changes-made-to-the-blend-file)
@@ -62,12 +62,13 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
 - Save and restore named weight snapshots inside the blend file
 - Pick bones and edit bone transforms
-- Smooth Weights, Mirror, Bone Creation and Apply Rest Pose
-- Create a bone chain from selected edge loops or an edge ring, then readjust its count and direction with `F9`
+- Smooth Weights, Mirror and Apply Rest Pose
+- Create bones from selected edges and automatically assign weights using only the newly created bones
 - Vertex copy/paste, nearest transfer, object-to-object transfer and vertex-group transfer
 - Two automatic weighting methods: Blender's built-in automatic weights and a dedicated voxel diffusion method (Voxel Heat Skinning)
 - Four dedicated weight brushes: Normal, Smoothing, Gradient and Lasso
 - Normalize, Clean Decimals, Limit Influences, Threshold Cleanup, Fix Violations, Unused cleanup and Stepped
+- Choose highest-weight or hierarchy-aware branch balancing for influence-count cleanup
 - Bone highlighting, weight-color preview and display-helper toggles
 - Intuitive numeric editing through cells, the slider and presets
 - List selected vertices in a lightweight cell grid and adjust values while watching the 3D View
@@ -138,6 +139,19 @@ The converted area is stored with its screen/workspace in the `.blend`. To resto
 `Ctrl + W` toggles the GPU overlay by default.
 Use `Ctrl + W` or `Esc` to close it.
 
+### Dedicated area / Weight Editor window
+
+Choose `ToPu Weight Editor` from Blender's normal editor-type selector to turn any area into a dedicated weight-editing area. The area is stored with its screen/workspace in the `.blend`, and its HUD display is restored when the file is opened.
+
+- The GPU HUD provides the same operations as the 3D View version. `Clean View` hides the header, toolbar, sidebar and other editor chrome together; click it again to restore the previous layout.
+- Only one HUD is interactive at a time. Another `ToPu Weight Editor` area shows `Make This the Main Area`, allowing it to adopt the HUD. If no HUD is active, use `Open ToPu Weight Editor`.
+- The window icon in the tool header can also open/close the same dedicated area in a separate Blender window.
+- Blender and the operating system manage the window size and placement; adjust the GPU UI separately with the HUD scale button.
+- Its viewport display toggles (`Modifier`, `Rest`, `In Front`, `Overlay`, and so on) target the 3D View that opened the dedicated window.
+- In the dedicated window, the `×` in the header closes the window.
+
+<!-- Screenshot: dedicated Weight Editor window -->
+
 ---
 ## Quick start
 
@@ -162,7 +176,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 | `Drag to Move` | Drag to move the GPU overlay. |
 | `Grid Display` | Toggles grid display and realtime update together. |
 | `▣` | Save all weights of the target object under a name. |
-| `↶` | Restore all weights of the target object from a saved snapshot. |
+| `↶` | Restore from a snapshot: the whole target in Object Mode, or selected vertices in Edit / Weight Paint Mode. |
 | `🗑` | Delete an unnecessary saved snapshot from the list. |
 | `⚙` | Open this add-on's preferences. |
 | `AUTO ×1` | Cycles `Auto` → `×1` → `×1.5` → `×2`. `Shift + Click` lets you enter a custom scale from `0.50` to `4.00`. |
@@ -176,12 +190,15 @@ The 3D View HUD scale and the dedicated area/window HUD scale are stored separat
 `▣`, `↶` and `🗑` in the header row provide temporary weight storage and restoration.
 
 - `▣` — save all weights of the current target object under a name.
-- `↶` — restore all weights of the target object from a saved snapshot.
+- `↶` — restore from the saved list. Object Mode restores the whole target; Edit and Weight Paint modes restore selected vertices.
 - `🗑` — delete an unnecessary saved snapshot; single and bulk deletion are both supported.
 
 Snapshots are compressed and stored in Blender Text datablocks inside the blend file.
 Large snapshots increase the `.blend` file size.
-Restoring requires the vertex count to match the count at save time.
+
+- The same saved object with the same vertex count is restored directly by vertex index.
+- A different object or topology uses the saved world-space vertices, normals and surface information for spatial transfer. Interpolation, distance, Robust Weight Inpainting, influence limiting and boundary smoothing follow the current `Object Weight Copy` detail settings.
+- Snapshots made by older versions remain supported through their saved vertex positions.
 
 <!-- Screenshot: snapshot save / restore dialogs -->
 
@@ -265,6 +282,8 @@ Left/right names such as `_L` / `_R` are swapped as well, and the L/R weights of
 - `Balance Center L/R Weights` is on by default. Turning it off skips only center-vertex averaging.
 - Left/right word sets can also be configured in the add-on preferences.
 - Whole-object mirroring has a selected-only option.
+- If the opposite vertex group is missing but the corresponding opposite bone exists, Mirror creates only the required group automatically. If no opposite bone exists, or the source is a non-deform group, a dialog lists the required pairs and lets you create them and continue or skip those mappings.
+- Automatic group creation preserves the TPWE selected column, Blender active vertex group and horizontal grid position.
 
 #### Center L/R Balancing
 
@@ -278,13 +297,17 @@ With the default settings, selected-vertex and whole-object mirroring automatica
   <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
 </p>
 
-`Bone Creation` creates a bone chain from edge loops or an edge ring selected in Mesh Edit Mode.
+`Bone Creation` creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode.
 
-- A regular click analyzes the selected edges and opens a confirmation dialog before creating anything.
-- The confirmation dialog lets you review or change the bone count, target, bone name, connection, deform use, roll reference, post-creation mode and `Reverse Direction`.
-- `Shift + Click` opens `Bone Creation Settings`, where you can set the generation method, automatic or fixed bone count, and a new or existing target armature.
-- It supports multiple closed loops, open edge paths, a single loop's normal direction and chains through edge-ring centers.
-- After creation, use the `F9` panel to readjust the bone count and `Reverse Direction`.
+- A regular click analyzes the selection and opens a confirmation dialog before creating anything.
+- Supported selections include centers of multiple closed loops, a selected-edge path, a single closed loop's normal direction, edge-ring centers, multiple open paths and branching edge networks. Use `Auto Detect` or choose a generation method explicitly.
+- The last-selected active edge determines the creation direction. For an ordinary chain, the loop or path containing that edge becomes the leading side (the chain tip), so select the edge you want at the front last. Multiple open paths and branches use that active edge or path as their common direction reference.
+- Branches are detected automatically. When one is found, the confirmation dialog and `F9` expose both `Bone Count` and `Branch Count`, while preserving endpoints and junctions.
+- For ordinary chains, the confirmation dialog and `F9` adjust `Bone Count` and `Reverse Direction`.
+- The confirmation dialog also controls Auto Weights, target, armature / bone naming, connection, deform use, roll reference and post-creation mode. If no editable existing armature is available, the target switches to `New Armature` automatically.
+- `Ctrl + Click` opens `Bone Creation Settings` for generation method, auto-weight method, replacement of existing weights, target, naming, connection, roll and post-creation defaults.
+- With `Auto Weights` enabled, Blender Built-in or Voxel Heat Skinning weights the target region using only the bones created by that run. `Replace Existing Weights` clears existing deform-bone weights from the destination armature on selected vertices, while preserving non-bone groups.
+- Multiple open paths are normally solved independently. If they topologically bound the same mesh strip, intermediate unselected vertices are included even when the paths are several edge rows apart, and all related generated chains solve that strip together. Unrelated paths remain selected-vertex-only.
 
 ### Apply Rest Pose
 
@@ -350,6 +373,7 @@ It can keep existing parent relationships, and linked objects can be localized a
 It can also weight only the part covered by the current vertex selection.
 
 The detail settings switch between Blender's built-in automatic weights and the dedicated voxel diffusion method (Voxel Heat Skinning).
+After the operation, the target influence list, TPWE selected column, Blender active vertex group and `Bone Hi` display are synchronized immediately.
 
 **Main Voxel Heat Skinning settings**
 
@@ -365,7 +389,7 @@ The detail settings switch between Blender's built-in automatic weights and the 
 | `Maximum Influences` | Maximum number of bones assigned to one vertex. The default is `4`. |
 | `Smoothing` / `Smoothing Passes` | Smooths boundaries along real mesh edges after automatic weighting. The defaults are ON and `5` passes; higher values spread the blend farther. |
 | `Range Proxy (Object)` | Uses visible meshes only to correct occupied cells, radii and calculation range. Weights are still written only to selected meshes. The default is OFF. |
-| `Range Proxy (Edit)` | For partial weighting, uses unselected vertices and meshes sharing the armature as calculation proxies. Weights are still written only to selected vertices. The default is ON. |
+| `Range Proxy (Edit)` | For partial weighting, uses unselected vertices and meshes sharing the armature as calculation proxies. Weights are still written only to selected vertices. The default is OFF; enable it only when surrounding geometry is needed for the calculation. |
 
 Voxel Heat Skinning generates weights from a volumetric voxel distance field and heat diffusion, with guards that suppress leakage into nearby parts. Processing time depends especially on resolution, `Diffuse Loops`, occupied-cell dilation and target vertex count, and Blender may remain unavailable until the operation finishes.
 
@@ -376,6 +400,7 @@ When `Use Specified Bones Only` is on, automatic weighting is restricted to the 
 - The same list applies to both Blender's built-in automatic weights and Voxel Heat Skinning, in Object Mode and Edit Mode.
 - `Get Selected Bones` captures the bone selection from Edit, Pose or Object Mode.
 - `All` / `None` buttons and a compact bone checklist let you adjust the list.
+- `Enabled First` is on by default and groups enabled bones at the top. Turn it off to restore the armature's original order.
 - Explicitly selected bones override deform-bone and excluded-keyword filtering.
 
 ---
@@ -490,7 +515,7 @@ Turning `Mask` on restricts the brush to the currently selected vertices.
 | `Normalize` | Normalizes the weight total of the selected vertices to 1.0. |
 | `Clean Decimals` | Rounds weight values to the configured number of digits. |
 | `Threshold Cleanup` | Zeroes weights at or below the threshold. |
-| `Limit Influences` | Brings each vertex within the maximum influence count. |
+| `Limit Influences` | Brings each vertex within the maximum influence count. `Influence Cleanup Settings` controls which influences are retained. |
 | `Fix Violations` | Applies normalize, decimals, threshold and influence-count settings together. |
 | `Unused` | Deletes unused vertex groups. |
 | `Stepped` | Quantizes weights to a fixed step while keeping each vertex total. Remainders that do not fit the step are left on editable influences. |
@@ -514,13 +539,26 @@ The reference values come from [Auto-cleanup reference values](#auto-cleanup-ref
 - `Rest` — switches the target armature between Pose Position and Rest Position.
 - `In Front` — toggles In Front display for the armatures related to the target mesh.
 - `Overlay` — toggles Blender's Vertex Group Weights display.
-- `Bone Hi` — highlights the bone matching the selected column with the add-on's own overlay, in Edit and Weight Paint Mode only.
+- `Bone Hi` — highlights the bone matching Blender's active vertex group, falling back to the TPWE selected column, in Edit and Weight Paint Mode only. If the name exists in several related armatures, every matching bone is highlighted. Its enabled state is restored after restarting Blender or loading the `.blend`.
 - `Material` — toggles the [weight-color preview](#weight-color-preview).
 - The `…` next to `Material` opens the preview's color and material-replacement settings.
 
 <p align="center">
   <img src="README_images/display_tools.gif" alt="Display helpers" width="720">
 </p>
+
+### Weight-color preview
+
+`Material` in the display helper row toggles a preview that shows weights as colors.
+The `…` next to it configures hue / saturation / value and whether materials are replaced.
+
+- The preview creates a uniquely named, add-on-owned color attribute. It never overwrites or deletes a same-named user attribute.
+- `Replace Materials` is off by default. When explicitly enabled, it may temporarily replace material slots, and it restores the slot order, DATA/OBJECT links, per-object overrides, the active slot and per-face material assignments when the preview is disabled.
+- On a mesh datablock shared by several objects, material replacement is skipped and viewport color display is used instead, so the other objects are not changed.
+
+> The `Material` preview is heavy; it is not recommended for constant use.
+
+<!-- Screenshot: weight-color preview and its detail settings -->
 
 ---
 ## Edit Settings
@@ -535,6 +573,14 @@ The reference values come from [Auto-cleanup reference values](#auto-cleanup-ref
 
 - Checked items are applied automatically whenever the add-on changes a value.
 - Use the `−` / `+` buttons, or type into the value field, to change the reference value.
+- The `…` attached to `Influence Count` opens `Influence Cleanup Settings`.
+
+**Influence Cleanup Settings**
+
+- `Consider Bone Hierarchy` (default) follows branches below the nearest common parent. When the limit has room, it retains at least one influence from each active branch and returns removed weight to a retained bone in the same branch when possible. Disconnected chains use their top-level roots, and unparented bones are treated as independent branches.
+- `Prefer Weight Values` keeps the highest values first, matching the legacy behavior.
+- `Similar Weight Range` sets the maximum individual difference that the parent/child path may reorder inside the same branch. Groups without a matching bone hierarchy safely fall back to weight priority.
+- The selected method is shared by direct cell input, scrolling, presets, Apply, sliders, smoothing, every brush, `Limit Influences`, `Fix Violations` and post-transfer inpainting. All related Armature modifiers are considered.
 
 > Automatic cleanup is not guaranteed to catch everything, so running `Fix Violations` as a final check is recommended.
 
@@ -593,7 +639,7 @@ Usage:
   <img width="1218" height="758" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
 </p>
 
-`Pick Bone` lets you click a bone in the viewport to select the vertex-group column with that bone's name.
+`Pick Bone` lets you click a bone in the viewport to select the vertex-group column with that bone's name. If the target mesh has several Armature modifiers, candidates are gathered from every related armature and the globally nearest visible bone is used.
 
 - While the GPU overlay is open, `Alt + Right Click` also starts bone picking by default.
 - `Shift + Click` on the `Pick Bone` button toggles that `Alt + Right Click` shortcut on and off.
@@ -696,6 +742,8 @@ The tabs below the grid choose which columns are shown.
 - `Deform` — only deform vertex groups whose names match a bone.
 - `Other` — only non-bone vertex groups that do not match a bone name.
 
+Bone / non-bone classification uses the union of bones from every Armature modifier on each mesh, plus a bound armature parent. With multiple armatures, groups belonging to secondary rigs are therefore not misclassified as `Other`.
+
 Per-tab options:
 
 - `Ignore Non-Bone Columns` — an `All` tab option. Automatically marks non-bone vertex groups as ignored so they stay out of totals, normalization and cleanup.
@@ -725,20 +773,6 @@ Right-clicking a column header in the GPU overlay opens the vertex-group transfe
 When opened from the dedicated Weight Editor window, the menu belongs to that window.
 
 ---
-## Weight-color preview
-
-`Material` in the display helper row toggles a preview that shows weights as colors.
-The `…` next to it configures hue / saturation / value and whether materials are replaced.
-
-- The preview creates a uniquely named, add-on-owned color attribute. It never overwrites or deletes a same-named user attribute.
-- `Replace Materials` is off by default. When explicitly enabled, it may temporarily replace material slots, and it restores the slot order, DATA/OBJECT links, per-object overrides, the active slot and per-face material assignments when the preview is disabled.
-- On a mesh datablock shared by several objects, material replacement is skipped and viewport color display is used instead, so the other objects are not changed.
-
-> The `Material` preview is heavy; it is not recommended for constant use.
-
-<!-- Screenshot: weight-color preview and its detail settings -->
-
----
 ## Multi-object editing
 
 When several meshes are in Edit Mode at once, the grid footer shows the current column, selected-vertex count and a multi-edit indicator (`N obj`), and the vertices of all objects are handled together.
@@ -747,20 +781,6 @@ A `Sync Selection` button is also added to `Properties > Object Data > Vertex Gr
 When it is on, the vertex-group selection is synchronized across the objects being multi-edited.
 
 <!-- Screenshot: multi-edit display and the Sync Selection button -->
-
----
-## Dedicated area / Weight Editor window
-
-Choose `ToPu Weight Editor` from Blender's normal editor-type selector to turn any area into a dedicated weight-editing area. The area is stored with its screen/workspace in the `.blend`, and its HUD display is restored when the file is opened.
-
-- The GPU HUD provides the same operations as the 3D View version. `Clean View` hides the header, toolbar, sidebar and other editor chrome together; click it again to restore the previous layout.
-- Only one HUD is interactive at a time. Another `ToPu Weight Editor` area shows `Make This the Main Area`, allowing it to adopt the HUD. If no HUD is active, use `Open ToPu Weight Editor`.
-- The window icon in the tool header can also open/close the same dedicated area in a separate Blender window.
-- Blender and the operating system manage the window size and placement; adjust the GPU UI separately with the HUD scale button.
-- Its viewport display toggles (`Modifier`, `Rest`, `In Front`, `Overlay`, and so on) target the 3D View that opened the dedicated window.
-- In the dedicated window, the `×` in the header closes the window.
-
-<!-- Screenshot: dedicated Weight Editor window -->
 
 ---
 ## Add-on preferences
@@ -776,6 +796,7 @@ Open them with the `⚙` button in the GPU overlay, or from `Edit > Preferences 
 | `GPU Overlay Color Theme` | `Built-in Set` (20 palettes) and `User Sets`. Import / export of color presets. |
 | `GPU Overlay Preset Values` | Changes the values of the preset buttons. |
 | `Scroll Step` | Step sizes for `Ctrl + Wheel` and `Ctrl + Shift + Wheel`. |
+| `Default Influence Cleanup Method` | `Consider Bone Hierarchy` (default) or `Prefer Weight Values`. It stays synchronized with the current scene's Influence Cleanup Settings and becomes the initial value for new scenes. |
 | Left/right word sets | Word pairs used to infer left/right names during mirroring. |
 | `Additional Shortcuts` | Smooth Weights and Pick Influence are off by default; HUD-only bone picking is on by default. |
 | `Shortcut Settings` | Review and change the registered keymap items. |
