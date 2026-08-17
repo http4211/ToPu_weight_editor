@@ -294,6 +294,10 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 ### Bone Creation
 
 <p align="left">
+
+  <img width="458" height="508" alt="image" src="https://github.com/user-attachments/assets/e8583f09-280f-4af6-a9bc-19f993d039c6" />
+
+  
   <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
 </p>
 
