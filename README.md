@@ -54,7 +54,7 @@ Softimage 風のウェイト編集をベースに、3D ビュー上へ描画さ�
 ## できること
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/bda50f2e-21a6-4635-ad5a-62b07fa6e617" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
 </p>
 
 - 編集モード・ウェイトペイントモードの両方で、GPU オーバーレイからウェイトを確認・編集
