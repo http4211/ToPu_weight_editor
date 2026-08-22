@@ -333,6 +333,13 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 #### 骨とウェイトの分割
 
+<p align="left">
+
+  <img width="440" height="311" alt="image" src="https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b" />
+
+</p>
+
+
 `骨作成` ボタンを `Shift + クリック` すると、既存の骨を連続した骨列へ分割し、対応する頂点グループのウェイトを分割後の骨へ再分配します。
 
 - ポーズモード、オブジェクトモード、アーマチュア編集モードでは選択ボーンを対象にします。メッシュ編集モードでは、TPWE グリッドのアクティブ列と同名の骨を対象にします。
