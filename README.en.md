@@ -318,8 +318,8 @@ With the default settings, selected-vertex and whole-object mirroring automatica
   - `World Z` — aligns roll using the world Z axis.
   - `World Y` — aligns roll using the world Y axis.
 - `Ctrl + Click` opens `Bone Creation Settings` for generation method, auto-weight method, replacement of existing weights, target, naming, connection, roll and post-creation defaults.
-- With `Auto Weights` enabled, Blender Built-in or Voxel Heat Skinning weights the target region using only the bones created by that run. `Replace Existing Weights` clears existing deform-bone weights from the destination armature on selected vertices, while preserving non-bone groups.
-- When multiple open paths bound the same mesh strip, TPWE follows mesh-edge connectivity up to 12 topology edges apart and includes intermediate unselected vertices between substantially overlapping paths. Spatially close but disconnected sheets are not included. `Center Axis` uses the same writable region.
+- With `Auto Weights` enabled, the target region is weighted using only the newly created bones. Choose either `Blender Built-in` or `Voxel Heat Skinning`. When `Replace Existing Weights` is enabled, existing bone weights from the target armature are cleared on the selected vertices before new weights are assigned. Vertex groups unrelated to bones are preserved.
+- When multiple open edge paths enclose the same mesh strip, unselected vertices between the paths are also included in auto weighting. Disconnected mesh parts are not affected. `Center Axis` uses the same region.
 
 #### Split Bone and Weights
 
