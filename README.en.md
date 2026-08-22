@@ -307,18 +307,19 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 - A regular click analyzes the selection and opens a confirmation dialog before creating anything.
 - Supported selections include centers of multiple closed loops, a selected-edge path, a single closed loop's normal direction, edge-ring centers, multiple open paths and branching edge networks. Use `Auto Detect` or choose a generation method explicitly.
 - The last-selected active edge, together with its active-vertex side, determines the creation direction. On an open path, the terminal on that side becomes the chain tip. If the active edge lies between subdivision points, the same branch stroke is traced to its terminal before orientation is decided.
-- Branches are detected automatically. The active-side terminal remains a tip, and the opposite root is chosen by straight continuation of that terminal direction. A long side branch therefore cannot swap the intended root and tip. For a closed-loop-derived branch tree, the actual segment from the active loop center to the neighboring loop center supplies the direction reference.
 - When a branch is found, the confirmation dialog and `F9` expose both `Bone Count` and `Branch Count`, while preserving endpoints and junctions.
-- For ordinary chains, the confirmation dialog and `F9` adjust `Bone Count` and `Reverse Direction`.
+- For ordinary chains, the confirmation dialog and `F9` adjust `Bone Count` and `Reverse Direction`. The confirmation dialog also controls Auto Weights, target, armature / bone naming, connection, deform use, roll reference and post-creation mode. If no editable existing armature is available, the target switches to `New Armature` automatically.
 - For multiple open paths, `Center Axis` off creates an independent chain on each path. Turning it on averages corresponding normalized positions into one center chain, even when the source paths have different vertex counts or stored directions.
-- `Center Axis` also supports several open branch networks with matching layouts. Intermediate edge counts may differ because matching is based on endpoints and junctions. If the layouts are incompatible, only Center Axis is unavailable; with it off, each branch tree can still be created independently.
-- `Center Axis` is never forced on automatically. A center chain or tree inherits the active edge and vertex direction from the actually active source network, so the active-side terminal remains the tip. The same direction is preserved after changing the bone count through `F9`.
-- The confirmation dialog also controls Auto Weights, target, armature / bone naming, connection, deform use, roll reference and post-creation mode. If no editable existing armature is available, the target switches to `New Armature` automatically.
-- `Selected Edge Surface` under `Bone Roll Reference` keeps each bone's local Y axis along the chain while aligning local X / Z from the averaged direction of faces connected to the selected edges. Multiple open paths transport their own surface reference along each curve, which makes skirt-like chains easier to control with a consistent local rotation direction.
+- `Bone Roll Reference` chooses how the roll of the generated bones is aligned.
+  - `Automatic Axis` — automatically chooses a stable mesh-local axis.
+  - `Selected Edge Surface` — keeps local Y along the chain and aligns local X / Z from the averaged direction of faces connected to the selected edges. Multiple open paths transport their own surface reference along each curve.
+  - `Mesh Local Z` — aligns roll using the mesh's local Z axis.
+  - `Mesh Local Y` — aligns roll using the mesh's local Y axis.
+  - `World Z` — aligns roll using the world Z axis.
+  - `World Y` — aligns roll using the world Y axis.
 - `Ctrl + Click` opens `Bone Creation Settings` for generation method, auto-weight method, replacement of existing weights, target, naming, connection, roll and post-creation defaults.
 - With `Auto Weights` enabled, Blender Built-in or Voxel Heat Skinning weights the target region using only the bones created by that run. `Replace Existing Weights` clears existing deform-bone weights from the destination armature on selected vertices, while preserving non-bone groups.
 - When multiple open paths bound the same mesh strip, TPWE follows mesh-edge connectivity up to 12 topology edges apart and includes intermediate unselected vertices between substantially overlapping paths. Spatially close but disconnected sheets are not included. `Center Axis` uses the same writable region.
-- If Blender Built-in creates no usable weight on any target vertex, TPWE retries once with a thicker temporary closed solver shell. It does not switch to Voxel Heat Skinning or another method, and weights are still written only to the original target vertices.
 
 #### Split Bone and Weights
 
@@ -327,7 +328,6 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 - In Pose, Object and Armature Edit Mode, the selected bones are used. In Mesh Edit Mode, the bone matching the TPWE grid's active column is used.
 - `Split Count` ranges from 2 to 64. `Smooth` controls the weight-transition width between neighboring split bones and defaults to `0`. Each affected vertex keeps its original total weight during redistribution.
 - `Mirror` is on by default. It uses the existing editable left/right word sets to split the matching opposite-side bones and weights with the same settings. When it is off, the opposite side is not changed.
-- Blender's native Armature X-Axis Mirror is disabled only during the operation and then restored, so the split dialog's `Mirror` option is the sole authority over opposite-side changes.
 - The original bone name remains on the first root-side segment. Existing child bones are reparented to the final new segment. When both sides are split, each side uses its own frozen original endpoints to calculate segment lengths.
 - After execution, `F9` can readjust `Split Count`, `Smooth` and `Mirror`. Turning Mirror off through F9 also restores the opposite side to its pre-operation state.
 
@@ -396,15 +396,6 @@ It can also weight only the part covered by the current vertex selection.
 
 The detail settings switch between Blender's built-in automatic weights and the dedicated voxel diffusion method (Voxel Heat Skinning).
 After the operation, the target influence list, TPWE selected column, Blender active vertex group and `Bone Hi` display are synchronized immediately.
-
-**Empty-result retry for Blender Built-in**
-
-Only when the first Blender Built-in solve completes without creating any usable weight on the target vertices, TPWE retries once with a thicker temporary closed solver shell.
-
-- The same recovery applies to all-bone and specified-bone runs, Object Mode, Edit Mode selected-only weighting, and Auto Weights started by Bone Creation.
-- A successful first solve performs no extra work.
-- The retry remains Blender Built-in; it does not silently switch to Envelope or Voxel Heat Skinning.
-- The temporary shell does not modify the source mesh, and weights are copied back only to the originally writable target vertices.
 
 In Edit Mode, when `Use Specified Bones Only` is combined with Voxel Heat Skinning and `Range Proxy (Edit)` is off, only the region formed by edges between selected vertices is used for the calculation. The full source mesh is not voxelized unnecessarily for a selected-only weighting run.
 
