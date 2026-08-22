@@ -323,6 +323,11 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 
 #### Split Bone and Weights
 
+<p align="left">
+  <img width="439" height="311" alt="image" src="https://github.com/user-attachments/assets/d02ef477-5d14-4015-a27f-b6a44dc5cc26" />
+</p>
+
+
 `Shift + Click` on `Bone Creation` splits existing bones into connected chains and redistributes each matching vertex-group weight among the resulting bones.
 
 - In Pose, Object and Armature Edit Mode, the selected bones are used. In Mesh Edit Mode, the bone matching the TPWE grid's active column is used.
