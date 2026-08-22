@@ -304,9 +304,9 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 
 `Bone Creation` creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode.
 
-- A regular click analyzes the selection and opens a confirmation dialog before creating anything.
-- Supported selections include centers of multiple closed loops, a selected-edge path, a single closed loop's normal direction, edge-ring centers, multiple open paths and branching edge networks. Use `Auto Detect` or choose a generation method explicitly.
-- The last-selected active edge, together with its active-vertex side, determines the creation direction. On an open path, the terminal on that side becomes the chain tip. If the active edge lies between subdivision points, the same branch stroke is traced to its terminal before orientation is decided.
+- A regular click automatically chooses a suitable generation method from the selected edges and opens the confirmation dialog.
+- Bones can be created from closed edge loops, open edge paths, edge rings and branching edge selections. The generation method can also be chosen manually in the settings.
+- Bone direction is based on the last-selected active edge. Select an edge on the side you want to become the tip last.
 - When a branch is found, the confirmation dialog and `F9` expose both `Bone Count` and `Branch Count`, while preserving endpoints and junctions.
 - For ordinary chains, the confirmation dialog and `F9` adjust `Bone Count` and `Reverse Direction`. The confirmation dialog also controls Auto Weights, target, armature / bone naming, connection, deform use, roll reference and post-creation mode. If no editable existing armature is available, the target switches to `New Armature` automatically.
 - For multiple open paths, `Center Axis` off creates an independent chain on each path. Turning it on averages corresponding normalized positions into one center chain, even when the source paths have different vertex counts or stored directions.
