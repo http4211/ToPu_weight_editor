@@ -10,11 +10,11 @@
 </p>
 
 ToPu_weight_editor (extension name: **ToPu:Weight Editor**) is a Blender add-on for reviewing and editing skin weights.
-Based on Softimage-style weight editing, it puts numeric weight editing, normalization, cleanup, smoothing, mirroring, copy & paste, transfer, bone picking, bone creation, and display helpers into a single **GPU overlay** drawn directly in the 3D View.
+Based on Softimage-style weight editing, it puts numeric weight editing, normalization, cleanup, smoothing, mirroring, copy & paste, transfer, bone picking, bone creation, bone-and-weight splitting, and display helpers into a single **GPU overlay** drawn directly in the 3D View.
 
 No external UI framework or extra Python package is used. The add-on runs with Blender's built-in GPU drawing and Blender-native areas/windows.
 
-> **This document describes version 1.5.155.**
+> **This document describes version 1.5.179.**
 > The legacy N-panel (sidebar) and the quick Pie Menu that existed up to the 1.4 series have been removed; all operations now live in the GPU overlay.
 > The overlay shortcut also changed from `W` to `Ctrl + W`.
 
@@ -34,6 +34,7 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - [Bone transform](#bone-transform)
 - [Edit](#edit)
   - [Bone Creation](#bone-creation)
+    - [Split Bone and Weights](#split-bone-and-weights)
 - [Weight Copy](#weight-copy)
 - [Brushes](#brushes)
 - [Cleanup](#cleanup)
@@ -63,7 +64,7 @@ No external UI framework or extra Python package is used. The add-on runs with B
 - Save and restore named weight snapshots inside the blend file
 - Pick bones and edit bone transforms
 - Smooth Weights, Mirror and Apply Rest Pose
-- Create bones from selected edges and automatically assign weights using only the newly created bones
+- Create bones from selected edges, auto-weight with the generated bones, and split existing bones together with their weights
 - Vertex copy/paste, nearest transfer, object-to-object transfer and vertex-group transfer
 - Two automatic weighting methods: Blender's built-in automatic weights and a dedicated voxel diffusion method (Voxel Heat Skinning)
 - Four dedicated weight brushes: Normal, Smoothing, Gradient and Lasso
@@ -305,13 +306,30 @@ With the default settings, selected-vertex and whole-object mirroring automatica
 
 - A regular click analyzes the selection and opens a confirmation dialog before creating anything.
 - Supported selections include centers of multiple closed loops, a selected-edge path, a single closed loop's normal direction, edge-ring centers, multiple open paths and branching edge networks. Use `Auto Detect` or choose a generation method explicitly.
-- The last-selected active edge determines the creation direction. For an ordinary chain, the loop or path containing that edge becomes the leading side (the chain tip), so select the edge you want at the front last. Multiple open paths and branches use that active edge or path as their common direction reference.
-- Branches are detected automatically. When one is found, the confirmation dialog and `F9` expose both `Bone Count` and `Branch Count`, while preserving endpoints and junctions.
+- The last-selected active edge, together with its active-vertex side, determines the creation direction. On an open path, the terminal on that side becomes the chain tip. If the active edge lies between subdivision points, the same branch stroke is traced to its terminal before orientation is decided.
+- Branches are detected automatically. The active-side terminal remains a tip, and the opposite root is chosen by straight continuation of that terminal direction. A long side branch therefore cannot swap the intended root and tip. For a closed-loop-derived branch tree, the actual segment from the active loop center to the neighboring loop center supplies the direction reference.
+- When a branch is found, the confirmation dialog and `F9` expose both `Bone Count` and `Branch Count`, while preserving endpoints and junctions.
 - For ordinary chains, the confirmation dialog and `F9` adjust `Bone Count` and `Reverse Direction`.
+- For multiple open paths, `Center Axis` off creates an independent chain on each path. Turning it on averages corresponding normalized positions into one center chain, even when the source paths have different vertex counts or stored directions.
+- `Center Axis` also supports several open branch networks with matching layouts. Intermediate edge counts may differ because matching is based on endpoints and junctions. If the layouts are incompatible, only Center Axis is unavailable; with it off, each branch tree can still be created independently.
+- `Center Axis` is never forced on automatically. A center chain or tree inherits the active edge and vertex direction from the actually active source network, so the active-side terminal remains the tip. The same direction is preserved after changing the bone count through `F9`.
 - The confirmation dialog also controls Auto Weights, target, armature / bone naming, connection, deform use, roll reference and post-creation mode. If no editable existing armature is available, the target switches to `New Armature` automatically.
+- `Selected Edge Surface` under `Bone Roll Reference` keeps each bone's local Y axis along the chain while aligning local X / Z from the averaged direction of faces connected to the selected edges. Multiple open paths transport their own surface reference along each curve, which makes skirt-like chains easier to control with a consistent local rotation direction.
 - `Ctrl + Click` opens `Bone Creation Settings` for generation method, auto-weight method, replacement of existing weights, target, naming, connection, roll and post-creation defaults.
 - With `Auto Weights` enabled, Blender Built-in or Voxel Heat Skinning weights the target region using only the bones created by that run. `Replace Existing Weights` clears existing deform-bone weights from the destination armature on selected vertices, while preserving non-bone groups.
-- Multiple open paths are normally solved independently. If they topologically bound the same mesh strip, intermediate unselected vertices are included even when the paths are several edge rows apart, and all related generated chains solve that strip together. Unrelated paths remain selected-vertex-only.
+- When multiple open paths bound the same mesh strip, TPWE follows mesh-edge connectivity up to 12 topology edges apart and includes intermediate unselected vertices between substantially overlapping paths. Spatially close but disconnected sheets are not included. `Center Axis` uses the same writable region.
+- If Blender Built-in creates no usable weight on any target vertex, TPWE retries once with a thicker temporary closed solver shell. It does not switch to Voxel Heat Skinning or another method, and weights are still written only to the original target vertices.
+
+#### Split Bone and Weights
+
+`Shift + Click` on `Bone Creation` splits existing bones into connected chains and redistributes each matching vertex-group weight among the resulting bones.
+
+- In Pose, Object and Armature Edit Mode, the selected bones are used. In Mesh Edit Mode, the bone matching the TPWE grid's active column is used.
+- `Split Count` ranges from 2 to 64. `Smooth` controls the weight-transition width between neighboring split bones and defaults to `0`. Each affected vertex keeps its original total weight during redistribution.
+- `Mirror` is on by default. It uses the existing editable left/right word sets to split the matching opposite-side bones and weights with the same settings. When it is off, the opposite side is not changed.
+- Blender's native Armature X-Axis Mirror is disabled only during the operation and then restored, so the split dialog's `Mirror` option is the sole authority over opposite-side changes.
+- The original bone name remains on the first root-side segment. Existing child bones are reparented to the final new segment. When both sides are split, each side uses its own frozen original endpoints to calculate segment lengths.
+- After execution, `F9` can readjust `Split Count`, `Smooth` and `Mirror`. Turning Mirror off through F9 also restores the opposite side to its pre-operation state.
 
 ### Apply Rest Pose
 
@@ -378,6 +396,17 @@ It can also weight only the part covered by the current vertex selection.
 
 The detail settings switch between Blender's built-in automatic weights and the dedicated voxel diffusion method (Voxel Heat Skinning).
 After the operation, the target influence list, TPWE selected column, Blender active vertex group and `Bone Hi` display are synchronized immediately.
+
+**Empty-result retry for Blender Built-in**
+
+Only when the first Blender Built-in solve completes without creating any usable weight on the target vertices, TPWE retries once with a thicker temporary closed solver shell.
+
+- The same recovery applies to all-bone and specified-bone runs, Object Mode, Edit Mode selected-only weighting, and Auto Weights started by Bone Creation.
+- A successful first solve performs no extra work.
+- The retry remains Blender Built-in; it does not silently switch to Envelope or Voxel Heat Skinning.
+- The temporary shell does not modify the source mesh, and weights are copied back only to the originally writable target vertices.
+
+In Edit Mode, when `Use Specified Bones Only` is combined with Voxel Heat Skinning and `Range Proxy (Edit)` is off, only the region formed by edges between selected vertices is used for the calculation. The full source mesh is not voxelized unnecessarily for a selected-only weighting run.
 
 **Main Voxel Heat Skinning settings**
 
@@ -583,7 +612,7 @@ The `…` next to it configures hue / saturation / value and whether materials a
 
 - `Consider Bone Hierarchy` (default) follows branches below the nearest common parent. When the limit has room, it retains at least one influence from each active branch and returns removed weight to a retained bone in the same branch when possible. Disconnected chains use their top-level roots, and unparented bones are treated as independent branches.
 - `Prefer Weight Values` keeps the highest values first, matching the legacy behavior.
-- `Similar Weight Range` sets the maximum individual difference that the parent/child path may reorder inside the same branch. Groups without a matching bone hierarchy safely fall back to weight priority.
+- `Similar Weight Range` sets the maximum individual difference that the parent/child path may reorder inside the same branch. After branch allocation it also prevents a negligible branch influence from displacing a materially larger candidate when their gap exceeds the configured range. Groups without a matching bone hierarchy safely fall back to weight priority.
 - The selected method is shared by direct cell input, scrolling, presets, Apply, sliders, smoothing, every brush, `Limit Influences`, `Fix Violations` and post-transfer inpainting. All related Armature modifiers are considered.
 
 > Automatic cleanup is not guaranteed to catch everything, so running `Fix Violations` as a final check is recommended.
@@ -710,8 +739,10 @@ This suits workflows where you switch vertices often to check the dominant influ
 - Clicking a row's `Vertex` cell highlights that vertex row in the viewport and keeps it visible in the grid.
 - Hold `Shift` / `Ctrl` while clicking or dragging to add to or remove from the row selection.
 - When some vertices have a total-value or influence-count problem, the `Sum` header changes to `Sum ⚠`. While violation-only view is active it reads `Viol. Only`.
+- For a dense selection, a non-blocking chunked scan checks the complete selection while keeping the displayed page lightweight. If a later page contains a violation, the `Sum` header updates after the scan without requiring a scroll.
 - Violation-only view covers violations across every page, not just the current one.
 - In violation-only view, the `Vertex` and `L` header actions also target only the displayed violation vertices.
+- If a box or lasso operation replaces the selection with different vertices while keeping the same vertex count, the grid is reacquired after the selection settles.
 
 **Cells**
 
@@ -848,6 +879,7 @@ Some features intentionally modify the current blend file:
 - **Weight snapshots** are compressed and stored in Blender Text datablocks. Large snapshots increase the `.blend` file size.
 - **Bone-transform undo data** also creates internal Text datablocks, and obsolete anchors are removed automatically.
 - **Bone Creation** adds bones to the specified new or existing armature.
+- **Split Bone and Weights** splits existing bones into connected segments, creates the matching vertex groups and redistributes their weights. With `Mirror` enabled, the corresponding opposite side is changed as well.
 - **Weight-color preview** creates a uniquely named, add-on-owned color attribute. Material slots are only replaced when `Replace Materials` is explicitly enabled.
 - **Apply Rest Pose** can modify armature rest data, mesh and shape-key coordinates, Actions and NLA-referenced animation. Save a backup before applying it.
 - **Auto Weight** can create temporary mesh/object datablocks during calculation; they are removed when processing finishes.
