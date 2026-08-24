@@ -8,7 +8,7 @@
   <a href="README.md">日本語</a> | <b>English</b>
 </p>
 
-ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
+ToPu_weight_editor (extension name: **ToPu:Weight Editor**) is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
 > **This document describes version 1.5.179.**
@@ -70,7 +70,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 ## Installation
 
 1. Download the distribution ZIP from `Assets` of the latest [release](https://github.com/http4211/ToPu_weight_editor/releases).
-2. Choose `Edit > Preferences > Add-ons > Install from Disk` and select the ZIP.
+2. Drag & drop the ZIP onto the Blender window (or choose `Edit > Preferences > Add-ons > Install from Disk` and select the ZIP).
 3. Enable `ToPu:Weight Editor` in the add-on list.
 
 Two icon buttons are then added to the 3D View tool header.
@@ -224,6 +224,8 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 
 `Auto Weights` (in the dialog) weights the target region using only the newly created bones (`Blender Built-in` / `Voxel Heat Skinning`). With `Replace Existing Weights`, existing bone weights on the selected vertices are cleared first (non-bone groups are preserved).
 
+The target region is the selected part. When multiple open edge paths cut through the same mesh as barriers, the vertices enclosed between them are weighted together using the bones of every path bounding that strip — only when a path borders two or more regions, which keeps a short, unrelated selection from making a whole mesh writable. Disconnected mesh islands are unaffected, and `Center Axis` uses the same region.
+
 `Bone Roll Reference` : `Automatic Axis` / `Selected Edge Surface` / `Mesh Local Z` / `Mesh Local Y` / `World Z` / `World Y`.
 
 #### Split Bone and Weights
@@ -352,6 +354,7 @@ Blends the selected column with the surrounding vertices. Good for hard paint ed
 - Left-drag smooths the weights around the cursor.
 - `Shift + Left-drag` smears like a fingertip; `Ctrl + Left-drag` spreads surrounding influences.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
+- `Method` chooses the working mode: `Fast` (only the connected edges under the cursor, quickest), `Surface` (walks connected topology without bleeding to the back side), `Volume` (also references spatially-near vertices to match local density; `Volume Range` tunes the reach).
 - When an ignored column is selected, only that ignored column is processed.
 
 ### Gradient brush
