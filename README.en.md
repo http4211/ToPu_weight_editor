@@ -8,7 +8,7 @@
   <a href="README.md">日本語</a> | <b>English</b>
 </p>
 
-ToPu_weight_editor (extension name: **ToPu:Weight Editor**) is a Blender add-on for reviewing and editing skin weights.
+ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
 > **This document describes version 1.5.179.**
