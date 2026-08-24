@@ -43,7 +43,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 ## Features
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/cada4dea-bdcf-4178-8215-ae9fb8cd36f4" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c" />
 </p>
 
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
@@ -352,7 +352,7 @@ The basic brush that adds to or subtracts from the selected column.
 Blends the selected column with the surrounding vertices. Good for hard paint edges and seams left after mirroring.
 
 - Left-drag smooths the weights around the cursor.
-- `Shift + Left-drag` smears like a fingertip; `Ctrl + Left-drag` spreads surrounding influences.
+- `Shift + Left-drag` smears like a fingertip; `Ctrl + Left-drag` spreads the selected column's stronger weights outward; `Alt + Left-drag` feathers its weaker weights outward, blending them into the surroundings.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
 - When an ignored column is selected, only that ignored column is processed.
 
