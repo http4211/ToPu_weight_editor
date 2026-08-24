@@ -43,7 +43,7 @@ ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集す
 ## できること
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/7e1c2cf7-3b4b-4ba9-8005-1d5011fb00ef" />
 </p>
 
 - 編集モード / ウェイトペイントモードの両方で、GPU オーバーレイからウェイトを確認・編集
