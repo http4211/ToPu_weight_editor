@@ -224,7 +224,7 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 
 `Auto Weights` (in the dialog) weights the target region using only the newly created bones (`Blender Built-in` / `Voxel Heat Skinning`). With `Replace Existing Weights`, existing bone weights on the selected vertices are cleared first (non-bone groups are preserved).
 
-The target is normally the selected vertices. But if you select two or more edge loops that sandwich a section of the mesh, the vertices between those loops are weighted as well. A separate mesh that is not connected to the selection is never affected.
+> The target is normally the selected vertices. But if you select two or more edge loops that sandwich a section of the mesh, the vertices between those loops are weighted as well. A separate mesh that is not connected to the selection is never affected.
 
 `Bone Roll Reference` : `Automatic Axis` / `Selected Edge Surface` / `Mesh Local Z` / `Mesh Local Y` / `World Z` / `World Y`.
 
