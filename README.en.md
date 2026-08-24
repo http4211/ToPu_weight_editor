@@ -459,11 +459,11 @@ Turning `Mask` on restricts the brush to the currently selected vertices. Helps 
 - Use the `−` / `+` buttons, or type into the value field, to change a value.
 - The `…` on `Influence Count` opens `Influence Cleanup Settings`.
 
-**Influence Cleanup Settings** (how influences are retained when limiting the count)
+**Influence Cleanup Settings** (which bones to keep when a vertex exceeds the influence limit)
 
-- `Consider Bone Hierarchy` (default) — follows branches below the nearest common parent, retaining at least one influence per active branch when there is room, and returning removed weight to the same branch when possible.
-- `Prefer Weight Values` — keeps the highest values first (legacy behavior).
-- `Similar Weight Range` — the maximum difference that the parent/child path may reorder within a branch. Groups without a matching hierarchy fall back to weight priority.
+- `Consider Bone Hierarchy` (default) — keeps influences spread across the separate chains that branch off a shared parent bone (for example the left and right legs splitting from the hip), so a vertex driven by several chains (a skirt influenced by both legs) is less likely to lose one whole chain.
+- `Prefer Weight Values` — the ordinary approach: keeps the highest-weighted bones first.
+- `Similar Weight Range` — for `Consider Bone Hierarchy`, the weight difference within which bones in the same branch may be reordered. Groups without a hierarchy fall back to `Prefer Weight Values`.
 
 > Automatic cleanup is not guaranteed to catch everything, so running `Fix Violations` as a final check is recommended.
 
