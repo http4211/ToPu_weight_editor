@@ -8,7 +8,7 @@
   <b>日本語</b> | <a href="README.en.md">English</a>
 </p>
 
-ToPu_weight_editor（拡張機能名: **ToPu:Weight Editor**）は、Blender 上でスキンウェイトを確認・編集するアドオンです。
+ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集するアドオンです。
 3D ビューに描画される **GPU オーバーレイ** から、数値編集・整理・スムーズ・ミラー・コピー / 転送・骨取得・骨作成・表示補助までをまとめて操作できます。外部フレームワークや追加の Python パッケージは不要です。
 
 > **バージョン 1.5.179 時点の仕様です。**
