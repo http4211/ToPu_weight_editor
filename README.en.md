@@ -43,7 +43,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 ## Features
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/ac271882-8490-43da-8c40-0b68cadeb6ad" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c" />
 </p>
 
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
@@ -552,6 +552,7 @@ Usage.
 - Click — makes it the selected column.
 - `Shift + Click` — selects every vertex that has a value in that group.
 - `Ctrl + Click` — keeps only the current-selection vertices that have a value in that column.
+- `Ctrl + Shift + Click` — cell-selects every cell in that column (all displayed rows, across pages).
 - Right-click — opens the [weight transfer menu](#column-right-click-weight-transfer).
 
 ### L / Vertex / Sum
@@ -577,6 +578,7 @@ Usage.
 - Click — type the value directly (`Enter` confirms). Start with `+` `-` `*` `/` for a relative operation (for example `*0.5` or `+0.1`).
 - Drag — select a range (`Shift + Drag` adds, `Ctrl + Drag` removes).
 - Right-click — clear the cell selection.
+- `Ctrl + Shift + Click` — cell-selects the whole column of that cell (same as from the column header).
 - With several cells selected, the entered value applies to all at once. While a cell selection remains, every value-changing operation (slider / wheel / presets / Apply) prioritizes the selected cells over the live mesh selection.
 
 <p align="center">
