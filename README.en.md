@@ -43,7 +43,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 ## Features
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c" />
+  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/ac271882-8490-43da-8c40-0b68cadeb6ad" />
 </p>
 
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
