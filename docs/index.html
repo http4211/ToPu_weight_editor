@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ToPu:Weight Editor</title>
+  <meta name="description" content="ToPu:Weight Editor - Blender skin weight editing add-on">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="images/icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    :root {
+      --theme-color: #E89A1C;
+      --sidebar-width: 17rem;
+    }
+    .app-name-link img { width: 46px; vertical-align: middle; margin-right: .4rem; }
+    .sidebar { border-right: 1px solid #eee; }
+    .sidebar ul li a { font-size: 15px; }
+    .markdown-section { max-width: 900px; }
+    .markdown-section h1 { padding-bottom: .4em; border-bottom: 2px solid var(--theme-color); }
+    .markdown-section h2 { margin-top: 2.4rem; }
+    .markdown-section img { border-radius: 6px; }
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background: #fffaf0;
+      color: #6b5a3a;
+    }
+    .markdown-section code { color: #b8651b; background: #fdf3e5; }
+    .markdown-section table { display: table; width: 100%; }
+    /* language switch in the sidebar top */
+    .app-nav { margin-right: 1rem; }
+    hr { border-top: 1px solid #eee; }
+  </style>
+</head>
+<body>
+  <div id="app">読み込み中…</div>
+  <script>
+    window.$docsify = {
+      name: '<img src="images/icon.png" alt="">ToPu:Weight Editor',
+      nameLink: { '/en/': '#/en/', '/': '#/ja/' },
+      repo: 'https://github.com/http4211/ToPu_weight_editor',
+
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      maxLevel: 4,
+      auto2top: true,
+
+      // multi-language: fall back to the Japanese pages if a file is missing
+      fallbackLanguages: ['en'],
+
+      search: {
+        paths: 'auto',
+        placeholder: { '/en/': 'Search', '/': '検索' },
+        noData: { '/en/': 'No results', '/': '見つかりませんでした' },
+        depth: 3
+      },
+
+      pagination: {
+        crossChapter: true,
+        crossChapterText: true,
+        previousText: { '/en/': 'Previous', '/': '前へ' },
+        nextText: { '/en/': 'Next', '/': '次へ' }
+      },
+
+      // send bare "/" to the Japanese top page
+      alias: {
+        '/_navbar.md': '/ja/_navbar.md',
+        '/_sidebar.md': '/ja/_sidebar.md',
+        '/$': '/ja/README.md'
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+</body>
+</html>
