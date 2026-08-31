@@ -213,28 +213,34 @@
       }
     })();
 
-    // Language toggle that keeps you on the same page when switching.
-    var langSwitchPlugin = function (hook, vm) {
-      function render() {
-        var path = (vm.route && vm.route.path) || '/ja/';
-        var isEn = path.indexOf('/en/') === 0;
-        var twin = isEn ? path.replace('/en/', '/ja/') : path.replace('/ja/', '/en/');
-        var ja = isEn ? twin : path;
-        var en = isEn ? path : twin;
+    // Language toggle. Deliberately standalone: it does not rely on docsify's
+    // plugin lifecycle, so it still appears if a sidebar/page fetch fails.
+    (function () {
+      function paint() {
+        var raw = location.hash.replace(/^#/, '') || '/ja/';
+        var isEn = raw.indexOf('/en/') === 0;
+        var ja = isEn ? raw.replace('/en/', '/ja/') : raw;
+        var en = isEn ? raw : (raw.indexOf('/ja/') === 0 ? raw.replace('/ja/', '/en/') : '/en/');
 
         var el = document.getElementById('lang-switch');
         if (!el) {
           el = document.createElement('div');
           el.id = 'lang-switch';
-          document.body.appendChild(el);
+          (document.body || document.documentElement).appendChild(el);
         }
         el.innerHTML =
-          '<a href="#' + ja + '" class="' + (isEn ? '' : 'active') + '">JP</a>' +
-          '<a href="#' + en + '" class="' + (isEn ? 'active' : '') + '">EN</a>';
+          '<a href="#' + ja + '"' + (isEn ? '' : ' class="active"') + '>JP</a>' +
+          '<a href="#' + en + '"' + (isEn ? ' class="active"' : '') + '>EN</a>';
       }
-      hook.doneEach(render);
-      hook.ready(render);
-    };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', paint);
+      } else {
+        paint();
+      }
+      window.addEventListener('hashchange', paint);
+      window.addEventListener('load', paint);
+    })();
 
     window.$docsify = {
       name: '<img src="images/icon.png" alt="">ToPu:Weight Editor',
@@ -243,6 +249,14 @@
 
       loadSidebar: true,
       loadNavbar: false,
+
+      // GitHub Pages (Jekyll) refuses to serve files starting with "_".
+      // Point every _sidebar.md request at an underscore-free copy.
+      alias: {
+        '/ja/_sidebar.md': '/ja/sidebar.md',
+        '/en/_sidebar.md': '/en/sidebar.md',
+        '/_sidebar.md': '/ja/sidebar.md'
+      },
       subMaxLevel: 0,
       maxLevel: 4,
       auto2top: true,
@@ -261,9 +275,7 @@
         crossChapterText: true,
         previousText: { '/en/': 'Previous', '/': '前へ' },
         nextText: { '/en/': 'Next', '/': '次へ' }
-      },
-
-      plugins: [langSwitchPlugin]
+      }
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
