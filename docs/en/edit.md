@@ -1,17 +1,17 @@
 # Edit
 
 <p align="left">
-  <img width="107" height="114" alt="image" src="https://github.com/user-attachments/assets/c63dd83d-edeb-476b-8a78-c8a682264b16" />
+  <img width="107" alt="image" src="https://github.com/user-attachments/assets/c63dd83d-edeb-476b-8a78-c8a682264b16" />
 </p>
 
 The `Edit` section holds `x-` / `x+`, plus `Smooth Weights`, `Mirror`, `Bone Creation` and `Apply Rest Pose`.
 
 ### Selecting vertices by X side
 
-<img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+<img width="53" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
 
 <p align="left">
-  <img width="1304" height="758" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
+  <img width="1304" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
 </p>
 
 Selects vertices on the `x-` or `x+` side, using the armature origin (or each object's origin when there is no armature) as the reference.
@@ -21,10 +21,10 @@ Selects vertices on the `x-` or `x+` side, using the armature origin (or each ob
 
 ### Smooth Weights
 
-<img width="299" height="230" alt="image" src="https://github.com/user-attachments/assets/df0b567d-c156-4139-9d88-2e4b572a6dcd" />
+<img width="299" alt="image" src="https://github.com/user-attachments/assets/df0b567d-c156-4139-9d88-2e4b572a6dcd" />
 
 <p align="left">
-  <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
+  <img width="1236" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
 </p>
 
 Blends the weights of the selected vertices into their surroundings.
@@ -36,12 +36,12 @@ Blends the weights of the selected vertices into their surroundings.
 
 ### Mirror
 
-<img width="478" height="454" alt="image" src="https://github.com/user-attachments/assets/ab59df15-6f02-46ab-9c79-0ed322987407" />
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/ab59df15-6f02-46ab-9c79-0ed322987407" />
 
-<img width="339" height="288" alt="image" src="https://github.com/user-attachments/assets/ba82830e-3339-474e-87a3-989f86abf288" />
+<img width="339" alt="image" src="https://github.com/user-attachments/assets/ba82830e-3339-474e-87a3-989f86abf288" />
 
 <p align="left">
-  <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
+  <img width="1354" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
 </p>
 
 Brings weights over from the mirrored position on the opposite side. Left/right names such as `_L` / `_R` are swapped as well.
@@ -59,8 +59,8 @@ Notes.
 ### Bone Creation
 
 <p align="left">
-  <img width="458" height="508" alt="image" src="https://github.com/user-attachments/assets/e8583f09-280f-4af6-a9bc-19f993d039c6" />
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+  <img width="458" alt="image" src="https://github.com/user-attachments/assets/e8583f09-280f-4af6-a9bc-19f993d039c6" />
+  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
 </p>
 
 Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode.
@@ -80,7 +80,7 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 #### Split Bone and Weights
 
 <p align="left">
-  <img width="439" height="311" alt="image" src="https://github.com/user-attachments/assets/d02ef477-5d14-4015-a27f-b6a44dc5cc26" />
+  <img width="439" alt="image" src="https://github.com/user-attachments/assets/d02ef477-5d14-4015-a27f-b6a44dc5cc26" />
 </p>
 
 `Shift + Click` on `Bone Creation` splits existing bones into connected chains and redistributes each matching vertex-group weight among the resulting bones.
@@ -93,7 +93,7 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 ### Apply Rest Pose
 
 <p align="left">
-  <img width="1302" height="768" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+  <img width="1302" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
 </p>
 
 Applies the current visual pose as the new rest pose. Action and shape-key retargeting are supported.

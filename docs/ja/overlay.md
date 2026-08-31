@@ -3,7 +3,7 @@
 ## GPU オーバーレイ / ヘッダー行
 
 <p align="left">
-  <img width="500" height="33" alt="image" src="https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc" />
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc" />
 </p>
 
 - `ドラッグで移動` : オーバーレイの位置を移動します。
@@ -20,7 +20,7 @@
 ## ウェイトスナップショット
 
 <p align="left">
-  <img width="69" height="28" alt="image" src="https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80" />
+  <img width="69" alt="image" src="https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80" />
 </p>
 
 ヘッダー行の `▣` `↶` `🗑` で、ウェイトを一時保存・復元できます。
@@ -37,10 +37,10 @@
 
 ## 骨トランスフォーム
 
-<img width="532" height="28" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
+<img width="532" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
 
 <p align="left">
-  <img width="1314" height="756" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
+  <img width="1314" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
 </p>
 
 選択列に対応する骨があれば、その `位置` `回転` `スケール` を確認・編集できます。ポーズを少し動かしてウェイトの効き方を確認したいときに使います。

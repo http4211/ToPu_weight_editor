@@ -1,7 +1,7 @@
 # ブラシ
 
 <p align="left">
-  <img width="192" height="111" alt="Image" src="https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3" />
+  <img width="192" alt="Image" src="https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3" />
 </p>
 
 GPU オーバーレイから、ビューポート上で使う独自のウェイトブラシを開始できます。編集モード / ウェイトペイントモードの両方で使え、ブラシ中でも骨取得や骨トランスフォームを併用できます。
@@ -11,10 +11,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### 通常ブラシ
 
-<img width="436" height="27" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
+<img width="436" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
 
 <p align="left">
-  <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
+  <img width="898" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
 </p>
 
 選択列のウェイトを加算 / 減算する基本ブラシです。
@@ -27,10 +27,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### スムーズブラシ
 
-<img width="719" height="31" alt="image" src="https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587" />
+<img width="719" alt="image" src="https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587" />
 
 <p align="left">
-  <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
+  <img width="1268" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
 </p>
 
 選択列のウェイトを周囲になじませるブラシです。塗り跡の硬い部分やミラー後の境界を整えるのに向いています。
@@ -48,10 +48,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### グラデーションブラシ
 
-<img width="640" height="24" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
+<img width="640" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
 
 <p align="left">
-  <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
+  <img width="1234" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
 </p>
 
 ドラッグ方向に沿って、選択列のウェイトにグラデーションを作るブラシです。
@@ -63,10 +63,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### 投げ縄ブラシ
 
-<img width="384" height="27" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
+<img width="384" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
 
 <p align="left">
-  <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
+  <img width="1154" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
 </p>
 
 囲んだ範囲を指定値で塗るブラシです。広い範囲を一気に 0 / 0.5 / 1.0 などへそろえたいときに向いています。
@@ -78,11 +78,11 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 ### 選択マスク
 
 <p align="left">
-  <img width="1208" height="772" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
+  <img width="1208" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
 </p>
 
 `マスク` を ON にすると、ブラシの影響先を選択中の頂点だけに制限します。近い別パーツや裏側の頂点へ意図せず塗るのを防げます。すべてのブラシで共通して使えます。
 
 <p align="center">
-  <img src="README_images/brush_tools.gif" alt="ブラシ操作" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/brush_tools.gif" alt="ブラシ操作">
 </p>

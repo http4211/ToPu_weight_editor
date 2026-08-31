@@ -20,8 +20,8 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 > ※ `自動` 倍率は OFF にすると `0.50〜4.00` の手動倍率を指定でき、HUD の倍率ボタンと連動します。
 
 <p align="left">
-  <img width="560" height="1046" alt="image" src="https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81" />
-　<img width="559" height="363" alt="image" src="https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34" />
+  <img width="560" alt="image" src="https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81" />
+　<img width="559" alt="image" src="https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34" />
 </p>
 
 ---

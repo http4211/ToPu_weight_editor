@@ -1,7 +1,7 @@
 # Brushes
 
 <p align="left">
-  <img width="187" height="111" alt="image" src="https://github.com/user-attachments/assets/64ef486e-415f-48ef-8e13-97b9cac42136" />
+  <img width="187" alt="image" src="https://github.com/user-attachments/assets/64ef486e-415f-48ef-8e13-97b9cac42136" />
 </p>
 
 The overlay can start the add-on's own weight brushes, used directly in the viewport. They work in both Edit Mode and Weight Paint Mode, and bone picking / bone transform stay available while brushing.
@@ -11,10 +11,10 @@ The overlay can start the add-on's own weight brushes, used directly in the view
 
 ### Normal brush
 
-<img width="539" height="29" alt="image" src="https://github.com/user-attachments/assets/9d3ade5f-ecc5-4456-babc-703c9596b5ec" />
+<img width="539" alt="image" src="https://github.com/user-attachments/assets/9d3ade5f-ecc5-4456-babc-703c9596b5ec" />
 
 <p align="left">
-  <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
+  <img width="898" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
 </p>
 
 The basic brush that adds to or subtracts from the selected column.
@@ -27,10 +27,10 @@ The basic brush that adds to or subtracts from the selected column.
 
 ### Smoothing brush
 
-<img width="787" height="29" alt="image" src="https://github.com/user-attachments/assets/47dadabd-d050-464c-95d4-e702ca28b778" />
+<img width="787" alt="image" src="https://github.com/user-attachments/assets/47dadabd-d050-464c-95d4-e702ca28b778" />
 
 <p align="left">
-  <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
+  <img width="1268" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
 </p>
 
 Blends the selected column with the surrounding vertices. Good for hard paint edges and seams left after mirroring.
@@ -48,10 +48,10 @@ Blends the selected column with the surrounding vertices. Good for hard paint ed
 
 ### Gradient brush
 
-<img width="707" height="26" alt="image" src="https://github.com/user-attachments/assets/ea890ba2-f618-4a65-98df-af87c8946b0c" />
+<img width="707" alt="image" src="https://github.com/user-attachments/assets/ea890ba2-f618-4a65-98df-af87c8946b0c" />
 
 <p align="left">
-  <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
+  <img width="1234" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
 </p>
 
 Builds a weight gradient along the drag direction.
@@ -63,10 +63,10 @@ Builds a weight gradient along the drag direction.
 
 ### Lasso brush
 
-<img width="407" height="28" alt="image" src="https://github.com/user-attachments/assets/a9f066a5-c5c9-4e4d-9bf8-93cdc9dc093d" />
+<img width="407" alt="image" src="https://github.com/user-attachments/assets/a9f066a5-c5c9-4e4d-9bf8-93cdc9dc093d" />
 
 <p align="left">
-  <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
+  <img width="1154" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
 </p>
 
 Fills an enclosed area with a set value. Good for flattening a wide area to 0 / 0.5 / 1.0 in one action.
@@ -78,11 +78,11 @@ Fills an enclosed area with a set value. Good for flattening a wide area to 0 / 
 ### Selection mask
 
 <p align="left">
-  <img width="1208" height="772" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
+  <img width="1208" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
 </p>
 
 Turning `Mask` on restricts the brush to the currently selected vertices. Helps avoid painting nearby parts or back-side vertices by accident. Shared by all brushes.
 
 <p align="center">
-  <img src="README_images/brush_tools.gif" alt="Brush tools" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/brush_tools.gif" alt="Brush tools">
 </p>

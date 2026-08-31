@@ -1,17 +1,17 @@
 # 編集
 
 <p align="left">
-  <img width="97" height="110" alt="image" src="https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de" />
+  <img width="97" alt="image" src="https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de" />
 </p>
 
 `編集` セクションには、`x-` / `x+` と、`スムーズ化` / `ミラー実行` / `骨作成` / `レストポーズ適用` があります。
 
 ### X 方向の頂点選択
 
-<img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+<img width="53" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
 
 <p align="left">
-  <img width="1304" height="758" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
+  <img width="1304" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
 </p>
 
 アーマチュア原点（無い場合はオブジェクト原点）を基準に、`x-` 側または `x+` 側の頂点を選択します。
@@ -21,10 +21,10 @@
 
 ### スムーズ化
 
-<img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
+<img width="296" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
 
 <p align="left">
-  <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
+  <img width="1236" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
 </p>
 
 選択頂点のウェイトを周囲へなじませます。
@@ -36,12 +36,12 @@
 
 ### ミラー実行
 
-<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
+<img width="484" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
 
-<img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
+<img width="340" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
 
 <p align="left">
-  <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
+  <img width="1354" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
 </p>
 
 反転位置の反対側からウェイトを持ってきます。`_L` / `_R` などの左右名も入れ替えて適用されます。
@@ -59,8 +59,8 @@
 ### 骨作成
 
 <p align="left">
-  <img width="459" height="508" alt="image" src="https://github.com/user-attachments/assets/53b3d388-e046-4716-915d-9f0663bf8ec5" />
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+  <img width="459" alt="image" src="https://github.com/user-attachments/assets/53b3d388-e046-4716-915d-9f0663bf8ec5" />
+  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
 </p>
 
 編集モードで選択した辺から、骨列または分岐した骨ツリーを作成します。
@@ -80,7 +80,7 @@
 #### 骨とウェイトの分割
 
 <p align="left">
-  <img width="440" height="311" alt="image" src="https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b" />
+  <img width="440" alt="image" src="https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b" />
 </p>
 
 `骨作成` ボタンを `Shift + クリック` すると、既存の骨を連続した骨列へ分割し、対応する頂点グループのウェイトを再分配します。
@@ -93,7 +93,7 @@
 ### レストポーズ適用
 
 <p align="left">
-  <img width="1302" height="768" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+  <img width="1302" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
 </p>
 
 現在の見た目のポーズを、新しいレストポーズとして適用します。アクションとシェイプキーのリターゲットに対応しています。

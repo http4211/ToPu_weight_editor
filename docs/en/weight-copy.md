@@ -1,9 +1,9 @@
 # Weight Copy
 
-<img width="189" height="113" alt="image" src="https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1" />
+<img width="189" alt="image" src="https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1" />
 
 <p align="left">
-  <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
 </p>
 
 - `Vtx Copy` / `Vtx Paste` — copy the active vertex's weights and paste onto the selected vertices.
@@ -31,9 +31,9 @@ Transfers weights from the object selected last (the active one) to the other se
 
 ### Auto Weight
 
-<img width="576" height="310" alt="image" src="https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393" />
+<img width="576" alt="image" src="https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393" />
 
-<img width="433" height="326" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
+<img width="433" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
 
 Binds the selected meshes to an armature and assigns automatic weights. It can keep parent relationships and weight only the part covered by the current selection. The detail settings switch between Blender's built-in automatic weights and Voxel Heat Skinning.
 

@@ -20,8 +20,8 @@ Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Ad
 > `Auto` scale can be turned off to enter a manual value from `0.50` to `4.00`, kept in sync with the HUD scale buttons.
 
 <p align="left">
-  <img width="600" height="1113" alt="image" src="https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71" />
-  <img width="590" height="359" alt="image" src="https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30" />
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71" />
+  <img width="590" alt="image" src="https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30" />
 </p>
 
 ---

@@ -1,7 +1,7 @@
 # 整理
 
 <p align="left">
-  <img width="188" height="111" alt="image" src="https://github.com/user-attachments/assets/2b5f0b8b-ccc2-4990-9883-d3e8e2c873cb" />
+  <img width="188" alt="image" src="https://github.com/user-attachments/assets/2b5f0b8b-ccc2-4990-9883-d3e8e2c873cb" />
 </p>
 
 - `正規化` : 選択頂点のウェイト合計を 1.0 に整える。
@@ -19,7 +19,7 @@
 ## 編集設定 / 自動整理の基準値
 
 <p align="left">
-<img width="519" height="26" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
+<img width="519" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
 </p>
 
 `正規化` `小数点` `閾値` `影響数` の 4 項目で、**整理**実行時の基準値を決めます。

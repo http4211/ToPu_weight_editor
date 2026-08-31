@@ -3,7 +3,7 @@
 ## できること
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
+  <img width="7600" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
 </p>
 
 - 編集モード / ウェイトペイントモードの両方で、GPU オーバーレイからウェイトを確認・編集
@@ -44,10 +44,10 @@
 ## 起動方法
 
 <p align="center">
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
 </p>
 <p align="center">
-  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+  <img width="257" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
 </p>
 
 - **ツールヘッダーのボタン** : アーマチュアアイコンで GPU オーバーレイを表示 / 非表示、ウィンドウアイコンで専用ウィンドウを開く / 閉じる。

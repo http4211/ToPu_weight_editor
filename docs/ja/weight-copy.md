@@ -1,9 +1,9 @@
 # ウェイトコピー
 
-<img width="152" height="109" alt="image" src="https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5" />
+<img width="152" alt="image" src="https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5" />
 
 <p align="left">
-  <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
 </p>
 
 - `頂点コピー` / `頂点貼付` : アクティブ頂点のウェイトをコピーし、選択頂点へ貼り付け。
@@ -32,8 +32,8 @@
 ### 自動ウェイト
 
 <p align="left">
-  <img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
-  <img width="438" height="332" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
+  <img width="552" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
+  <img width="438" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
 </p>
 
 選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。親子関係を維持でき、選択頂点の部位だけを部分的にウェイト付けすることもできます。詳細設定で、Blender 公式方式と Voxel Heat Skinning を切り替えます。

@@ -5,35 +5,224 @@
   <title>ToPu:Weight Editor</title>
   <meta name="description" content="ToPu:Weight Editor - Blender skin weight editing add-on">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#16181d">
   <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root {
-      --theme-color: #E89A1C;
-      --sidebar-width: 17rem;
+      --accent:      #F0821E;
+      --accent-soft: #FFA94D;
+      --bg:          #16181d;
+      --bg-alt:      #1c1f26;
+      --bg-side:     #14161b;
+      --bg-code:     #21252d;
+      --fg:          #d7dae0;
+      --fg-dim:      #9aa1ad;
+      --fg-strong:   #ffffff;
+      --line:        #2a2f39;
+      --theme-color: var(--accent);
+      --sidebar-width: 18rem;
     }
-    .app-name-link img { width: 46px; vertical-align: middle; margin-right: .4rem; }
-    .sidebar { border-right: 1px solid #eee; }
-    .sidebar ul li a { font-size: 15px; }
-    .markdown-section { max-width: 900px; }
-    .markdown-section h1 { padding-bottom: .4em; border-bottom: 2px solid var(--theme-color); }
-    .markdown-section h2 { margin-top: 2.4rem; }
-    .markdown-section img { border-radius: 6px; }
+
+    html, body { background: var(--bg); }
+    body { color: var(--fg); }
+
+    /* ---------- sidebar ---------- */
+    .sidebar {
+      background: var(--bg-side);
+      border-right: 1px solid var(--line);
+      padding-top: 6px;
+    }
+    .sidebar::-webkit-scrollbar { width: 8px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #333945; border-radius: 4px; }
+    .sidebar > h1 { margin: 1.2rem 0 .6rem; }
+    .sidebar > h1 .app-name-link { color: var(--fg-strong); font-size: 17px; font-weight: 600; }
+    .sidebar > h1 .app-name-link img {
+      width: 40px; height: 40px; vertical-align: middle;
+      margin-right: .5rem; border-radius: 9px;
+    }
+    .sidebar ul li a {
+      color: var(--fg-dim);
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 2px 0;
+      border-left: 2px solid transparent;
+      transition: color .12s, border-color .12s;
+    }
+    .sidebar ul li a:hover { color: var(--accent-soft); text-decoration: none; }
+    .sidebar ul li.active > a,
+    .sidebar ul li a.active {
+      color: var(--accent) !important;
+      font-weight: 600;
+      border-left-color: var(--accent);
+      padding-left: 8px;
+    }
+    /* section labels */
+    .sidebar > .sidebar-nav > ul > li > strong {
+      display: block;
+      color: var(--fg-dim);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      margin: 1.3rem 0 .35rem;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid var(--line);
+    }
+    /* page level */
+    .sidebar > .sidebar-nav > ul > li > ul > li > a {
+      color: var(--fg);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 4px 0;
+    }
+    /* heading level (detailed table of contents) */
+    .sidebar > .sidebar-nav > ul > li > ul > li > ul > li > a { font-size: 13px; opacity: .92; }
+    .sidebar > .sidebar-nav > ul > li > ul > li > ul > li > ul > li > a { font-size: 12.5px; opacity: .78; }
+    .sidebar-nav ul ul { border-left: 1px solid var(--line); margin-left: .45rem; padding-left: .7rem; }
+    .sidebar-toggle { background: transparent; }
+    .sidebar-toggle-button span { background: var(--fg-dim); }
+
+    /* ---------- language switch (top right) ---------- */
+    .app-nav { top: 14px; right: 22px; margin: 0; }
+    .app-nav > ul { display: none; }
+    #lang-switch {
+      display: inline-flex;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 3px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.4);
+    }
+    #lang-switch a {
+      display: block;
+      padding: 5px 15px;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      color: var(--fg-dim);
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    #lang-switch a:hover { color: var(--fg-strong); }
+    #lang-switch a.active { background: var(--accent); color: #1a1206; }
+
+    /* ---------- content ---------- */
+    .content { background: var(--bg); }
+    .markdown-section { max-width: 940px; color: var(--fg); }
+    .markdown-section h1, .markdown-section h2,
+    .markdown-section h3, .markdown-section h4 { color: var(--fg-strong); }
+    .markdown-section h1 { padding-bottom: .45em; border-bottom: 2px solid var(--accent); }
+    .markdown-section h2 {
+      margin-top: 2.6rem;
+      padding-bottom: .3em;
+      border-bottom: 1px solid var(--line);
+    }
+    .markdown-section h3 { margin-top: 1.9rem; color: var(--accent-soft); }
+    .markdown-section a { color: var(--accent-soft); }
+    .markdown-section strong { color: var(--fg-strong); }
+    .markdown-section hr { border-top: 1px solid var(--line); }
+
     .markdown-section blockquote {
-      border-left: 4px solid var(--theme-color);
-      background: #fffaf0;
-      color: #6b5a3a;
+      border-left: 4px solid var(--accent);
+      background: #23201a;
+      color: #cbbfa8;
+      border-radius: 0 6px 6px 0;
     }
-    .markdown-section code { color: #b8651b; background: #fdf3e5; }
-    .markdown-section table { display: table; width: 100%; }
-    /* language switch in the sidebar top */
-    .app-nav { margin-right: 1rem; }
-    hr { border-top: 1px solid #eee; }
+    .markdown-section blockquote p { color: #cbbfa8; }
+
+    .markdown-section code { color: #ffc07a; background: var(--bg-code); border-radius: 4px; }
+    .markdown-section pre { background: var(--bg-code); }
+    .markdown-section pre > code { background: transparent; color: #d7dae0; }
+
+    .markdown-section table { display: table; width: 100%; border-collapse: collapse; }
+    .markdown-section tr { background: transparent; border-top: 1px solid var(--line); }
+    .markdown-section th { background: var(--bg-alt); color: var(--fg-strong); }
+    .markdown-section th, .markdown-section td { border: 1px solid var(--line); padding: 8px 12px; }
+    .markdown-section tr:nth-child(2n) { background: #1a1d23; }
+
+    /* ---------- images: keep the original aspect ratio ----------
+       the markdown carries width AND height attributes; once the width is
+       clamped to the column, a fixed height would squash the image        */
+    .markdown-section img,
+    .markdown-section p img,
+    .markdown-section video {
+      height: auto !important;     /* never let a fixed height squash it */
+      width: auto;                 /* honour the width attribute, then clamp */
+      max-width: 100%;
+      border-radius: 6px;
+      background: #0e1013;
+    }
+    /* the feature banner and other oversized shots fill the column */
+    .markdown-section p[align="center"] img { display: inline-block; }
+
+    /* ---------- search ---------- */
+    .sidebar .search { border-bottom: 1px solid var(--line); margin-bottom: 0; }
+    .sidebar .search input {
+      background: var(--bg-alt);
+      color: var(--fg);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 13px;
+    }
+    .sidebar .search input::placeholder { color: #6b7280; }
+    .sidebar .search .results-panel { background: transparent; }
+    .sidebar .search h2 { color: var(--fg-strong); }
+    .sidebar .search p { color: var(--fg-dim); }
+    .sidebar .search .matching-post { border-bottom: 1px solid var(--line); }
+    .sidebar .search .search-keyword { color: var(--accent); background: transparent; font-style: normal; }
+
+    /* ---------- pagination ---------- */
+    .docsify-pagination-container { border-top: 1px solid var(--line); color: var(--fg-dim); }
+    .pagination-item-title { color: var(--fg) !important; }
+    .pagination-item-label { color: var(--accent-soft) !important; }
+    .pagination-item a:hover .pagination-item-title { color: var(--accent) !important; }
+
+    /* ---------- copy code button ---------- */
+    .docsify-copy-code-button {
+      background: var(--bg-alt) !important;
+      color: var(--fg-dim) !important;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font-size: 11px !important;
+    }
+    .docsify-copy-code-button:hover { color: var(--accent) !important; }
+
+    @media screen and (max-width: 768px) {
+      .app-nav { top: 10px; right: 12px; }
+      #lang-switch a { padding: 4px 11px; font-size: 11.5px; }
+    }
   </style>
 </head>
 <body>
   <div id="app">読み込み中…</div>
   <script>
+    // Language toggle that keeps you on the same page when switching.
+    var langSwitchPlugin = function (hook, vm) {
+      function render() {
+        var path = (vm.route && vm.route.path) || '/ja/';
+        var isEn = path.indexOf('/en/') === 0;
+        var twin = isEn ? path.replace('/en/', '/ja/') : path.replace('/ja/', '/en/');
+        var ja = isEn ? twin : path;
+        var en = isEn ? path : twin;
+
+        var el = document.getElementById('lang-switch');
+        if (!el) {
+          var nav = document.querySelector('.app-nav') || document.body;
+          el = document.createElement('div');
+          el.id = 'lang-switch';
+          nav.appendChild(el);
+        }
+        el.innerHTML =
+          '<a href="#' + ja + '" class="' + (isEn ? '' : 'active') + '">JP</a>' +
+          '<a href="#' + en + '" class="' + (isEn ? 'active' : '') + '">EN</a>';
+      }
+      hook.doneEach(render);
+      hook.ready(render);
+    };
+
     window.$docsify = {
       name: '<img src="images/icon.png" alt="">ToPu:Weight Editor',
       nameLink: { '/en/': '#/en/', '/': '#/ja/' },
@@ -41,11 +230,10 @@
 
       loadSidebar: true,
       loadNavbar: true,
-      subMaxLevel: 3,
+      subMaxLevel: 0,
       maxLevel: 4,
       auto2top: true,
 
-      // multi-language: fall back to the Japanese pages if a file is missing
       fallbackLanguages: ['en'],
 
       search: {
@@ -62,12 +250,13 @@
         nextText: { '/en/': 'Next', '/': '次へ' }
       },
 
-      // send bare "/" to the Japanese top page
       alias: {
         '/_navbar.md': '/ja/_navbar.md',
         '/_sidebar.md': '/ja/_sidebar.md',
         '/$': '/ja/README.md'
-      }
+      },
+
+      plugins: [langSwitchPlugin]
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>

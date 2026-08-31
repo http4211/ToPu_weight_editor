@@ -1,9 +1,9 @@
 # 表示補助
 
-<img width="510" height="24" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
+<img width="510" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
 
 <p align="left">
-  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
+  <img width="1380" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
 </p>
 
 - `モディ` : Armature モディファイア表示（ポーズ変形）を切り替え。
@@ -14,13 +14,13 @@
 - `マテリ` : ウェイトカラープレビューを切り替え。横の `…` で色（色相 / 彩度 / 輝度）とマテリアル置換を設定。
 
 <p align="center">
-  <img src="README_images/display_tools.gif" alt="表示補助の動作" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/display_tools.gif" alt="表示補助の動作">
 </p>
 
 ### ウェイトカラープレビュー
 
 <p align="center">
-  <img width="332" height="259" alt="image" src="https://github.com/user-attachments/assets/c92a022d-92b4-486b-990c-a56aa7ea6098" />
+  <img width="332" alt="image" src="https://github.com/user-attachments/assets/c92a022d-92b4-486b-990c-a56aa7ea6098" />
 </p>
 
 `マテリ` で、ウェイトをカラー表示するプレビューを切り替えます。

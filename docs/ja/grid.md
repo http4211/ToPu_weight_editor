@@ -4,24 +4,24 @@
 
 ### プリセットボタン
 
-<img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
+<img width="473" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
 
-<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
+<img width="280" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
 
 <p align="left">
-  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
+  <img width="1188" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
 </p>
 
 `0` `0.1` `0.25` `0.5` `0.75` `0.9` `1` をワンクリックで適用できます。`Add` / `Add%` モードでは `Shift + クリック` で負方向に適用します。プリセット値はアドオンプリファレンスで変更できます。
 
 ### 入力モード / スライダーと数値欄
 
-<img width="431" height="156" alt="Image" src="https://github.com/user-attachments/assets/3ff92ec4-e965-47e9-a535-421889cac398" />
+<img width="431" alt="Image" src="https://github.com/user-attachments/assets/3ff92ec4-e965-47e9-a535-421889cac398" />
 
-<img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
+<img width="693" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
 
 <p align="left">
-  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
+  <img width="1188" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
 </p>
 
 左端のボタンで入力モードを `ABS` → `ADD` → `ADD%` の順に切り替えます。
@@ -42,12 +42,12 @@
 
 ## 特殊グループ選択 / 骨取得
 
-<img width="339" height="195" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
+<img width="339" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
 
-<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+<img width="109" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
 
 <p align="left">
-  <img width="1218" height="758" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
+  <img width="1218" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
 </p>
 
 `骨取得` を使うと、ビューポート上のボーンをクリックして、そのボーン名の頂点グループ列を選択できます。複数の Armature モディファイアがある場合は最も近い候補を取得します。
@@ -57,18 +57,18 @@
 - `▣↖` が ON のとき : 選択頂点が変わるたびに、最もウェイト値が高い列を自動選択。頂点を切り替えながら主影響ボーンを確認する作業に向きます。
 
 <p align="center">
-  <img src="README_images/bone_pick.gif" alt="骨取得の動作" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/bone_pick.gif" alt="骨取得の動作">
 </p>
 
 ---
 
 ## 列状態 / 表示条件（ロック / 無視 / 強制表示）
 
-<img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
-<img width="393" height="187" alt="image" src="https://github.com/user-attachments/assets/fccbf13f-6dc1-4dc8-97e1-cae4aaf6f785" />
+<img width="156" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
+<img width="393" alt="image" src="https://github.com/user-attachments/assets/fccbf13f-6dc1-4dc8-97e1-cae4aaf6f785" />
 
 <p align="left">
-  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
+  <img width="1192" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
 </p>
 
 - `ロック` : 選択列を編集できない状態にする。
@@ -83,13 +83,13 @@
 
 ### 列ヘッダー
 
-  <img width="425" height="33" alt="image" src="https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a" />
+  <img width="425" alt="image" src="https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a" />
 
 <p align="center">
-  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
+  <img width="1346" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
 </p>
 
-  <img width="202" height="122" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
+  <img width="202" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
 
 - クリック : その列が選択列になる。
 - `Shift + 列クリック` : その頂点グループに値がある頂点をまとめて選択。
@@ -99,10 +99,10 @@
 
 ### 固 / 頂点 / 合計
 
-<img width="149" height="30" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
+<img width="149" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
 
 <p align="center">
-  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
+  <img width="1192" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
 </p>
 
 - `固` : 対象頂点をウェイトロック（`Alt + クリック` で解除）。各行の `固` セルでも切り替え可（ドラッグでまとめて）。
@@ -114,7 +114,7 @@
 ### セル
 
 <p align="center">
-  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886" />
+  <img width="1184" alt="Image" src="https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886" />
 </p>
 
 - クリック : 数値を直接入力（`Enter` で確定）。先頭に `+` `-` `*` `/` で現在値へ演算（例: `*0.5`、`+0.1`）。
@@ -124,17 +124,17 @@
 - 複数セル選択中は、入力値をまとめて適用。選択セルが残っている間は、スライダー / ホイール / プリセット / 適用など全ての値変更で実メッシュ選択より優先されます。
 
 <p align="center">
-  <img src="README_images/cell_edit.gif" alt="セル編集" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/cell_edit.gif" alt="セル編集">
 </p>
 
 ### 表示タブ
 
 <p align="left">
-  <img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
+  <img width="724" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
 </p>
 
 <p align="left">
-  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
+  <img width="1186" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
 </p>
 
 グリッド下部のタブで、表示する列の種類を切り替えます。
@@ -152,12 +152,12 @@
 
 ### 列右クリックのウェイト転送
 
-<img width="517" height="246" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
+<img width="517" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
 
-<img width="205" height="125" alt="Image" src="https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db" />
+<img width="205" alt="Image" src="https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db" />
 
 <p align="left">
-  <img width="571" height="1024" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
+  <img width="571" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
 </p>
 
 列ヘッダーを右クリックすると、頂点グループ間の転送メニューを開けます。

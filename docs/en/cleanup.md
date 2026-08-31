@@ -1,7 +1,7 @@
 # Cleanup
 
 <p align="left">
-  <img width="188" height="112" alt="image" src="https://github.com/user-attachments/assets/946e636f-8162-4b77-9f79-58ce49000510" />
+  <img width="188" alt="image" src="https://github.com/user-attachments/assets/946e636f-8162-4b77-9f79-58ce49000510" />
 </p>
 
 - `Normalize` — normalizes the weight total of the selected vertices to 1.0.
@@ -19,7 +19,7 @@
 ## Edit Settings / Auto-cleanup reference values
 
 <p align="left">
-  <img width="512" height="24" alt="image" src="https://github.com/user-attachments/assets/610329e6-337a-4cb1-aea2-13453394c95f" />
+  <img width="512" alt="image" src="https://github.com/user-attachments/assets/610329e6-337a-4cb1-aea2-13453394c95f" />
 </p>
 
 `Normalize`, `Decimals`, `Threshold` and `Influence Count` set the reference values used by the **Cleanup** buttons.

@@ -2,10 +2,10 @@
 
 ## Display helpers
 
-<img width="524" height="24" alt="image" src="https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020" />
+<img width="524" alt="image" src="https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020" />
 
 <p align="left">
-  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
+  <img width="1380" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
 </p>
 
 - `Modifier` — toggles the Armature modifier display (pose deformation).
@@ -16,7 +16,7 @@
 - `Material` — toggles the weight-color preview. The `…` next to it configures color (hue / saturation / value) and material replacement.
 
 <p align="center">
-  <img src="README_images/display_tools.gif" alt="Display helpers" width="720">
+  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/display_tools.gif" alt="Display helpers">
 </p>
 
 ### Weight-color preview
