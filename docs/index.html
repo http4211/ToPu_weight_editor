@@ -5,21 +5,21 @@
   <title>ToPu:Weight Editor</title>
   <meta name="description" content="ToPu:Weight Editor - Blender skin weight editing add-on">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="theme-color" content="#16181d">
+  <meta name="theme-color" content="#161616">
   <link rel="icon" href="images/icon.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <style>
     :root {
       --accent:      #F0821E;
-      --accent-soft: #FFA94D;
-      --bg:          #16181d;
-      --bg-alt:      #1c1f26;
-      --bg-side:     #14161b;
-      --bg-code:     #21252d;
-      --fg:          #d7dae0;
-      --fg-dim:      #9aa1ad;
+      --accent-soft: #FFB064;
+      --bg:          #161616;   /* neutral grey, no blue tint */
+      --bg-alt:      #1e1e1e;
+      --bg-side:     #121212;
+      --bg-code:     #242424;
+      --fg:          #dcdcdc;
+      --fg-dim:      #9e9e9e;
       --fg-strong:   #ffffff;
-      --line:        #2a2f39;
+      --line:        #303030;
       --theme-color: var(--accent);
       --sidebar-width: 18rem;
     }
@@ -34,9 +34,9 @@
       padding-top: 6px;
     }
     .sidebar::-webkit-scrollbar { width: 8px; }
-    .sidebar::-webkit-scrollbar-thumb { background: #333945; border-radius: 4px; }
+    .sidebar::-webkit-scrollbar-thumb { background: #3a3a3a; border-radius: 4px; }
     .sidebar > h1 { margin: 1.2rem 0 .6rem; }
-    .sidebar > h1 .app-name-link { color: var(--fg-strong); font-size: 17px; font-weight: 600; }
+    .sidebar > h1 .app-name-link { color: #ffffff !important; font-size: 17px; font-weight: 700; }
     .sidebar > h1 .app-name-link img {
       width: 40px; height: 40px; vertical-align: middle;
       margin-right: .5rem; border-radius: 9px;
@@ -109,41 +109,59 @@
       transition: background .15s, color .15s;
     }
     #lang-switch a:hover { color: var(--fg-strong); }
-    #lang-switch a.active { background: var(--accent); color: #1a1206; }
+    #lang-switch a.active { background: var(--accent); color: #171717; }
 
     /* ---------- content ---------- */
     .content { background: var(--bg); }
     .markdown-section { max-width: 940px; color: var(--fg); }
-    .markdown-section h1, .markdown-section h2,
-    .markdown-section h3, .markdown-section h4 { color: var(--fg-strong); }
-    .markdown-section h1 { padding-bottom: .45em; border-bottom: 2px solid var(--accent); }
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section h5,
+    .markdown-section h1 a,
+    .markdown-section h2 a,
+    .markdown-section h3 a,
+    .markdown-section h4 a { color: #ffffff !important; }
+    .markdown-section h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      padding-bottom: .45em;
+      border-bottom: 2px solid var(--accent);
+    }
     .markdown-section h2 {
       margin-top: 2.6rem;
       padding-bottom: .3em;
       border-bottom: 1px solid var(--line);
     }
-    .markdown-section h3 { margin-top: 1.9rem; color: var(--accent-soft); }
+    .markdown-section h3 {
+      margin-top: 1.9rem;
+      color: var(--accent-soft) !important;   /* orange, still bright on grey */
+    }
+    .markdown-section h3 a { color: var(--accent-soft) !important; }
+    /* the anchor docsify injects into headings must not dim them */
+    .markdown-section .anchor span { color: inherit !important; }
     .markdown-section a { color: var(--accent-soft); }
     .markdown-section strong { color: var(--fg-strong); }
     .markdown-section hr { border-top: 1px solid var(--line); }
 
     .markdown-section blockquote {
       border-left: 4px solid var(--accent);
-      background: #23201a;
-      color: #cbbfa8;
+      background: #202020;
+      color: #cfcfcf;
       border-radius: 0 6px 6px 0;
     }
-    .markdown-section blockquote p { color: #cbbfa8; }
+    .markdown-section blockquote p { color: #cfcfcf; }
 
     .markdown-section code { color: #ffc07a; background: var(--bg-code); border-radius: 4px; }
     .markdown-section pre { background: var(--bg-code); }
-    .markdown-section pre > code { background: transparent; color: #d7dae0; }
+    .markdown-section pre > code { background: transparent; color: #dcdcdc; }
 
     .markdown-section table { display: table; width: 100%; border-collapse: collapse; }
     .markdown-section tr { background: transparent; border-top: 1px solid var(--line); }
     .markdown-section th { background: var(--bg-alt); color: var(--fg-strong); }
     .markdown-section th, .markdown-section td { border: 1px solid var(--line); padding: 8px 12px; }
-    .markdown-section tr:nth-child(2n) { background: #1a1d23; }
+    .markdown-section tr:nth-child(2n) { background: #1c1c1c; }
 
     /* ---------- images: keep the original aspect ratio ----------
        the markdown carries width AND height attributes; once the width is
@@ -155,7 +173,7 @@
       width: auto;                 /* honour the width attribute, then clamp */
       max-width: 100%;
       border-radius: 6px;
-      background: #0e1013;
+      background: #101010;
     }
     /* the feature banner and other oversized shots fill the column */
     .markdown-section p[align="center"] img { display: inline-block; }
@@ -170,7 +188,7 @@
       padding: 8px 10px;
       font-size: 13px;
     }
-    .sidebar .search input::placeholder { color: #6b7280; }
+    .sidebar .search input::placeholder { color: #757575; }
     .sidebar .search .results-panel { background: transparent; }
     .sidebar .search h2 { color: var(--fg-strong); }
     .sidebar .search p { color: var(--fg-dim); }
