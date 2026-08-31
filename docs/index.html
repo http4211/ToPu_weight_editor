@@ -84,15 +84,18 @@
     .sidebar-toggle-button span { background: var(--fg-dim); }
 
     /* ---------- language switch (top right) ---------- */
-    .app-nav { top: 14px; right: 22px; margin: 0; }
-    .app-nav > ul { display: none; }
+    .app-nav { display: none; }
     #lang-switch {
+      position: fixed;
+      top: 14px;
+      right: 78px;              /* clear of the GitHub corner ribbon */
+      z-index: 100;
       display: inline-flex;
       background: var(--bg-alt);
       border: 1px solid var(--line);
       border-radius: 999px;
       padding: 3px;
-      box-shadow: 0 2px 10px rgba(0,0,0,.4);
+      box-shadow: 0 2px 10px rgba(0,0,0,.45);
     }
     #lang-switch a {
       display: block;
@@ -191,7 +194,7 @@
     .docsify-copy-code-button:hover { color: var(--accent) !important; }
 
     @media screen and (max-width: 768px) {
-      .app-nav { top: 10px; right: 12px; }
+      #lang-switch { top: 8px; right: 60px; }
       #lang-switch a { padding: 4px 11px; font-size: 11.5px; }
     }
   </style>
@@ -199,6 +202,17 @@
 <body>
   <div id="app">読み込み中…</div>
   <script>
+    // Land on a language folder. docsify resolves _sidebar.md / _navbar.md
+    // relative to the current folder, so we must never sit on the bare root.
+    (function () {
+      var h = location.hash;
+      if (!h || h === '#' || h === '#/' || h === '#/#/') {
+        var nav = (navigator.language || 'ja').toLowerCase();
+        location.replace(location.pathname + location.search +
+          (nav.indexOf('ja') === 0 ? '#/ja/' : '#/en/'));
+      }
+    })();
+
     // Language toggle that keeps you on the same page when switching.
     var langSwitchPlugin = function (hook, vm) {
       function render() {
@@ -210,10 +224,9 @@
 
         var el = document.getElementById('lang-switch');
         if (!el) {
-          var nav = document.querySelector('.app-nav') || document.body;
           el = document.createElement('div');
           el.id = 'lang-switch';
-          nav.appendChild(el);
+          document.body.appendChild(el);
         }
         el.innerHTML =
           '<a href="#' + ja + '" class="' + (isEn ? '' : 'active') + '">JP</a>' +
@@ -229,7 +242,7 @@
       repo: 'https://github.com/http4211/ToPu_weight_editor',
 
       loadSidebar: true,
-      loadNavbar: true,
+      loadNavbar: false,
       subMaxLevel: 0,
       maxLevel: 4,
       auto2top: true,
@@ -248,12 +261,6 @@
         crossChapterText: true,
         previousText: { '/en/': 'Previous', '/': '前へ' },
         nextText: { '/en/': 'Next', '/': '次へ' }
-      },
-
-      alias: {
-        '/_navbar.md': '/ja/_navbar.md',
-        '/_sidebar.md': '/ja/_sidebar.md',
-        '/$': '/ja/README.md'
       },
 
       plugins: [langSwitchPlugin]
