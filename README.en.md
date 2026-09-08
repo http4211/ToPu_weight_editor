@@ -1,7 +1,7 @@
-# ToPu_weight_editor
+# ToPu Weight Editor
 
 <p align="center">
-  <img width="611" height="807" alt="image" src="https://github.com/user-attachments/assets/e69834b9-3d6d-47b2-b239-baccc06b948f" />
+  <img width="611" alt="image" src="docs/images/en/interface.png" />
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
-> **This document describes version 1.5.179.**
+> **This document describes version 1.5.244.**
 > The N-panel and Pie Menu from the 1.4 series have been removed; all operations now live in the GPU overlay. The overlay shortcut also changed from `W` to `Ctrl + W`.
 
 ## Table of contents
@@ -43,7 +43,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 ## Features
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c" />
+  <img width="1200" alt="Image" src="docs/images/en/quick-reference.png" />
 </p>
 
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
@@ -58,7 +58,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 - Intuitive numeric editing through cells, the slider and presets
 - Simultaneous editing of several meshes, with vertex-group selection sync
 - A dedicated ToPu Weight Editor area available as a Blender editor type, plus a separate dedicated window
-- Japanese / English UI (follows Blender's language setting, or can be forced)
+- Japanese / English UI (follows Blender's language setting)
 
 ## Requirements
 
@@ -78,10 +78,10 @@ Two icon buttons are then added to the 3D View tool header.
 ## Opening the editor
 
 <p align="center">
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+  <img width="1280" alt="Image" src="docs/images/shared/opening-the-editor-01.gif" />
 </p>
 <p align="center">
-  <img width="230" height="28" alt="image" src="https://github.com/user-attachments/assets/4303fa20-bf9e-4f50-bdae-3d7d5c8e28ea" />
+  <img width="230" alt="image" src="docs/images/en/opening-the-editor-01.png" />
 </p>
 
 - **Tool-header buttons** — the armature icon shows / hides the GPU overlay; the window icon opens / closes the dedicated window.
@@ -101,7 +101,11 @@ Choosing `ToPu Weight Editor` from the Editor Type selector turns that area into
 
 ## Quick start
 
-https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
+<p align="center">
+  <img src="docs/images/shared/quick-start.gif" alt="Quick start demonstration" width="800">
+</p>
+
+<a href="docs/images/shared/quick-start.mp4">Open video (MP4)</a>
 
 1. Select a mesh that is bound to an armature.
 2. Enter Edit Mode or Weight Paint Mode.
@@ -114,7 +118,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 ## GPU overlay / Header row
 
-- `Drag to Move` — moves the overlay.
+- Drag the title field to move the overlay; drag any corner to resize it.
 - `Grid Display` — toggles grid display and realtime update.
 - `▣` `↶` `🗑` — save / restore / delete a [weight snapshot](#weight-snapshots).
 - `⚙` — opens the add-on preferences.
@@ -128,19 +132,19 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 `▣` `↶` `🗑` in the header row provide temporary weight storage and restoration.
 
 - `▣` — save all weights of the target object under a name.
-- `↶` — restore from the list. Object Mode restores the whole target; Edit / Weight Paint Mode restores selected vertices.
+- `↶` — restore from the list. Object Mode restores the whole target. Edit / Weight Paint Mode can restore the whole target or selected vertices only (`Restore Selected Vertices Only` is off by default).
 - `🗑` — delete a saved snapshot (single or bulk).
 
-The same object with the same vertex count is restored directly by vertex index; a different object or topology uses the saved positions and normals for spatial transfer (interpolation and so on follow the `Object Weight Copy` detail settings).
+`Restore Method` offers `Auto`, `Vertex Index` and `Nearest Transfer`. `Auto` restores the same object with the same vertex count by vertex index; a different object or topology uses the saved positions and normals for spatial transfer (interpolation and so on follow the `Object Weight Copy` detail settings).
 
 > Snapshots are compressed and stored inside the `.blend`. Large snapshots increase the file size.
 
 ## Bone transform
 
-<img width="532" height="28" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
+<img width="532" alt="Image" src="docs/images/shared/bone-transform-01.png" />
 
 <p align="left">
-  <img width="1314" height="756" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
+  <img width="1314" alt="Image" src="docs/images/shared/bone-transform-02.gif" />
 </p>
 
 When the selected column matches a bone, its `Location`, `Rotation` and `Scale` can be reviewed and edited. Useful for nudging the pose while watching how the weights behave.
@@ -152,57 +156,59 @@ When the selected column matches a bone, its `Location`, `Rotation` and `Scale` 
 ## Edit
 
 <p align="left">
-  <img width="107" height="114" alt="image" src="https://github.com/user-attachments/assets/c63dd83d-edeb-476b-8a78-c8a682264b16" />
+  <img width="107" alt="image" src="docs/images/en/edit-01.png" />
 </p>
 
 The `Edit` section holds `x-` / `x+`, plus `Smooth Weights`, `Mirror`, `Bone Creation` and `Apply Rest Pose`.
 
 ### Selecting vertices by X side
 
-<img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+<img width="53" alt="Image" src="docs/images/shared/selecting-vertices-by-x-side-01.png" />
 
 <p align="left">
-  <img width="1304" height="758" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
+  <img width="1304" alt="Image" src="docs/images/shared/selecting-vertices-by-x-side-02.gif" />
 </p>
 
 Selects vertices on the `x-` or `x+` side, using the armature origin (or each object's origin when there is no armature) as the reference.
 
 - Plain click — does not select vertices on the center line.
-- `Shift + Click` — also selects the center-line vertices.
+- `Shift + Click` — selects only the center-line vertices.
 
 ### Smooth Weights
 
-<img width="299" height="230" alt="image" src="https://github.com/user-attachments/assets/df0b567d-c156-4139-9d88-2e4b572a6dcd" />
+<img width="299" alt="image" src="docs/images/en/smooth-weights-01.png" />
 
 <p align="left">
-  <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
+  <img width="1236" alt="Image" src="docs/images/shared/smooth-weights-01.gif" />
 </p>
 
 Blends the weights of the selected vertices into their surroundings.
 
 - Plain click — smooths the selected vertices.
-- `Shift + Click` — smooths the full weight range of the selected column plus one outer ring.
+- `Shift + Click` — smooths the selected column’s weighted region plus one outer ring. In multi-object Edit Mode, this includes meshes with no selected vertices.
 - `Ctrl + Click` — repairs abnormal weights using the surroundings as the reference.
 - `…` — detail settings: range, method (`Fast` / `Surface` / `Volume`), iterations, and the cleanup applied afterwards.
+- Shift-click settings: `Border Spread Value` (default `0.01`; `0` disables outward expansion) and `Selected Vertices Only` (off by default). Enable the latter to restrict the whole range, including the outer ring, to selected vertices.
 
 ### Mirror
 
-<img width="478" height="454" alt="image" src="https://github.com/user-attachments/assets/ab59df15-6f02-46ab-9c79-0ed322987407" />
+<img width="478" alt="image" src="docs/images/en/mirror-01.png" />
 
-<img width="339" height="288" alt="image" src="https://github.com/user-attachments/assets/ba82830e-3339-474e-87a3-989f86abf288" />
+<img width="339" alt="image" src="docs/images/en/mirror-02.png" />
 
 <p align="left">
-  <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
+  <img width="1354" alt="Image" src="docs/images/shared/mirror-01.gif" />
 </p>
 
 Brings weights over from the mirrored position on the opposite side. Left/right names such as `_L` / `_R` are swapped as well.
 
-- Plain click — mirrors the selected vertices.
+- Plain click — mirrors selected vertices in Edit / Weight Paint Mode. In Object Mode, opens a direction dialog and mirrors the whole selected meshes.
 - `Ctrl + Click` — choose a direction and mirror the whole target object (or selected vertices only).
 - `…` — detail settings: mirror direction, reference space, search distance, center correction, center tolerance and the left/right word sets.
 
 Notes.
 
+- Supports multiple meshes. Selected-vertex mirroring uses each mesh’s own selection; whole-mesh mirroring also includes edited meshes with no selected vertices.
 - Asymmetric geometry is supported (the reflected position is projected onto the source surface and interpolated; can be disabled in the details).
 - If the opposite vertex group is missing but the corresponding opposite bone exists, it is created automatically (otherwise a dialog lets you create or skip).
 - **Center L/R Balancing** (on by default) balances the L/R weights of center-axis vertices. Turn off `Balance Center L/R Weights` in Mirror Details to skip only this step.
@@ -210,8 +216,8 @@ Notes.
 ### Bone Creation
 
 <p align="left">
-  <img width="458" height="508" alt="image" src="https://github.com/user-attachments/assets/e8583f09-280f-4af6-a9bc-19f993d039c6" />
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+  <img width="458" alt="image" src="docs/images/en/bone-creation-01.png" />
+  <img width="1280" alt="Image" src="docs/images/shared/bone-creation-01.gif" />
 </p>
 
 Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode.
@@ -222,16 +228,23 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 - `Bone Count` and `Reverse Direction` (and `Branch Count` for branches) can be adjusted in the confirmation dialog and via `F9`. The dialog also controls Auto Weights, target, naming, connection, roll reference and post-creation mode.
 - Multiple open paths — `Center Axis` off creates an independent chain on each path; on averages them into one center chain.
 
-`Auto Weights` (in the dialog) weights the target region using only the newly created bones (`Blender Built-in` / `Voxel Heat Skinning`). With `Replace Existing Weights`, existing bone weights on the selected vertices are cleared first (non-bone groups are preserved).
+`Auto Weights` (in the dialog) weights the target region using only the newly created bones (`Blender Built-in` / `Voxel Heat Skinning`). With `Replace Existing Weights`, existing bone weights belonging to the destination armature are cleared from the target vertices first. Unrelated vertex groups are preserved.
 
-> The target is normally the selected vertices. But if you select two or more edge loops that sandwich a section of the mesh, the vertices between those loops are weighted as well. A separate mesh that is not connected to the selection is never affected.
+> The target is normally the selected vertices. When multiple open edge paths enclose the same connected mesh strip, unselected vertices between them are included. Disconnected meshes are unaffected. `Center Axis` uses the same region.
 
-`Bone Roll Reference` : `Automatic Axis` / `Selected Edge Surface` / `Mesh Local Z` / `Mesh Local Y` / `World Z` / `World Y`.
+`Bone Roll Reference` aligns the bone axes while keeping each bone along its chain.
+
+- `Automatic Axis` — chooses a suitable reference axis automatically.
+- `Selected Edge Surface` — follows the faces connected to the selected edges.
+- `Mesh Local Z` — uses the mesh’s local Z axis.
+- `Mesh Local Y` — uses the mesh’s local Y axis.
+- `World Z` — uses the world Z axis.
+- `World Y` — uses the world Y axis.
 
 #### Split Bone and Weights
 
 <p align="left">
-  <img width="439" height="311" alt="image" src="https://github.com/user-attachments/assets/d02ef477-5d14-4015-a27f-b6a44dc5cc26" />
+  <img width="439" alt="image" src="docs/images/en/split-bone-and-weights-01.png" />
 </p>
 
 `Shift + Click` on `Bone Creation` splits existing bones into connected chains and redistributes each matching vertex-group weight among the resulting bones.
@@ -244,7 +257,7 @@ Creates a bone chain or branched bone tree from edges selected in Mesh Edit Mode
 ### Apply Rest Pose
 
 <p align="left">
-  <img width="1302" height="768" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+  <img width="1302" alt="Image" src="docs/images/shared/apply-rest-pose-01.gif" />
 </p>
 
 Applies the current visual pose as the new rest pose. Action and shape-key retargeting are supported.
@@ -253,14 +266,16 @@ Applies the current visual pose as the new rest pose. Action and shape-key retar
 
 ## Weight Copy
 
-<img width="189" height="113" alt="image" src="https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1" />
+<img width="189" alt="image" src="docs/images/en/weight-copy-01.png" />
 
 <p align="left">
-  <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="docs/images/shared/weight-copy-01.gif" />
 </p>
 
 - `Vtx Copy` / `Vtx Paste` — copy the active vertex's weights and paste onto the selected vertices.
-- `Near Copy` / `Near Paste` — store the selected vertices' positions and weights, then paste the closest stored weights.
+- `Near Copy` — stores the selected vertices’ positions and weights.
+- `Near Paste` — pastes weights onto selected vertices using the stored positions. `Shift + Click` enables `Clothing Inner-Side Mode` for that paste only.
+- Both paste actions target selected vertices and share the `Object Weight Copy` settings. Shift-click does not change the saved settings.
 - `Auto Weight` — bind the selected meshes to an armature and assign automatic weights.
 - `Obj Xfer` — transfer weights from the active mesh to the other selected meshes.
 
@@ -284,11 +299,11 @@ Transfers weights from the object selected last (the active one) to the other se
 
 ### Auto Weight
 
-<img width="576" height="310" alt="image" src="https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393" />
+<img width="576" alt="image" src="docs/images/en/auto-weight-01.png" />
 
-<img width="433" height="326" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
+<img width="433" alt="image" src="docs/images/en/auto-weight-02.png" />
 
-Binds the selected meshes to an armature and assigns automatic weights. It can keep parent relationships and weight only the part covered by the current selection. The detail settings switch between Blender's built-in automatic weights and Voxel Heat Skinning.
+Binds the selected meshes to an armature and assigns automatic weights. In Object Mode, it can preserve parent-child relationships among selected meshes (on by default). It can also weight only the part covered by the current selection. The detail settings switch between Blender's built-in automatic weights and Voxel Heat Skinning.
 
 **Main Voxel Heat Skinning settings**
 
@@ -317,20 +332,23 @@ When on, automatic weighting is restricted to the saved bone list (both methods,
 ## Brushes
 
 <p align="left">
-  <img width="187" height="111" alt="image" src="https://github.com/user-attachments/assets/64ef486e-415f-48ef-8e13-97b9cac42136" />
+  <img width="187" alt="image" src="docs/images/en/brushes-01.png" />
 </p>
 
 The overlay can start the add-on's own weight brushes, used directly in the viewport. They work in both Edit Mode and Weight Paint Mode, and bone picking / bone transform stay available while brushing.
 
 - `F` changes the size; `Tab` / `Q` / `Esc` return to the previous tool.
-- The tool header exposes size, selection mask and each brush's value.
+- The tool header exposes size, selection mask and each brush’s value.
+- HUD `Size`: drag horizontally to change, `Shift + Drag` for fine adjustment, or click to type. The range is `1–1000 px`, shared with `F` and the tool header.
+- Edit Mode supports multiple meshes; Weight Paint targets the active mesh.
+- All four brushes support the editing settings for normalization, decimals, threshold and influence count.
 
 ### Normal brush
 
-<img width="539" height="29" alt="image" src="https://github.com/user-attachments/assets/9d3ade5f-ecc5-4456-babc-703c9596b5ec" />
+<img width="539" alt="image" src="docs/images/en/normal-brush-01.png" />
 
 <p align="left">
-  <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
+  <img width="898" alt="Image" src="docs/images/shared/normal-brush-01.gif" />
 </p>
 
 The basic brush that adds to or subtracts from the selected column.
@@ -340,19 +358,23 @@ The basic brush that adds to or subtracts from the selected column.
 - `Normal Amount` — how much one stroke changes.
 - `Constant Paint` — avoids over-layering when the same vertex is hit repeatedly.
 - `Stack Paint` — adds/subtracts `Normal Amount` on every touch, building up gradually.
+- `Through` in the tool settings — also paints layered surfaces behind the frontmost surface.
 
 ### Smoothing brush
 
-<img width="787" height="29" alt="image" src="https://github.com/user-attachments/assets/47dadabd-d050-464c-95d4-e702ca28b778" />
+<img width="787" alt="image" src="docs/images/en/smoothing-brush-01.png" />
 
 <p align="left">
-  <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
+  <img width="1268" alt="Image" src="docs/images/shared/smoothing-brush-01.gif" />
 </p>
 
-Blends the selected column with the surrounding vertices. Good for hard paint edges and seams left after mirroring.
+Blends weights with the surrounding vertices. By default, it processes editable groups together to soften paint edges and seams left after mirroring.
 
 - Left-drag smooths the weights around the cursor.
-- `Shift + Left-drag` smears like a fingertip; `Ctrl + Left-drag` spreads the selected column's stronger weights outward; `Alt + Left-drag` feathers its weaker weights outward, blending them into the surroundings.
+- `Shift + Left-drag` — moves weights like a fingertip.
+- `Ctrl + Left-drag` — spreads the selected column’s stronger weights outward.
+- `Alt + Left-drag` — blends toward weaker nearby values to shrink the selected column’s influence.
+- `Active Group Only` — smooths only existing weights in the active group, without spreading to zero-weight vertices.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
 - When an ignored column is selected, only that ignored column is processed.
 
@@ -364,14 +386,15 @@ Blends the selected column with the surrounding vertices. Good for hard paint ed
 
 ### Gradient brush
 
-<img width="707" height="26" alt="image" src="https://github.com/user-attachments/assets/ea890ba2-f618-4a65-98df-af87c8946b0c" />
+<img width="707" alt="image" src="docs/images/en/gradient-brush-01.png" />
 
 <p align="left">
-  <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
+  <img width="1234" alt="Image" src="docs/images/shared/gradient-brush-01.gif" />
 </p>
 
 Builds a weight gradient along the drag direction.
 
+- Plain left-drag replaces weights with the gradient.
 - `Gradient Value` — the maximum weight (the falloff curve runs from this value down to 0).
 - Hold `Ctrl` for the subtract direction, `Shift` for the add direction.
 - Type — `Linear` (straight) / `Radial` (outward from the start point) / `Line Radial` (spreads from the dragged line).
@@ -379,10 +402,10 @@ Builds a weight gradient along the drag direction.
 
 ### Lasso brush
 
-<img width="407" height="28" alt="image" src="https://github.com/user-attachments/assets/a9f066a5-c5c9-4e4d-9bf8-93cdc9dc093d" />
+<img width="407" alt="image" src="docs/images/en/lasso-brush-01.png" />
 
 <p align="left">
-  <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
+  <img width="1154" alt="Image" src="docs/images/shared/lasso-brush-01.gif" />
 </p>
 
 Fills an enclosed area with a set value. Good for flattening a wide area to 0 / 0.5 / 1.0 in one action.
@@ -394,76 +417,74 @@ Fills an enclosed area with a set value. Good for flattening a wide area to 0 / 
 ### Selection mask
 
 <p align="left">
-  <img width="1208" height="772" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
+  <img width="1208" alt="Image" src="docs/images/shared/selection-mask-01.gif" />
 </p>
 
-Turning `Mask` on restricts the brush to the currently selected vertices. Helps avoid painting nearby parts or back-side vertices by accident. Shared by all brushes.
-
-<p align="center">
-  <img src="README_images/brush_tools.gif" alt="Brush tools" width="720">
-</p>
+Turning `Mask` on restricts the brush to the currently selected vertices. Helps avoid painting nearby parts or back-side vertices by accident. Shared by all brushes. If no vertices are selected, painting does not run.
 
 ## Cleanup
 
 <p align="left">
-  <img width="188" height="112" alt="image" src="https://github.com/user-attachments/assets/946e636f-8162-4b77-9f79-58ce49000510" />
+  <img width="188" alt="image" src="docs/images/en/cleanup-01.png" />
 </p>
 
 - `Normalize` — normalizes the weight total of the selected vertices to 1.0.
-- `Clean Decimals` — rounds weight values to the configured digits.
+- `Clean Decimals` — rounds weight values to the configured digits (disabled at `0`).
 - `Threshold Cleanup` — zeroes weights at or below the threshold.
 - `Limit Influences` — brings each vertex within the maximum influence count.
 - `Fix Violations` — applies normalize, decimals, threshold and influence-count settings together.
 - `Unused` — deletes unused vertex groups.
-- `Stepped` — quantizes weights to a fixed step while keeping each vertex total (`…` sets the step size).
+- `Stepped` — opens an execution dialog in the 3D View and snaps weights to a fixed step while keeping each vertex total. Use `F9` afterwards to adjust Step Size; `…` also sets the step size.
 
 > Reference values come from [Edit Settings / Auto-cleanup reference values](#edit-settings--auto-cleanup-reference-values). Run in Object Mode, these act on every vertex of the object. Editable center-axis L/R pairs that were already equal stay equal.
 
 ## Display helpers
 
-<img width="524" height="24" alt="image" src="https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020" />
+<img width="524" alt="image" src="docs/images/en/display-helpers-01.png" />
 
 <p align="left">
-  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
+  <img width="1380" alt="Image" src="docs/images/shared/display-helpers-01.gif" />
 </p>
 
-- `Modifier` — toggles the Armature modifier display (pose deformation).
-- `Rest` — switches the armature between Pose and Rest Position.
+- `Mod` — toggles Armature modifier display (pose deformation) across the current targets, including multi-edit and Object Mode multi-selection. Meshes without an Armature modifier are skipped.
+- `Rest` — on for Rest Position, off for Pose Position. `Rest` and `In Front` are unavailable without a target armature.
 - `In Front` — toggles In Front display for the armatures.
 - `Overlay` — toggles Blender's Vertex Group Weights display.
 - `Bone Hi` — highlights the bone matching the active vertex group (or the selected column), in Edit / Weight Paint Mode only. Its enabled state is restored on reload.
 - `Material` — toggles the weight-color preview. The `…` next to it configures color (hue / saturation / value) and material replacement.
 
-<p align="center">
-  <img src="README_images/display_tools.gif" alt="Display helpers" width="720">
-</p>
-
 ### Weight-color preview
 
-`Material` toggles a preview that shows weights as colors.
+`Material` previews weights on selected meshes. Deselected meshes return to their original display.
+
+- `Active Weight` (default) — shows the active group from blue to red, with zero weights in dark gray.
+- `Colorful Blend` — combines colors from multiple groups.
+- Use the adjacent `…` to choose the mode, colors and material replacement.
 
 - Creates a uniquely named, add-on-owned color attribute (it never overwrites or deletes a same-named user attribute).
 - `Replace Materials` (off by default) — only when on does it temporarily replace material slots, restoring them when the preview is disabled. Skipped on shared mesh data.
 
-> The `Material` preview is heavy; constant use is not recommended.
+> Preview performance depends on mesh size and the number of selected meshes.
 
 ## Edit Settings / Auto-cleanup reference values
 
 <p align="left">
-  <img width="512" height="24" alt="image" src="https://github.com/user-attachments/assets/610329e6-337a-4cb1-aea2-13453394c95f" />
+  <img width="512" alt="image" src="docs/images/en/edit-settings-auto-cleanup-reference-values-01.png" />
 </p>
 
 `Normalize`, `Decimals`, `Threshold` and `Influence Count` set the reference values used by the [Cleanup](#cleanup) buttons.
 
 - Checked items are applied automatically whenever the add-on changes a value.
 - Use the `−` / `+` buttons, or type into the value field, to change a value.
+- `Decimal Places` ranges from `0–7`. `0` disables decimal cleanup and decimal violations; normalization, threshold and influence-count checks remain active.
 - The `…` on `Influence Count` opens `Influence Cleanup Settings`.
 
 **Influence Cleanup Settings** (which bones to keep when a vertex exceeds the influence limit)
 
 - `Consider Bone Hierarchy` (default) — keeps influences spread across the separate chains that branch off a shared parent bone (for example the left and right legs splitting from the hip), so a vertex driven by several chains (a skirt influenced by both legs) is less likely to lose one whole chain.
 - `Prefer Weight Values` — the ordinary approach: keeps the highest-weighted bones first.
-- `Similar Weight Range` — for `Consider Bone Hierarchy`, the weight difference within which bones in the same branch may be reordered. Groups without a hierarchy fall back to `Prefer Weight Values`.
+- `Similar Weight Range` (default `0.001`) — the weight difference within which hierarchy can change the retention order. Groups without a hierarchy use `Prefer Weight Values`.
+- Removed weight goes to the nearest retained bone in the hierarchy; a retained parent wins an equal-distance tie.
 
 > Automatic cleanup is not guaranteed to catch everything, so running `Fix Violations` as a final check is recommended.
 
@@ -471,24 +492,24 @@ Turning `Mask` on restricts the brush to the currently selected vertices. Helps 
 
 ### Preset buttons
 
-<img width="492" height="101" alt="image" src="https://github.com/user-attachments/assets/11f48284-8a22-4133-b3e9-a97db0e69445" />
+<img width="492" alt="image" src="docs/images/en/preset-buttons-01.png" />
 
-<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
+<img width="280" alt="Image" src="docs/images/shared/preset-buttons-01.png" />
 
 <p align="left">
-  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
+  <img width="1188" alt="Image" src="docs/images/shared/preset-buttons-02.gif" />
 </p>
 
 Applies `0`, `0.1`, `0.25`, `0.5`, `0.75`, `0.9` or `1` in one click. In `Add` / `Add%` mode, `Shift + Click` applies the negative value. Preset values can be changed in the add-on preferences.
 
 ### Input mode, slider and value field
 
-<img width="494" height="158" alt="image" src="https://github.com/user-attachments/assets/c3a9a157-9ab5-4a09-a081-183b39b28a99" />
+<img width="494" alt="image" src="docs/images/en/input-mode-slider-and-value-field-01.png" />
 
-<img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
+<img width="693" alt="Image" src="docs/images/shared/input-mode-slider-and-value-field-01.png" />
 
 <p align="left">
-  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
+  <img width="1188" alt="Image" src="docs/images/shared/input-mode-slider-and-value-field-02.gif" />
 </p>
 
 The leftmost button cycles the input mode through `ABS` → `ADD` → `ADD%`.
@@ -503,16 +524,16 @@ Usage.
 - Click the value field to type; scroll the wheel over it to nudge the value.
 - `Apply` — applies the value field to the current column of the selected vertices.
 - `⟳` — rebuilds the grid from the current selection (useful after special selection commands).
-- `Ctrl + Wheel` adds / subtracts, `Ctrl + Shift + Wheel` in finer steps (step sizes are set in preferences).
+- `Ctrl + Wheel` adjusts weights; `Ctrl + Shift + Wheel` uses finer steps. Selected cells take priority; otherwise the current column is used. Step sizes are set in preferences.
 
 ## Special Group Selection / Pick Bone
 
-<img width="338" height="197" alt="image" src="https://github.com/user-attachments/assets/3f38bdb8-8fc5-48c9-ae62-89f9627bb8ee" />
+<img width="338" alt="image" src="docs/images/en/special-group-selection-pick-bone-01.png" />
 
-<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+<img width="109" alt="Image" src="docs/images/shared/special-group-selection-pick-bone-01.png" />
 
 <p align="left">
-  <img width="1218" height="758" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
+  <img width="1218" alt="Image" src="docs/images/shared/special-group-selection-pick-bone-02.gif" />
 </p>
 
 `Pick Bone` lets you click a bone in the viewport to select the vertex-group column with that bone's name. With several Armature modifiers, the globally nearest visible bone is used.
@@ -521,18 +542,14 @@ Usage.
 - The `…` opens the excluded-word and shortcut settings (excluded words keep bones containing `IK`, `FK`, `twist` and similar out of the candidates).
 - When `▣↖` is on, changing the selection automatically selects the highest-weight column. Suits switching vertices often to check the dominant influence bone.
 
-<p align="center">
-  <img src="README_images/bone_pick.gif" alt="Bone picking" width="720">
-</p>
-
 ## Column State & Visibility (Lock / Ignore / Force Show)
 
-<img width="157" height="28" alt="image" src="https://github.com/user-attachments/assets/1abf4eb8-5e6b-46e5-8fb4-13e5b1e48628" />
+<img width="157" alt="image" src="docs/images/en/column-state-visibility-lock-ignore-force-show-01.png" />
 
-<img width="399" height="195" alt="image" src="https://github.com/user-attachments/assets/997d4dac-03f2-4866-a578-2b15df0007d8" />
+<img width="399" alt="image" src="docs/images/en/column-state-visibility-lock-ignore-force-show-02.png" />
 
 <p align="left">
-  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
+  <img width="1192" alt="Image" src="docs/images/shared/column-state-visibility-lock-ignore-force-show-01.gif" />
 </p>
 
 - `Lock` — makes the selected column non-editable.
@@ -546,50 +563,47 @@ Usage.
 ### Column headers
 
 <p align="center">
-  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
+  <img width="1346" alt="Image" src="docs/images/shared/column-headers-01.gif" />
 </p>
 
 - Click — makes it the selected column.
 - `Shift + Click` — selects every vertex that has a value in that group.
 - `Ctrl + Click` — keeps only the current-selection vertices that have a value in that column.
-- `Ctrl + Shift + Click` — cell-selects every cell in that column (all displayed rows, across pages).
+- `Ctrl + Shift + Click` — adds every cell in that column to the existing cell selection, including displayed rows on later pages.
 - Right-click — opens the [weight transfer menu](#column-right-click-weight-transfer).
 
-### L / Vertex / Sum
+### L / Ver / Sum
 
-<img width="111" height="33" alt="image" src="https://github.com/user-attachments/assets/7af6fa19-7275-46ae-972a-25e2ab45ceb2" />
+<img width="111" alt="image" src="docs/images/en/l-vertex-sum-01.png" />
 
 <p align="center">
-  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
+  <img width="1192" alt="Image" src="docs/images/shared/l-vertex-sum-01.gif" />
 </p>
 
 - `L` — weight-lock the target vertices (`Alt + Click` unlocks). Each row's `L` cell also toggles the lock (drag for several).
-- `Vertex` — grid-select the displayed rows (`Alt + Click` clears). Each row's `Vertex` cell highlights that vertex in the viewport and keeps it visible.
+- `Ver` — grid-select the displayed rows (`Alt + Click` clears). Click a vertex number to toggle its row selection, drag to select a range, `Shift + Click` to add, or `Ctrl + Drag` to remove.
 - `Sum` — toggle **violation-only view** (`Shift + Click` selects the vertices shown in the grid).
 - When some vertices have a total-value or influence-count problem, the `Sum` header changes to `Sum ⚠`.
-- Violation-only view covers violations across every page, not just the current one.
+- Violation-only view covers every page. In this view, `L` / `Ver` header actions also include matching rows on later pages. `Shift + Click` on `Sum` selects the entire current display set as mesh vertices.
+- Total-cell warning colors identify sum, influence-count, decimal or threshold problems. Hover to see the reasons.
 
 ### Cells
 
 <p align="center">
-  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886" />
+  <img width="1184" alt="Image" src="docs/images/shared/cells-01.gif" />
 </p>
 
 - Click — type the value directly (`Enter` confirms). Start with `+` `-` `*` `/` for a relative operation (for example `*0.5` or `+0.1`).
 - Drag — select a range (`Shift + Drag` adds, `Ctrl + Drag` removes).
-- Right-click — clear the cell selection.
-- `Ctrl + Shift + Click` — cell-selects the whole column of that cell (same as from the column header).
+- Right-click, or click empty grid space — clear the cell selection.
+- `Ctrl + Shift + Click` — adds the cell’s whole column to the existing selection, including displayed rows on later pages (also available from the column header).
 - With several cells selected, the entered value applies to all at once. While a cell selection remains, every value-changing operation (slider / wheel / presets / Apply) prioritizes the selected cells over the live mesh selection.
-
-<p align="center">
-  <img src="README_images/cell_edit.gif" alt="Cell editing" width="720">
-</p>
 
 ### Column tabs
 
 <p align="left">
-  <img width="562" height="31" alt="image" src="https://github.com/user-attachments/assets/9a6f941e-05c7-4855-812e-7f618001c662" />
-  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
+  <img width="562" alt="image" src="docs/images/en/column-tabs-01.png" />
+  <img width="1186" alt="Image" src="docs/images/shared/column-tabs-01.gif" />
 </p>
 
 The tabs below the grid choose which columns are shown.
@@ -598,18 +612,23 @@ The tabs below the grid choose which columns are shown.
 - `Deform` — only deform vertex groups whose names match a bone.
 - `Other` — only non-bone vertex groups that do not match a bone name.
 
+Use the scrollbars to move vertically or horizontally. Over the grid, the wheel scrolls vertically and `Shift + Wheel` scrolls horizontally. The footer shows the current column and selected-vertex count.
+
 Per-tab options.
 
-- `Ignore Non-Bone Columns` (All tab) — marks non-bone groups as ignored.
+- `Ignore Non-Bone Columns` (All tab) — excludes non-bone columns from totals, normalization and cleanup. Manual Ignore choices survive target changes.
+- `Hierarchy` (All tab, on by default) — includes armatures along the object’s parent chain when classifying bone columns. When off, only Armature modifiers are used.
 - `Always Show` (Other tab) — always shows existing non-bone columns even when the selection has no values for them.
 - `Allow >1` (Other tab) — when on, Other columns are not treated as violations at a total of 1 or more, and are not normalized.
-- `Hidden Words` — hides specified words from the group-name display (actual names are unchanged).
+- `Hidden Words` — removes only the specified text from displayed column names. It does not hide columns or rename actual vertex groups.
+
+In multi-edit, a shared name is a bone column if any edited mesh’s applicable armature contains that bone. The `Other` tab has its own independent Ignore state.
 
 ### Column right-click weight transfer
 
 <p align="left">
-  <img width="515" height="246" alt="image" src="https://github.com/user-attachments/assets/08b1ca77-55aa-438a-bb2d-dab1ee1afd59" />
-  <img width="577" height="835" alt="image" src="https://github.com/user-attachments/assets/a38e5d23-7c4a-4102-971a-b54873d67845" />
+  <img width="515" alt="image" src="docs/images/en/column-right-click-weight-transfer-01.png" />
+  <img width="577" alt="image" src="docs/images/en/column-right-click-weight-transfer-02.png" />
 </p>
 
 Right-clicking a column header opens the vertex-group transfer menu.
@@ -627,7 +646,7 @@ A `Sync Selection` button is also added to `Properties > Object Data > Vertex Gr
 
 Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Add-ons`.
 
-- `Display Language` — `Auto` / `Japanese` / `English` (Auto follows Blender's language setting).
+- UI language follows Blender's `Preferences > Interface > Translation` settings.
 - `Display Settings` — whether the GPU overlay button is shown in the tool header.
 - `GPU Overlay UI Scale` — separate scales for the `3D View HUD` and the `Dedicated Area / Window HUD`.
 - `GPU Overlay UI Style` — `Slightly Round UI Corners`.
@@ -643,8 +662,8 @@ Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Ad
 > `Auto` scale can be turned off to enter a manual value from `0.50` to `4.00`, kept in sync with the HUD scale buttons.
 
 <p align="left">
-  <img width="600" height="1113" alt="image" src="https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71" />
-  <img width="590" height="359" alt="image" src="https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30" />
+  <img width="600" alt="image" src="docs/images/en/add-on-preferences-01.png" />
+  <img width="590" alt="image" src="docs/images/en/add-on-preferences-02.png" />
 </p>
 
 ## Shortcuts
@@ -653,8 +672,9 @@ Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Ad
 | --- | --- | --- |
 | Show / hide the GPU overlay | `Ctrl + W` | Enabled |
 | Close the GPU overlay | `Ctrl + W` / `Esc` | Enabled |
-| Add to / subtract from the selected column | `Ctrl + Wheel` | Enabled |
-| Fine adjustment of the selected column | `Ctrl + Shift + Wheel` | Enabled |
+| Add / subtract weights in selected cells or the current column | `Ctrl + Wheel` | Enabled |
+| Fine weight adjustment in selected cells or the current column | `Ctrl + Shift + Wheel` | Enabled |
+| Add a whole column to the cell selection | `Ctrl + Shift + Click` (header / cell) | Enabled |
 | Pick a bone while the overlay is open | `Alt + Right Click` | Enabled |
 | Smooth Weights | `Ctrl + Alt + S` | Disabled |
 | Pick an influence from a bone | `Ctrl + Alt + B` | Disabled |

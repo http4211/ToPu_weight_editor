@@ -1,7 +1,7 @@
-# ToPu_weight_editor
+# ToPu Weight Editor
 
 <p align="center">
-  <img width="614" height="803" alt="image" src="https://github.com/user-attachments/assets/cd95a546-837b-4e1a-8a5a-165b7273fba1" />
+  <img width="614" alt="image" src="docs/images/ja/interface.png" />
 </p>
 
 <p align="center">
@@ -11,7 +11,7 @@
 ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集するアドオンです。
 3D ビューに描画される **GPU オーバーレイ** から、数値編集・整理・スムーズ・ミラー・コピー / 転送・骨取得・骨作成・表示補助までをまとめて操作できます。外部フレームワークや追加の Python パッケージは不要です。
 
-> **バージョン 1.5.179 時点の仕様です。**
+> **バージョン 1.5.244 時点の仕様です。**
 > 1.4 系までの N パネルとパイメニューは廃止され、操作は GPU オーバーレイに一本化されました。表示ショートカットも `W` から `Ctrl + W` に変更されています。
 
 ## 目次
@@ -43,7 +43,7 @@ ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集す
 ## できること
 
 <p align="center">
-  <img width="7600" height="5200" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
+  <img width="1200" alt="Image" src="docs/images/ja/quick-reference.png" />
 </p>
 
 - 編集モード / ウェイトペイントモードの両方で、GPU オーバーレイからウェイトを確認・編集
@@ -58,7 +58,7 @@ ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集す
 - セル / スライダー / プリセットによる直感的な数値編集
 - 複数メッシュの同時編集と頂点グループ選択の同期
 - Blender のエディタータイプとして使える専用エリアと、独立した専用ウィンドウ
-- 日本語 / 英語 UI（Blender の言語設定に追従、または個別に固定）
+- 日本語 / 英語 UI（Blender の言語設定に追従）
 
 ## 動作環境
 
@@ -78,10 +78,10 @@ ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集す
 ## 起動方法
 
 <p align="center">
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+  <img width="1280" alt="Image" src="docs/images/shared/opening-the-editor-01.gif" />
 </p>
 <p align="center">
-  <img width="257" height="55" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+  <img width="257" alt="image" src="docs/images/ja/opening-the-editor-01.png" />
 </p>
 
 - **ツールヘッダーのボタン** : アーマチュアアイコンで GPU オーバーレイを表示 / 非表示、ウィンドウアイコンで専用ウィンドウを開く / 閉じる。
@@ -101,7 +101,11 @@ ToPu:Weight Editorは、Blender 上でスキンウェイトを確認・編集す
 
 ## クイックスタート
 
-https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
+<p align="center">
+  <img src="docs/images/shared/quick-start.gif" alt="Quick start demonstration" width="800">
+</p>
+
+<a href="docs/images/shared/quick-start.mp4">動画を開く（MP4）</a>
 
 1. アーマチュアにバインドされたメッシュを選択します。
 2. 編集モード、またはウェイトペイントモードにします。
@@ -115,10 +119,10 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ## GPU オーバーレイ / ヘッダー行
 
 <p align="left">
-  <img width="500" height="33" alt="image" src="https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc" />
+  <img width="500" alt="image" src="docs/images/ja/gpu-overlay-header-row-01.png" />
 </p>
 
-- `ドラッグで移動` : オーバーレイの位置を移動します。
+- タイトル欄をドラッグして位置を移動し、四隅をドラッグして大きさを変更します。
 - `グリッド表示` : グリッド表示とリアルタイム更新を切り替えます。
 - `▣` `↶` `🗑` : [ウェイトスナップショット](#ウェイトスナップショット)の保存 / 復元 / 削除。
 - `⚙` : アドオンプリファレンスを開きます。
@@ -130,25 +134,25 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ## ウェイトスナップショット
 
 <p align="left">
-  <img width="69" height="28" alt="image" src="https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80" />
+  <img width="69" alt="image" src="docs/images/ja/weight-snapshots-01.png" />
 </p>
 
 ヘッダー行の `▣` `↶` `🗑` で、ウェイトを一時保存・復元できます。
 
 - `▣` : 対象オブジェクトの全ウェイトに名前を付けて保存。
-- `↶` : 一覧から復元。オブジェクトモードは対象全体、編集 / ウェイトペイントモードは選択頂点へ復元。
+- `↶` : 一覧から復元。オブジェクトモードでは対象全体、編集 / ウェイトペイントモードでは全体または選択頂点だけに復元できます（選択頂点のみは初期設定 OFF）。
 - `🗑` : 一覧から選んで削除（個別 / 一括）。
 
-復元先が保存元と同じオブジェクトで頂点数も同じ場合は頂点番号でそのまま復元し、別オブジェクトや異なるトポロジーへは保存した位置・法線で空間転送します（補間などは `オブジェクト転送` の詳細設定に従います）。
+`復元方式` は `自動` / `頂点番号` / `近接転送` から選べます。`自動` は、保存元と同じオブジェクトで頂点数も同じなら頂点番号で復元し、別オブジェクトや異なるトポロジーへは位置・法線で空間転送します（補間などは `オブジェクト転送` の詳細設定に従います）。
 
 > ※ スナップショットは圧縮して `.blend` 内に保存されます。大きなスナップショットはファイルサイズを増やします。
 
 ## 骨トランスフォーム
 
-<img width="532" height="28" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
+<img width="532" alt="Image" src="docs/images/shared/bone-transform-01.png" />
 
 <p align="left">
-  <img width="1314" height="756" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
+  <img width="1314" alt="Image" src="docs/images/shared/bone-transform-02.gif" />
 </p>
 
 選択列に対応する骨があれば、その `位置` `回転` `スケール` を確認・編集できます。ポーズを少し動かしてウェイトの効き方を確認したいときに使います。
@@ -160,57 +164,59 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ## 編集
 
 <p align="left">
-  <img width="97" height="110" alt="image" src="https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de" />
+  <img width="97" alt="image" src="docs/images/ja/edit-01.png" />
 </p>
 
 `編集` セクションには、`x-` / `x+` と、`スムーズ化` / `ミラー実行` / `骨作成` / `レストポーズ適用` があります。
 
 ### X 方向の頂点選択
 
-<img width="53" height="25" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+<img width="53" alt="Image" src="docs/images/shared/selecting-vertices-by-x-side-01.png" />
 
 <p align="left">
-  <img width="1304" height="758" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
+  <img width="1304" alt="Image" src="docs/images/shared/selecting-vertices-by-x-side-02.gif" />
 </p>
 
 アーマチュア原点（無い場合はオブジェクト原点）を基準に、`x-` 側または `x+` 側の頂点を選択します。
 
 - 通常クリック : 中心線上の頂点は選択しません。
-- `Shift + クリック` : 中心線上の頂点も選択します。
+- `Shift + クリック` : 中心線上の頂点だけを選択します。
 
 ### スムーズ化
 
-<img width="296" height="163" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
+<img width="296" alt="Image" src="docs/images/ja/smooth-weights-01.png" />
 
 <p align="left">
-  <img width="1236" height="764" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
+  <img width="1236" alt="Image" src="docs/images/shared/smooth-weights-01.gif" />
 </p>
 
 選択頂点のウェイトを周囲へなじませます。
 
 - 通常クリック : 選択頂点をスムーズ化。
-- `Shift + クリック` : 選択列のウェイト範囲全体と外側 1 リングを自動スムーズ。
+- `Shift + クリック` : 選択列にウェイトがある範囲と、その外側 1 リングを自動スムーズ。複数メッシュの編集時は、頂点未選択のメッシュも対象です。
 - `Ctrl + クリック` : 周囲を基準に異常なウェイトを修正。
 - 右隣の `…` : 対象範囲・方式（`高速` / `表面` / `ボリューム`）・回数・実行後の整理方法を調整。
+- `Shift + クリック` 用の設定 : `周辺への広がり値`（初期値 `0.01`、`0` で外側への拡張なし）と `選択頂点のみ`（初期値 OFF）。`選択頂点のみ` を ON にすると、外側のリングも含めて選択頂点に限定します。
 
 ### ミラー実行
 
-<img width="484" height="459" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
+<img width="484" alt="Image" src="docs/images/ja/mirror-01.png" />
 
-<img width="340" height="232" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
+<img width="340" alt="Image" src="docs/images/ja/mirror-02.png" />
 
 <p align="left">
-  <img width="1354" height="762" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
+  <img width="1354" alt="Image" src="docs/images/shared/mirror-01.gif" />
 </p>
 
 反転位置の反対側からウェイトを持ってきます。`_L` / `_R` などの左右名も入れ替えて適用されます。
 
-- 通常クリック : 選択頂点をミラー。
+- 通常クリック : 編集 / ウェイトペイントモードでは選択頂点をミラー。オブジェクトモードでは方向を選ぶダイアログを開き、選択メッシュ全体に実行します。
 - `Ctrl + クリック` : 方向を選んで、対象オブジェクト全体（または選択頂点のみ）をミラー。
 - 右隣の `…` : 詳細設定（方向・基準空間・検索距離・中央補正・中央許容・左右ワードセット）を開く。
 
 補足。
 
+- 複数メッシュに対応。選択頂点へのミラーは各メッシュの選択を使い、全体ミラーでは頂点未選択の編集メッシュも処理します。
 - 左右非対称の形状にも対応します（近傍サーフェスへ投影して補間。詳細設定で無効化可）。
 - 反対側の頂点グループが無くても、対応する反対側ボーンがあれば自動作成します（対応ボーンが無い場合は作成 / スキップを確認）。
 - **中央 L/R 均等化**（デフォルト ON）: 中心軸上の頂点の L/R ウェイトを自動で均等化します。ミラー詳細の `中央頂点L/R補正` を OFF にするとこの均等化だけを省略できます。
@@ -218,8 +224,8 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ### 骨作成
 
 <p align="left">
-  <img width="459" height="508" alt="image" src="https://github.com/user-attachments/assets/53b3d388-e046-4716-915d-9f0663bf8ec5" />
-  <img width="1280" height="720" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+  <img width="459" alt="image" src="docs/images/ja/bone-creation-01.png" />
+  <img width="1280" alt="Image" src="docs/images/shared/bone-creation-01.gif" />
 </p>
 
 編集モードで選択した辺から、骨列または分岐した骨ツリーを作成します。
@@ -230,16 +236,23 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 - `骨数` `方向を反転`（分岐時は `分岐数` も）は、確認ダイアログと `F9` から調整できます。確認ダイアログでは、自動ウェイト・作成先・名前・接続・ロール基準・作成後のモードも変更できます。
 - 複数の開いた辺列 : `中心軸` OFF で各辺列に独立した骨列、ON で中央に 1 本の骨列を作成します。
 
-`自動ウェイト`（確認ダイアログ内）: 作成した骨だけで対象範囲にウェイトを割り当てます（`Blender 公式` / `Voxel Heat Skinning`）。`既存ウェイトを置き換え` を有効にすると、選択頂点の既存ボーンウェイトを消してから割り当てます（骨以外のグループは残る）。
+`自動ウェイト`（確認ダイアログ内）: 作成した骨だけで対象範囲にウェイトを割り当てます（`Blender 公式` / `Voxel Heat Skinning`）。`既存ウェイトを置き換え` を有効にすると、対象頂点にある作成先アーマチュアの既存ボーンウェイトを消してから割り当てます。骨と無関係な頂点グループは残ります。
 
-> 対象範囲は、基本的に選択した頂点です。ただし複数の辺ループでメッシュを挟むように選択した場合は、ループの間に挟まれた頂点もまとめてウェイト付けされます。選択とつながっていない別メッシュには影響しません。
+> 対象は基本的に選択頂点です。複数の開いた辺列で同じメッシュ帯を挟んでいる場合は、間にある未選択頂点も対象になります。つながっていない別メッシュには影響しません。`中心軸` でも同じ範囲を使います。
 
-`ボーンロール基準` : `自動軸` / `選択辺の面方向` / `メッシュのローカルZ` / `メッシュのローカルY` / `ワールドZ` / `ワールドY`。
+`ボーンロール基準` で、骨の長さ方向を保ったまま軸の向きを揃えます。
+
+- `自動軸` : 骨列に合う基準軸を自動で選びます。
+- `選択辺の面方向` : 選択辺につながる面の向きに揃えます。
+- `メッシュのローカルZ` : メッシュ自身の Z 軸を基準にします。
+- `メッシュのローカルY` : メッシュ自身の Y 軸を基準にします。
+- `ワールドZ` : ワールドの Z 軸を基準にします。
+- `ワールドY` : ワールドの Y 軸を基準にします。
 
 #### 骨とウェイトの分割
 
 <p align="left">
-  <img width="440" height="311" alt="image" src="https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b" />
+  <img width="440" alt="image" src="docs/images/ja/split-bone-and-weights-01.png" />
 </p>
 
 `骨作成` ボタンを `Shift + クリック` すると、既存の骨を連続した骨列へ分割し、対応する頂点グループのウェイトを再分配します。
@@ -252,7 +265,7 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ### レストポーズ適用
 
 <p align="left">
-  <img width="1302" height="768" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+  <img width="1302" alt="Image" src="docs/images/shared/apply-rest-pose-01.gif" />
 </p>
 
 現在の見た目のポーズを、新しいレストポーズとして適用します。アクションとシェイプキーのリターゲットに対応しています。
@@ -261,14 +274,16 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 
 ## ウェイトコピー
 
-<img width="152" height="109" alt="image" src="https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5" />
+<img width="152" alt="image" src="docs/images/ja/weight-copy-01.png" />
 
 <p align="left">
-  <img width="1042" height="770" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="docs/images/shared/weight-copy-01.gif" />
 </p>
 
 - `頂点コピー` / `頂点貼付` : アクティブ頂点のウェイトをコピーし、選択頂点へ貼り付け。
-- `近接コピー` / `近接貼付` : 選択頂点の位置とウェイトを保存し、選択頂点に最も近いウェイトを貼り付け。
+- `近接コピー` : 選択頂点の位置とウェイトを保存。
+- `近接貼付` : 保存した位置をもとに、選択頂点へウェイトを貼り付け。`Shift + クリック` では、その貼り付けだけ `衣装裏面モード` を有効にします。
+- 近接貼付の通常操作と `Shift + クリック` は、どちらも選択頂点が対象で、`オブジェクト転送` の詳細設定を共用します。Shift 操作で保存済み設定は変わりません。
 - `自動ウェイト` : 選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当て。
 - `オブジェクト転送` : アクティブメッシュのウェイトを他の選択メッシュへ転送。
 
@@ -293,11 +308,11 @@ https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
 ### 自動ウェイト
 
 <p align="left">
-  <img width="552" height="381" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
-  <img width="438" height="332" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
+  <img width="552" alt="Image" src="docs/images/ja/auto-weight-01.png" />
+  <img width="438" alt="image" src="docs/images/ja/auto-weight-02.png" />
 </p>
 
-選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。親子関係を維持でき、選択頂点の部位だけを部分的にウェイト付けすることもできます。詳細設定で、Blender 公式方式と Voxel Heat Skinning を切り替えます。
+選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。オブジェクトモードでは選択メッシュ間の親子関係を維持できます（初期設定 ON）。選択頂点の部位だけを部分的にウェイト付けすることもできます。詳細設定で、Blender 公式方式と Voxel Heat Skinning を切り替えます。
 
 **Voxel Heat Skinning の主な設定**
 
@@ -326,20 +341,23 @@ ON にすると、保存したボーンリストだけで自動ウェイトを�
 ## ブラシ
 
 <p align="left">
-  <img width="192" height="111" alt="Image" src="https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3" />
+  <img width="192" alt="Image" src="docs/images/ja/brushes-01.png" />
 </p>
 
 GPU オーバーレイから、ビューポート上で使う独自のウェイトブラシを開始できます。編集モード / ウェイトペイントモードの両方で使え、ブラシ中でも骨取得や骨トランスフォームを併用できます。
 
 - `F` でサイズ変更、`Tab` / `Q` / `Esc` で元のツールへ戻る。
 - ツールヘッダーで、サイズ・選択マスク・各ブラシ値などを調整。
+- HUD の `サイズ` 欄 : 左右ドラッグで変更、`Shift + ドラッグ` で微調整、クリックで直接入力。範囲は `1〜1000 px` で、`F` とツールヘッダーのサイズに連動します。
+- 編集モードは複数メッシュ、ウェイトペイントモードはアクティブメッシュが対象です。
+- 4 種類とも編集設定の正規化・小数点・閾値・影響数に対応します。
 
 ### 通常ブラシ
 
-<img width="436" height="27" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
+<img width="436" alt="Image" src="docs/images/ja/normal-brush-01.png" />
 
 <p align="left">
-  <img width="898" height="764" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
+  <img width="898" alt="Image" src="docs/images/shared/normal-brush-01.gif" />
 </p>
 
 選択列のウェイトを加算 / 減算する基本ブラシです。
@@ -349,19 +367,23 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 - `通常量` : 1 ストロークあたりの変化量。
 - `一定塗` : 同じ頂点に重ねても塗りすぎないように塗る。
 - `重ね塗` : 当たるたびに `通常量` を加減算し、なぞるほど強くなる。
+- ツール設定の `貫通` : 手前の面に加え、奥に重なった面も塗ります。
 
 ### スムーズブラシ
 
-<img width="719" height="31" alt="image" src="https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587" />
+<img width="719" alt="image" src="docs/images/ja/smoothing-brush-01.png" />
 
 <p align="left">
-  <img width="1268" height="762" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
+  <img width="1268" alt="Image" src="docs/images/shared/smoothing-brush-01.gif" />
 </p>
 
-選択列のウェイトを周囲になじませるブラシです。塗り跡の硬い部分やミラー後の境界を整えるのに向いています。
+ウェイトを周囲になじませるブラシです。通常は編集可能なグループをまとめて処理し、塗り跡やミラー後の境界を整えます。
 
 - 左ドラッグでなめらかにする。
-- `Shift + 左ドラッグ` で指先でなぞるようにスミア、`Ctrl + 左ドラッグ` で選択列の強いウェイトを周囲へ広げる、`Alt + 左ドラッグ` で選択列の弱いウェイトを周囲へなじませながら広げる。
+- `Shift + 左ドラッグ` : 指先でなぞるようにウェイトを移動。
+- `Ctrl + 左ドラッグ` : 選択列の強いウェイトを周囲へ広げる。
+- `Alt + 左ドラッグ` : 周囲の弱い値になじませ、選択列の影響を縮小。
+- `アクティブグループのみ` : 選択列の既存ウェイトだけをスムーズにし、0 の頂点へは広げません。
 - `強さ` で寄せ具合、`回数` で反復回数を調整。
 - 無視列を選択している場合は、その無視列だけを処理。
 
@@ -373,14 +395,15 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### グラデーションブラシ
 
-<img width="640" height="24" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
+<img width="640" alt="Image" src="docs/images/ja/gradient-brush-01.png" />
 
 <p align="left">
-  <img width="1234" height="756" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
+  <img width="1234" alt="Image" src="docs/images/shared/gradient-brush-01.gif" />
 </p>
 
 ドラッグ方向に沿って、選択列のウェイトにグラデーションを作るブラシです。
 
+- 通常の左ドラッグはグラデーションで置き換えます。
 - `グラデ値` で最大値を調整（減衰カーブに沿ってこの値から 0 へ）。
 - `Ctrl` で減算方向、`Shift` で加算方向。
 - 種類 : `リニア`（直線）/ `放射`（開始点から外側へ）/ `線放射`（線から広がる）。
@@ -388,10 +411,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### 投げ縄ブラシ
 
-<img width="384" height="27" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
+<img width="384" alt="Image" src="docs/images/ja/lasso-brush-01.png" />
 
 <p align="left">
-  <img width="1154" height="796" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
+  <img width="1154" alt="Image" src="docs/images/shared/lasso-brush-01.gif" />
 </p>
 
 囲んだ範囲を指定値で塗るブラシです。広い範囲を一気に 0 / 0.5 / 1.0 などへそろえたいときに向いています。
@@ -403,80 +426,78 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 ### 選択マスク
 
 <p align="left">
-  <img width="1208" height="772" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
+  <img width="1208" alt="Image" src="docs/images/shared/selection-mask-01.gif" />
 </p>
 
-`マスク` を ON にすると、ブラシの影響先を選択中の頂点だけに制限します。近い別パーツや裏側の頂点へ意図せず塗るのを防げます。すべてのブラシで共通して使えます。
-
-<p align="center">
-  <img src="README_images/brush_tools.gif" alt="ブラシ操作" width="720">
-</p>
+`マスク` を ON にすると、ブラシの影響先を選択中の頂点だけに制限します。近い別パーツや裏側の頂点へ意図せず塗るのを防げます。すべてのブラシで共通して使えます。頂点が未選択の場合は塗れません。
 
 ## 整理
 
 <p align="left">
-  <img width="188" height="111" alt="image" src="https://github.com/user-attachments/assets/2b5f0b8b-ccc2-4990-9883-d3e8e2c873cb" />
+  <img width="188" alt="image" src="docs/images/ja/cleanup-01.png" />
 </p>
 
 - `正規化` : 選択頂点のウェイト合計を 1.0 に整える。
-- `小数整理` : ウェイト値を指定桁で整理。
+- `小数整理` : ウェイト値を指定桁で整理（`0` 桁では無効）。
 - `閾値整理` : しきい値以下の低いウェイトを 0 に。
 - `影響整理` : 頂点あたりの最大影響数を上限に収める。
 - `違反整理` : 正規化・小数・閾値・影響数の設定でまとめて整理。
 - `未使用整理` : 未使用の頂点グループを削除。
-- `段階化` : ウェイトを一定の刻みへ段階化し、各頂点の合計を維持（`…` で刻みを設定）。
+- `段階化` : 3D ビューの実行ダイアログから、ウェイトを一定の刻みへ揃えます。各頂点の合計を維持し、実行後は `F9` で刻みを再調整できます。`…` からも刻みを設定できます。
 
 > ※ 基準値は[編集設定 / 自動整理の基準値](#編集設定--自動整理の基準値)で設定します。オブジェクトモードで実行するとオブジェクトの全頂点が対象になります。中心軸上で実行前から等しい L/R ペアは、等しいまま処理されます。
 
 ## 表示補助
 
-<img width="510" height="24" alt="Image" src="https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d" />
+<img width="510" alt="Image" src="docs/images/ja/display-helpers-01.png" />
 
 <p align="left">
-  <img width="1380" height="980" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
+  <img width="1380" alt="Image" src="docs/images/shared/display-helpers-01.gif" />
 </p>
 
-- `モディ` : Armature モディファイア表示（ポーズ変形）を切り替え。
-- `レスト` : アーマチュアをポーズ位置 / レスト位置で切り替え。
+- `モディ` : 対象メッシュの Armature モディファイア表示（ポーズ変形）を切り替え。複数編集とオブジェクトモードの複数選択に対応し、モディファイアがないメッシュは除外します。
+- `レスト` : ON でレスト位置、OFF でポーズ位置。対象アーマチュアがない場合、`レスト` と `最前面` は使用できません。
 - `最前面` : アーマチュアの最前面表示を切り替え。
 - `オーバーレイ` : Blender の頂点グループウェイト表示を切り替え。
 - `骨ハイ` : アクティブ頂点グループ（無い場合は選択列）に対応するボーンを、編集 / ウェイトペイント時だけハイライト。ON 状態は保存されます。
 - `マテリ` : ウェイトカラープレビューを切り替え。横の `…` で色（色相 / 彩度 / 輝度）とマテリアル置換を設定。
 
-<p align="center">
-  <img src="README_images/display_tools.gif" alt="表示補助の動作" width="720">
-</p>
-
 ### ウェイトカラープレビュー
 
 <p align="center">
-  <img width="332" height="259" alt="image" src="https://github.com/user-attachments/assets/c92a022d-92b4-486b-990c-a56aa7ea6098" />
+  <img width="332" alt="image" src="docs/images/ja/weight-color-preview-01.png" />
 </p>
 
-`マテリ` で、ウェイトをカラー表示するプレビューを切り替えます。
+`マテリアル` を ON にすると、選択メッシュのウェイトをカラー表示します。選択を外したメッシュは元の表示へ戻ります。
+
+- `標準ウェイト色`（初期設定）: アクティブグループを青〜赤で表示し、ウェイト 0 は暗い灰色で表示します。
+- `カラフル合成` : 複数グループの色を合成して表示します。
+- 横の `…` で表示方式・色・マテリアル置換を設定します。
 
 - 専用の一意な名前のカラー属性を作成します（同名のユーザー属性は上書き・削除しません）。
 - `マテリアル置換`（デフォルト OFF）: ON のときだけマテリアルスロットを一時的に置き換え、解除時に元へ復元。共有メッシュでは置換をスキップ。
 
-> ※ `マテリ` 表示は動作が重くなるため、常用は推奨しません。
+> 表示負荷はメッシュの大きさや選択数によって変わります。
 
 ## 編集設定 / 自動整理の基準値
 
 <p align="left">
-<img width="519" height="26" alt="Image" src="https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63" />
+<img width="519" alt="Image" src="docs/images/ja/edit-settings-auto-cleanup-reference-values-01.png" />
 </p>
 
 `正規化` `小数点` `閾値` `影響数` の 4 項目で、[整理](#整理)実行時の基準値を決めます。
 
 - チェックを入れた項目は、値を変更する際に自動で整理されます。
 - `−` `+` ボタン、または数値欄への直接入力で変更。
+- `小数点` は `0〜7` 桁。`0` では小数整理と小数違反の検査だけを無効にし、正規化・閾値・影響数の検査は続けます。
 - `影響数` の右の `…` から `影響数整理設定` を開けます。
 
 **影響数整理設定**（影響数が上限を超えたとき、どのボーンを残すか）
 
 - `親子関係を考慮`（デフォルト）: 共通の親から枝分かれしたボーンの系統（例: 腰から分かれる左脚・右脚）ごとに、影響が残るように配分します。スカートのように複数の脚から影響を受ける頂点でも、片方の脚が丸ごと消えにくくなります。
 - `値を優先` : 一般的な整理方法で、ウェイトが大きいボーンから順に残します。
-- `近似ウェイト幅` : `親子関係を考慮` で、枝の中の残す順番を入れ替えてよいと見なすウェイト差。階層を持たないグループは自動で `値を優先` になります。
+- `近似ウェイト幅`（初期値 `0.001`）: 階層を優先して残す順番を調整できるウェイト差。階層がないグループは `値を優先` で処理します。
+- 整理で除いたウェイトは、階層上で近い残存ボーンへ渡します。同じ距離なら親を優先します。
 
 > ※ 自動整理は確実ではないため、最後に `違反整理` などで確認することを推奨します。
 
@@ -484,24 +505,24 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### プリセットボタン
 
-<img width="473" height="101" alt="Image" src="https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa" />
+<img width="473" alt="Image" src="docs/images/ja/preset-buttons-01.png" />
 
-<img width="280" height="28" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
+<img width="280" alt="Image" src="docs/images/shared/preset-buttons-01.png" />
 
 <p align="left">
-  <img width="1188" height="764" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
+  <img width="1188" alt="Image" src="docs/images/shared/preset-buttons-02.gif" />
 </p>
 
 `0` `0.1` `0.25` `0.5` `0.75` `0.9` `1` をワンクリックで適用できます。`Add` / `Add%` モードでは `Shift + クリック` で負方向に適用します。プリセット値はアドオンプリファレンスで変更できます。
 
 ### 入力モード / スライダーと数値欄
 
-<img width="431" height="156" alt="Image" src="https://github.com/user-attachments/assets/3ff92ec4-e965-47e9-a535-421889cac398" />
+<img width="431" alt="Image" src="docs/images/ja/input-mode-slider-and-value-field-01.png" />
 
-<img width="693" height="37" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
+<img width="693" alt="Image" src="docs/images/shared/input-mode-slider-and-value-field-01.png" />
 
 <p align="left">
-  <img width="1188" height="756" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
+  <img width="1188" alt="Image" src="docs/images/shared/input-mode-slider-and-value-field-02.gif" />
 </p>
 
 左端のボタンで入力モードを `ABS` → `ADD` → `ADD%` の順に切り替えます。
@@ -516,16 +537,16 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 - 数値欄はクリックで直接入力、上でホイールすると少しずつ変更。
 - `適用` : 数値欄の値を選択頂点の現在列に適用。
 - `⟳` : 現在の選択頂点でグリッドを手動更新（特殊な選択コマンドの後などに）。
-- `Ctrl + ホイール` で加減算、`Ctrl + Shift + ホイール` でより細かく加減算（増減量はプリファレンスで変更可）。
+- `Ctrl + ホイール` でウェイトを加減算、`Ctrl + Shift + ホイール` で微調整。セル選択があればそのセルを優先し、なければ現在列が対象です（増減量はプリファレンスで変更可）。
 
 ## 特殊グループ選択 / 骨取得
 
-<img width="339" height="195" alt="Image" src="https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710" />
+<img width="339" alt="Image" src="docs/images/ja/special-group-selection-pick-bone-01.png" />
 
-<img width="109" height="24" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+<img width="109" alt="Image" src="docs/images/shared/special-group-selection-pick-bone-01.png" />
 
 <p align="left">
-  <img width="1218" height="758" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
+  <img width="1218" alt="Image" src="docs/images/shared/special-group-selection-pick-bone-02.gif" />
 </p>
 
 `骨取得` を使うと、ビューポート上のボーンをクリックして、そのボーン名の頂点グループ列を選択できます。複数の Armature モディファイアがある場合は最も近い候補を取得します。
@@ -534,17 +555,13 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 - 右隣の `…` : 除外ワード（`IK` `FK` `twist` などを候補から外す）とショートカットを設定。
 - `▣↖` が ON のとき : 選択頂点が変わるたびに、最もウェイト値が高い列を自動選択。頂点を切り替えながら主影響ボーンを確認する作業に向きます。
 
-<p align="center">
-  <img src="README_images/bone_pick.gif" alt="骨取得の動作" width="720">
-</p>
-
 ## 列状態 / 表示条件（ロック / 無視 / 強制表示）
 
-<img width="156" height="26" alt="Image" src="https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08" />
-<img width="393" height="187" alt="image" src="https://github.com/user-attachments/assets/fccbf13f-6dc1-4dc8-97e1-cae4aaf6f785" />
+<img width="156" alt="Image" src="docs/images/ja/column-state-visibility-lock-ignore-force-show-01.png" />
+<img width="393" alt="image" src="docs/images/ja/column-state-visibility-lock-ignore-force-show-02.png" />
 
 <p align="left">
-  <img width="1192" height="766" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
+  <img width="1192" alt="Image" src="docs/images/shared/column-state-visibility-lock-ignore-force-show-01.gif" />
 </p>
 
 - `ロック` : 選択列を編集できない状態にする。
@@ -557,58 +574,55 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### 列ヘッダー
 
-  <img width="425" height="33" alt="image" src="https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a" />
+  <img width="425" alt="image" src="docs/images/ja/column-headers-01.png" />
 
 <p align="center">
-  <img width="1346" height="790" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
+  <img width="1346" alt="Image" src="docs/images/shared/column-headers-01.gif" />
 </p>
 
-  <img width="202" height="122" alt="image" src="https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7" />
+  <img width="202" alt="image" src="docs/images/ja/column-headers-02.png" />
 
 - クリック : その列が選択列になる。
 - `Shift + 列クリック` : その頂点グループに値がある頂点をまとめて選択。
 - `Ctrl + 列クリック` : 選択中の頂点のうち、その列に値がある頂点だけを残す。
-- `Ctrl + Shift + 列クリック` : その列のセルをすべてセル選択する（全ページの表示行が対象）。
+- `Ctrl + Shift + 列クリック` : その列の全セルを、現在のセル選択に追加（全ページの表示行が対象）。
 - 右クリック : [ウェイト転送メニュー](#列右クリックのウェイト転送)を開く。
 
-### 固 / 頂点 / 合計
+### L / 頂点 / 合計
 
-<img width="149" height="30" alt="Image" src="https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703" />
+<img width="149" alt="Image" src="docs/images/ja/l-vertex-sum-01.png" />
 
 <p align="center">
-  <img width="1192" height="762" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
+  <img width="1192" alt="Image" src="docs/images/shared/l-vertex-sum-01.gif" />
 </p>
 
-- `固` : 対象頂点をウェイトロック（`Alt + クリック` で解除）。各行の `固` セルでも切り替え可（ドラッグでまとめて）。
-- `頂点` : 表示中の行をグリッド選択（`Alt + クリック` で解除）。各行の `頂点` セルで、その頂点をビュー上でハイライトし常に表示。
+- `L` : 対象頂点をウェイトロック（`Alt + クリック` で解除）。各行の `L` セルでも切り替えられ、ドラッグでまとめて変更できます。
+- `頂点` : 表示行をまとめてグリッド選択（`Alt + クリック` で解除）。各行の頂点番号はクリックで選択を切り替え、ドラッグで範囲選択、`Shift + クリック` で追加、`Ctrl + ドラッグ` で解除します。
 - `合計` : **違反のみ表示**を切り替え（`Shift + クリック` で表示中の頂点をメッシュ選択）。
 - 影響数や合計値に問題がある頂点があると、`合計` ヘッダーが `合計 ⚠` に変わります。
-- 違反のみ表示は、現在のページだけでなく全ページの違反行が対象です。
+- 違反のみ表示は全ページの違反行が対象です。この表示中の `L` / `頂点` ヘッダー操作も、ページ外の違反行を含みます。`合計` の `Shift + クリック` は現在の表示対象全体をメッシュ選択します。
+- 合計セルの警告色は、合計・影響数・小数点・閾値の理由を示します。マウスを重ねると詳細を確認できます。
 
 ### セル
 
 <p align="center">
-  <img width="1184" height="758" alt="Image" src="https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886" />
+  <img width="1184" alt="Image" src="docs/images/shared/cells-01.gif" />
 </p>
 
 - クリック : 数値を直接入力（`Enter` で確定）。先頭に `+` `-` `*` `/` で現在値へ演算（例: `*0.5`、`+0.1`）。
 - ドラッグ : 範囲選択（`Shift + ドラッグ` で追加、`Ctrl + ドラッグ` で解除）。
-- 右クリック : セル選択を解除。
-- `Ctrl + Shift + クリック` : そのセルの列をまとめてセル選択（列ヘッダーからも同じ）。
+- 右クリック、またはグリッドの空白をクリック : セル選択を解除。
+- `Ctrl + Shift + クリック` : そのセルの列全体を現在のセル選択に追加。全ページの表示行が対象で、列ヘッダーからも同じ操作ができます。
 - 複数セル選択中は、入力値をまとめて適用。選択セルが残っている間は、スライダー / ホイール / プリセット / 適用など全ての値変更で実メッシュ選択より優先されます。
-
-<p align="center">
-  <img src="README_images/cell_edit.gif" alt="セル編集" width="720">
-</p>
 
 ### 表示タブ
 
 <p align="left">
-  <img width="724" height="25" alt="Image" src="https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b" />
+  <img width="724" alt="Image" src="docs/images/ja/column-tabs-01.png" />
 </p>
 
 <p align="left">
-  <img width="1186" height="764" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
+  <img width="1186" alt="Image" src="docs/images/shared/column-tabs-01.gif" />
 </p>
 
 グリッド下部のタブで、表示する列の種類を切り替えます。
@@ -617,21 +631,26 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 - `変形` : ボーン名と一致する変形用の列だけを表示。
 - `その他` : ボーン名と一致しない非ボーン列だけを表示。
 
+スクロールバーで縦横に移動できます。グリッド上のホイールは縦、`Shift + ホイール` は横スクロールです。フッターに現在列と選択頂点数を表示します。
+
 タブごとのオプション。
 
-- `非ボーン列を無視`（すべてタブ）: 非ボーン列を自動的に無視状態にする。
+- `非ボーン列を無視`（すべてタブ）: 非ボーン列を合計・正規化・整理から除外します。手動の無視設定は対象を切り替えても保持されます。
+- `階層`（すべてタブ、初期設定 ON）: オブジェクトの親をたどり、親階層にあるアーマチュアの骨もボーン列の判定に含めます。OFF では Armature モディファイアだけで判定します。
 - `作成済み常時`（その他タブ）: 値が入っていなくても、作成済みの非ボーン列を常に表示。
 - `不正規許可`（その他タブ）: ON のとき、その他列は合計が 1 以上でも違反にせず、正規化もしない。
-- `非表示ワード` : 指定したワードをグループ名表示から隠して短く表示（実際の名前は変わらない）。
+- `非表示ワード` : 列名から指定文字だけを省略します。列そのものは隠さず、実際の頂点グループ名も変えません。
+
+複数編集では、いずれかのメッシュの対象アーマチュアに同名の骨があれば、その名前をボーン列として扱います。`その他` タブの無視設定は独立しています。
 
 ### 列右クリックのウェイト転送
 
-<img width="517" height="246" alt="Image" src="https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655" />
+<img width="517" alt="Image" src="docs/images/ja/column-right-click-weight-transfer-01.png" />
 
-<img width="205" height="125" alt="Image" src="https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db" />
+<img width="205" alt="Image" src="docs/images/ja/column-right-click-weight-transfer-02.png" />
 
 <p align="left">
-  <img width="571" height="1024" alt="Image" src="https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae" />
+  <img width="571" alt="Image" src="docs/images/ja/column-right-click-weight-transfer-03.png" />
 </p>
 
 列ヘッダーを右クリックすると、頂点グループ間の転送メニューを開けます。
@@ -649,7 +668,7 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレンス > アドオン` から開けます。
 
-- `表示言語` : `自動` / `日本語` / `英語`（自動は Blender の言語設定に追従）。
+- UI の言語は Blender の `プリファレンス > インターフェイス > 翻訳` に従います。
 - `表示設定` : ツールヘッダーへの GPU オーバーレイボタン表示。
 - `GPUオーバーレイ UI倍率` : `3DビューHUD` と `専用エリア / ウィンドウHUD` の倍率を個別に設定。
 - `GPUオーバーレイ UIスタイル` : `UIの角を少し丸める`。
@@ -665,8 +684,8 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 > ※ `自動` 倍率は OFF にすると `0.50〜4.00` の手動倍率を指定でき、HUD の倍率ボタンと連動します。
 
 <p align="left">
-  <img width="560" height="1046" alt="image" src="https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81" />
-　<img width="559" height="363" alt="image" src="https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34" />
+  <img width="560" alt="image" src="docs/images/ja/add-on-preferences-01.png" />
+　<img width="559" alt="image" src="docs/images/ja/add-on-preferences-02.png" />
 </p>
 
 ## ショートカット
@@ -675,8 +694,9 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 | --- | --- | --- |
 | GPU オーバーレイ表示 / 非表示 | `Ctrl + W` | 有効 |
 | GPU オーバーレイを閉じる | `Ctrl + W` / `Esc` | 有効 |
-| 選択列のウェイト加算 / 減算 | `Ctrl + ホイール` | 有効 |
-| 選択列のウェイト微調整 | `Ctrl + Shift + ホイール` | 有効 |
+| 選択セル / 現在列のウェイト加算・減算 | `Ctrl + ホイール` | 有効 |
+| 選択セル / 現在列のウェイト微調整 | `Ctrl + Shift + ホイール` | 有効 |
+| 列全体をセル選択へ追加 | `Ctrl + Shift + クリック`（列名 / セル） | 有効 |
 | GPU オーバーレイ中の骨取得 | `Alt + 右クリック` | 有効 |
 | スムーズ化 | `Ctrl + Alt + S` | 無効 |
 | 骨からインフルエンス選択 | `Ctrl + Alt + B` | 無効 |
