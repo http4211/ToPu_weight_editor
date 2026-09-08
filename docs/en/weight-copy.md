@@ -1,13 +1,15 @@
 # Weight Copy
 
-<img width="189" alt="image" src="https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1" />
+<img width="189" alt="image" src="../images/en/weight-copy-01.png" />
 
 <p align="left">
-  <img width="1042" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="../images/shared/weight-copy-01.gif" />
 </p>
 
 - `Vtx Copy` / `Vtx Paste` — copy the active vertex's weights and paste onto the selected vertices.
-- `Near Copy` / `Near Paste` — store the selected vertices' positions and weights, then paste the closest stored weights.
+- `Near Copy` — stores the selected vertices’ positions and weights.
+- `Near Paste` — pastes weights onto selected vertices using the stored positions. `Shift + Click` enables `Clothing Inner-Side Mode` for that paste only.
+- Both paste actions target selected vertices and share the `Object Weight Copy` settings. Shift-click does not change the saved settings.
 - `Auto Weight` — bind the selected meshes to an armature and assign automatic weights.
 - `Obj Xfer` — transfer weights from the active mesh to the other selected meshes.
 
@@ -31,11 +33,11 @@ Transfers weights from the object selected last (the active one) to the other se
 
 ### Auto Weight
 
-<img width="576" alt="image" src="https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393" />
+<img width="576" alt="image" src="../images/en/auto-weight-01.png" />
 
-<img width="433" alt="image" src="https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1" />
+<img width="433" alt="image" src="../images/en/auto-weight-02.png" />
 
-Binds the selected meshes to an armature and assigns automatic weights. It can keep parent relationships and weight only the part covered by the current selection. The detail settings switch between Blender's built-in automatic weights and Voxel Heat Skinning.
+Binds the selected meshes to an armature and assigns automatic weights. In Object Mode, it can preserve parent-child relationships among selected meshes (on by default). It can also weight only the part covered by the current selection. The detail settings switch between Blender's built-in automatic weights and Voxel Heat Skinning.
 
 **Main Voxel Heat Skinning settings**
 

@@ -4,7 +4,7 @@
 
 GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレンス > アドオン` から開けます。
 
-- `表示言語` : `自動` / `日本語` / `英語`（自動は Blender の言語設定に追従）。
+- UI の言語は Blender の `プリファレンス > インターフェイス > 翻訳` に従います。
 - `表示設定` : ツールヘッダーへの GPU オーバーレイボタン表示。
 - `GPUオーバーレイ UI倍率` : `3DビューHUD` と `専用エリア / ウィンドウHUD` の倍率を個別に設定。
 - `GPUオーバーレイ UIスタイル` : `UIの角を少し丸める`。
@@ -20,8 +20,8 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 > ※ `自動` 倍率は OFF にすると `0.50〜4.00` の手動倍率を指定でき、HUD の倍率ボタンと連動します。
 
 <p align="left">
-  <img width="560" alt="image" src="https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81" />
-　<img width="559" alt="image" src="https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34" />
+  <img width="560" alt="image" src="../images/ja/add-on-preferences-01.png" />
+　<img width="559" alt="image" src="../images/ja/add-on-preferences-02.png" />
 </p>
 
 ---
@@ -32,8 +32,9 @@ GPU オーバーレイの `⚙` ボタン、または `編集 > プリファレ�
 | --- | --- | --- |
 | GPU オーバーレイ表示 / 非表示 | `Ctrl + W` | 有効 |
 | GPU オーバーレイを閉じる | `Ctrl + W` / `Esc` | 有効 |
-| 選択列のウェイト加算 / 減算 | `Ctrl + ホイール` | 有効 |
-| 選択列のウェイト微調整 | `Ctrl + Shift + ホイール` | 有効 |
+| 選択セル / 現在列のウェイト加算・減算 | `Ctrl + ホイール` | 有効 |
+| 選択セル / 現在列のウェイト微調整 | `Ctrl + Shift + ホイール` | 有効 |
+| 列全体をセル選択へ追加 | `Ctrl + Shift + クリック`（列名 / セル） | 有効 |
 | GPU オーバーレイ中の骨取得 | `Alt + 右クリック` | 有効 |
 | スムーズ化 | `Ctrl + Alt + S` | 無効 |
 | 骨からインフルエンス選択 | `Ctrl + Alt + B` | 無効 |

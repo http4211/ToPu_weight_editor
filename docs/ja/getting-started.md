@@ -3,7 +3,7 @@
 ## できること
 
 <p align="center">
-  <img width="7600" alt="Image" src="https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b" />
+  <img width="1200" alt="Image" src="../images/ja/quick-reference.png" />
 </p>
 
 - 編集モード / ウェイトペイントモードの両方で、GPU オーバーレイからウェイトを確認・編集
@@ -18,7 +18,7 @@
 - セル / スライダー / プリセットによる直感的な数値編集
 - 複数メッシュの同時編集と頂点グループ選択の同期
 - Blender のエディタータイプとして使える専用エリアと、独立した専用ウィンドウ
-- 日本語 / 英語 UI（Blender の言語設定に追従、または個別に固定）
+- 日本語 / 英語 UI（Blender の言語設定に追従）
 
 ---
 
@@ -44,10 +44,10 @@
 ## 起動方法
 
 <p align="center">
-  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+  <img width="1280" alt="Image" src="../images/shared/opening-the-editor-01.gif" />
 </p>
 <p align="center">
-  <img width="257" alt="image" src="https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101" />
+  <img width="257" alt="image" src="../images/ja/opening-the-editor-01.png" />
 </p>
 
 - **ツールヘッダーのボタン** : アーマチュアアイコンで GPU オーバーレイを表示 / 非表示、ウィンドウアイコンで専用ウィンドウを開く / 閉じる。
@@ -69,7 +69,11 @@
 
 ## クイックスタート
 
-https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
+<p align="center">
+  <img src="../images/shared/quick-start.gif" alt="Quick start demonstration" width="800">
+</p>
+
+<a href="../images/shared/quick-start.mp4">動画を開く（MP4）</a>
 
 1. アーマチュアにバインドされたメッシュを選択します。
 2. 編集モード、またはウェイトペイントモードにします。

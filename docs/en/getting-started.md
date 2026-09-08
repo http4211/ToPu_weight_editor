@@ -3,7 +3,7 @@
 ## Features
 
 <p align="center">
-  <img width="7600" alt="Image" src="https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c" />
+  <img width="1200" alt="Image" src="../images/en/quick-reference.png" />
 </p>
 
 - Review and edit weights from the GPU overlay in both Edit Mode and Weight Paint Mode
@@ -18,7 +18,7 @@
 - Intuitive numeric editing through cells, the slider and presets
 - Simultaneous editing of several meshes, with vertex-group selection sync
 - A dedicated ToPu Weight Editor area available as a Blender editor type, plus a separate dedicated window
-- Japanese / English UI (follows Blender's language setting, or can be forced)
+- Japanese / English UI (follows Blender's language setting)
 
 ---
 
@@ -44,10 +44,10 @@ Two icon buttons are then added to the 3D View tool header.
 ## Opening the editor
 
 <p align="center">
-  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b" />
+  <img width="1280" alt="Image" src="../images/shared/opening-the-editor-01.gif" />
 </p>
 <p align="center">
-  <img width="230" alt="image" src="https://github.com/user-attachments/assets/4303fa20-bf9e-4f50-bdae-3d7d5c8e28ea" />
+  <img width="230" alt="image" src="../images/en/opening-the-editor-01.png" />
 </p>
 
 - **Tool-header buttons** — the armature icon shows / hides the GPU overlay; the window icon opens / closes the dedicated window.
@@ -69,7 +69,11 @@ Choosing `ToPu Weight Editor` from the Editor Type selector turns that area into
 
 ## Quick start
 
-https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6
+<p align="center">
+  <img src="../images/shared/quick-start.gif" alt="Quick start demonstration" width="800">
+</p>
+
+<a href="../images/shared/quick-start.mp4">Open video (MP4)</a>
 
 1. Select a mesh that is bound to an armature.
 2. Enter Edit Mode or Weight Paint Mode.

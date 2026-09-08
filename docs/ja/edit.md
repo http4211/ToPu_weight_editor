@@ -1,57 +1,59 @@
 # 編集
 
 <p align="left">
-  <img width="97" alt="image" src="https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de" />
+  <img width="97" alt="image" src="../images/ja/edit-01.png" />
 </p>
 
 `編集` セクションには、`x-` / `x+` と、`スムーズ化` / `ミラー実行` / `骨作成` / `レストポーズ適用` があります。
 
 ### X 方向の頂点選択
 
-<img width="53" alt="Image" src="https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311" />
+<img width="53" alt="Image" src="../images/shared/selecting-vertices-by-x-side-01.png" />
 
 <p align="left">
-  <img width="1304" alt="Image" src="https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4" />
+  <img width="1304" alt="Image" src="../images/shared/selecting-vertices-by-x-side-02.gif" />
 </p>
 
 アーマチュア原点（無い場合はオブジェクト原点）を基準に、`x-` 側または `x+` 側の頂点を選択します。
 
 - 通常クリック : 中心線上の頂点は選択しません。
-- `Shift + クリック` : 中心線上の頂点も選択します。
+- `Shift + クリック` : 中心線上の頂点だけを選択します。
 
 ### スムーズ化
 
-<img width="296" alt="Image" src="https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608" />
+<img width="296" alt="Image" src="../images/ja/smooth-weights-01.png" />
 
 <p align="left">
-  <img width="1236" alt="Image" src="https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936" />
+  <img width="1236" alt="Image" src="../images/shared/smooth-weights-01.gif" />
 </p>
 
 選択頂点のウェイトを周囲へなじませます。
 
 - 通常クリック : 選択頂点をスムーズ化。
-- `Shift + クリック` : 選択列のウェイト範囲全体と外側 1 リングを自動スムーズ。
+- `Shift + クリック` : 選択列にウェイトがある範囲と、その外側 1 リングを自動スムーズ。複数メッシュの編集時は、頂点未選択のメッシュも対象です。
 - `Ctrl + クリック` : 周囲を基準に異常なウェイトを修正。
 - 右隣の `…` : 対象範囲・方式（`高速` / `表面` / `ボリューム`）・回数・実行後の整理方法を調整。
+- `Shift + クリック` 用の設定 : `周辺への広がり値`（初期値 `0.01`、`0` で外側への拡張なし）と `選択頂点のみ`（初期値 OFF）。`選択頂点のみ` を ON にすると、外側のリングも含めて選択頂点に限定します。
 
 ### ミラー実行
 
-<img width="484" alt="Image" src="https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8" />
+<img width="484" alt="Image" src="../images/ja/mirror-01.png" />
 
-<img width="340" alt="Image" src="https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912" />
+<img width="340" alt="Image" src="../images/ja/mirror-02.png" />
 
 <p align="left">
-  <img width="1354" alt="Image" src="https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead" />
+  <img width="1354" alt="Image" src="../images/shared/mirror-01.gif" />
 </p>
 
 反転位置の反対側からウェイトを持ってきます。`_L` / `_R` などの左右名も入れ替えて適用されます。
 
-- 通常クリック : 選択頂点をミラー。
+- 通常クリック : 編集 / ウェイトペイントモードでは選択頂点をミラー。オブジェクトモードでは方向を選ぶダイアログを開き、選択メッシュ全体に実行します。
 - `Ctrl + クリック` : 方向を選んで、対象オブジェクト全体（または選択頂点のみ）をミラー。
 - 右隣の `…` : 詳細設定（方向・基準空間・検索距離・中央補正・中央許容・左右ワードセット）を開く。
 
 補足。
 
+- 複数メッシュに対応。選択頂点へのミラーは各メッシュの選択を使い、全体ミラーでは頂点未選択の編集メッシュも処理します。
 - 左右非対称の形状にも対応します（近傍サーフェスへ投影して補間。詳細設定で無効化可）。
 - 反対側の頂点グループが無くても、対応する反対側ボーンがあれば自動作成します（対応ボーンが無い場合は作成 / スキップを確認）。
 - **中央 L/R 均等化**（デフォルト ON）: 中心軸上の頂点の L/R ウェイトを自動で均等化します。ミラー詳細の `中央頂点L/R補正` を OFF にするとこの均等化だけを省略できます。
@@ -59,8 +61,8 @@
 ### 骨作成
 
 <p align="left">
-  <img width="459" alt="image" src="https://github.com/user-attachments/assets/53b3d388-e046-4716-915d-9f0663bf8ec5" />
-  <img width="1280" alt="Image" src="https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1" />
+  <img width="459" alt="image" src="../images/ja/bone-creation-01.png" />
+  <img width="1280" alt="Image" src="../images/shared/bone-creation-01.gif" />
 </p>
 
 編集モードで選択した辺から、骨列または分岐した骨ツリーを作成します。
@@ -71,16 +73,23 @@
 - `骨数` `方向を反転`（分岐時は `分岐数` も）は、確認ダイアログと `F9` から調整できます。確認ダイアログでは、自動ウェイト・作成先・名前・接続・ロール基準・作成後のモードも変更できます。
 - 複数の開いた辺列 : `中心軸` OFF で各辺列に独立した骨列、ON で中央に 1 本の骨列を作成します。
 
-`自動ウェイト`（確認ダイアログ内）: 作成した骨だけで対象範囲にウェイトを割り当てます（`Blender 公式` / `Voxel Heat Skinning`）。`既存ウェイトを置き換え` を有効にすると、選択頂点の既存ボーンウェイトを消してから割り当てます（骨以外のグループは残る）。
+`自動ウェイト`（確認ダイアログ内）: 作成した骨だけで対象範囲にウェイトを割り当てます（`Blender 公式` / `Voxel Heat Skinning`）。`既存ウェイトを置き換え` を有効にすると、対象頂点にある作成先アーマチュアの既存ボーンウェイトを消してから割り当てます。骨と無関係な頂点グループは残ります。
 
-> 対象範囲は、基本的に選択した頂点です。ただし複数の辺ループでメッシュを挟むように選択した場合は、ループの間に挟まれた頂点もまとめてウェイト付けされます。選択とつながっていない別メッシュには影響しません。
+> 対象は基本的に選択頂点です。複数の開いた辺列で同じメッシュ帯を挟んでいる場合は、間にある未選択頂点も対象になります。つながっていない別メッシュには影響しません。`中心軸` でも同じ範囲を使います。
 
-`ボーンロール基準` : `自動軸` / `選択辺の面方向` / `メッシュのローカルZ` / `メッシュのローカルY` / `ワールドZ` / `ワールドY`。
+`ボーンロール基準` で、骨の長さ方向を保ったまま軸の向きを揃えます。
+
+- `自動軸` : 骨列に合う基準軸を自動で選びます。
+- `選択辺の面方向` : 選択辺につながる面の向きに揃えます。
+- `メッシュのローカルZ` : メッシュ自身の Z 軸を基準にします。
+- `メッシュのローカルY` : メッシュ自身の Y 軸を基準にします。
+- `ワールドZ` : ワールドの Z 軸を基準にします。
+- `ワールドY` : ワールドの Y 軸を基準にします。
 
 #### 骨とウェイトの分割
 
 <p align="left">
-  <img width="440" alt="image" src="https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b" />
+  <img width="440" alt="image" src="../images/ja/split-bone-and-weights-01.png" />
 </p>
 
 `骨作成` ボタンを `Shift + クリック` すると、既存の骨を連続した骨列へ分割し、対応する頂点グループのウェイトを再分配します。
@@ -93,7 +102,7 @@
 ### レストポーズ適用
 
 <p align="left">
-  <img width="1302" alt="Image" src="https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf" />
+  <img width="1302" alt="Image" src="../images/shared/apply-rest-pose-01.gif" />
 </p>
 
 現在の見た目のポーズを、新しいレストポーズとして適用します。アクションとシェイプキーのリターゲットに対応しています。

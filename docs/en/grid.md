@@ -4,24 +4,24 @@
 
 ### Preset buttons
 
-<img width="492" alt="image" src="https://github.com/user-attachments/assets/11f48284-8a22-4133-b3e9-a97db0e69445" />
+<img width="492" alt="image" src="../images/en/preset-buttons-01.png" />
 
-<img width="280" alt="Image" src="https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92" />
+<img width="280" alt="Image" src="../images/shared/preset-buttons-01.png" />
 
 <p align="left">
-  <img width="1188" alt="Image" src="https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3" />
+  <img width="1188" alt="Image" src="../images/shared/preset-buttons-02.gif" />
 </p>
 
 Applies `0`, `0.1`, `0.25`, `0.5`, `0.75`, `0.9` or `1` in one click. In `Add` / `Add%` mode, `Shift + Click` applies the negative value. Preset values can be changed in the add-on preferences.
 
 ### Input mode, slider and value field
 
-<img width="494" alt="image" src="https://github.com/user-attachments/assets/c3a9a157-9ab5-4a09-a081-183b39b28a99" />
+<img width="494" alt="image" src="../images/en/input-mode-slider-and-value-field-01.png" />
 
-<img width="693" alt="Image" src="https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502" />
+<img width="693" alt="Image" src="../images/shared/input-mode-slider-and-value-field-01.png" />
 
 <p align="left">
-  <img width="1188" alt="Image" src="https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e" />
+  <img width="1188" alt="Image" src="../images/shared/input-mode-slider-and-value-field-02.gif" />
 </p>
 
 The leftmost button cycles the input mode through `ABS` → `ADD` → `ADD%`.
@@ -36,18 +36,18 @@ Usage.
 - Click the value field to type; scroll the wheel over it to nudge the value.
 - `Apply` — applies the value field to the current column of the selected vertices.
 - `⟳` — rebuilds the grid from the current selection (useful after special selection commands).
-- `Ctrl + Wheel` adds / subtracts, `Ctrl + Shift + Wheel` in finer steps (step sizes are set in preferences).
+- `Ctrl + Wheel` adjusts weights; `Ctrl + Shift + Wheel` uses finer steps. Selected cells take priority; otherwise the current column is used. Step sizes are set in preferences.
 
 ---
 
 ## Special Group Selection / Pick Bone
 
-<img width="338" alt="image" src="https://github.com/user-attachments/assets/3f38bdb8-8fc5-48c9-ae62-89f9627bb8ee" />
+<img width="338" alt="image" src="../images/en/special-group-selection-pick-bone-01.png" />
 
-<img width="109" alt="Image" src="https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b" />
+<img width="109" alt="Image" src="../images/shared/special-group-selection-pick-bone-01.png" />
 
 <p align="left">
-  <img width="1218" alt="Image" src="https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39" />
+  <img width="1218" alt="Image" src="../images/shared/special-group-selection-pick-bone-02.gif" />
 </p>
 
 `Pick Bone` lets you click a bone in the viewport to select the vertex-group column with that bone's name. With several Armature modifiers, the globally nearest visible bone is used.
@@ -56,20 +56,16 @@ Usage.
 - The `…` opens the excluded-word and shortcut settings (excluded words keep bones containing `IK`, `FK`, `twist` and similar out of the candidates).
 - When `▣↖` is on, changing the selection automatically selects the highest-weight column. Suits switching vertices often to check the dominant influence bone.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/bone_pick.gif" alt="Bone picking">
-</p>
-
 ---
 
 ## Column State & Visibility (Lock / Ignore / Force Show)
 
-<img width="157" alt="image" src="https://github.com/user-attachments/assets/1abf4eb8-5e6b-46e5-8fb4-13e5b1e48628" />
+<img width="157" alt="image" src="../images/en/column-state-visibility-lock-ignore-force-show-01.png" />
 
-<img width="399" alt="image" src="https://github.com/user-attachments/assets/997d4dac-03f2-4866-a578-2b15df0007d8" />
+<img width="399" alt="image" src="../images/en/column-state-visibility-lock-ignore-force-show-02.png" />
 
 <p align="left">
-  <img width="1192" alt="Image" src="https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a" />
+  <img width="1192" alt="Image" src="../images/shared/column-state-visibility-lock-ignore-force-show-01.gif" />
 </p>
 
 - `Lock` — makes the selected column non-editable.
@@ -85,50 +81,47 @@ Usage.
 ### Column headers
 
 <p align="center">
-  <img width="1346" alt="Image" src="https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0" />
+  <img width="1346" alt="Image" src="../images/shared/column-headers-01.gif" />
 </p>
 
 - Click — makes it the selected column.
 - `Shift + Click` — selects every vertex that has a value in that group.
 - `Ctrl + Click` — keeps only the current-selection vertices that have a value in that column.
-- `Ctrl + Shift + Click` — cell-selects every cell in that column (all displayed rows, across pages).
+- `Ctrl + Shift + Click` — adds every cell in that column to the existing cell selection, including displayed rows on later pages.
 - Right-click — opens the **weight transfer menu**.
 
-### L / Vertex / Sum
+### L / Ver / Sum
 
-<img width="111" alt="image" src="https://github.com/user-attachments/assets/7af6fa19-7275-46ae-972a-25e2ab45ceb2" />
+<img width="111" alt="image" src="../images/en/l-vertex-sum-01.png" />
 
 <p align="center">
-  <img width="1192" alt="Image" src="https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d" />
+  <img width="1192" alt="Image" src="../images/shared/l-vertex-sum-01.gif" />
 </p>
 
 - `L` — weight-lock the target vertices (`Alt + Click` unlocks). Each row's `L` cell also toggles the lock (drag for several).
-- `Vertex` — grid-select the displayed rows (`Alt + Click` clears). Each row's `Vertex` cell highlights that vertex in the viewport and keeps it visible.
+- `Ver` — grid-select the displayed rows (`Alt + Click` clears). Click a vertex number to toggle its row selection, drag to select a range, `Shift + Click` to add, or `Ctrl + Drag` to remove.
 - `Sum` — toggle **violation-only view** (`Shift + Click` selects the vertices shown in the grid).
 - When some vertices have a total-value or influence-count problem, the `Sum` header changes to `Sum ⚠`.
-- Violation-only view covers violations across every page, not just the current one.
+- Violation-only view covers every page. In this view, `L` / `Ver` header actions also include matching rows on later pages. `Shift + Click` on `Sum` selects the entire current display set as mesh vertices.
+- Total-cell warning colors identify sum, influence-count, decimal or threshold problems. Hover to see the reasons.
 
 ### Cells
 
 <p align="center">
-  <img width="1184" alt="Image" src="https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886" />
+  <img width="1184" alt="Image" src="../images/shared/cells-01.gif" />
 </p>
 
 - Click — type the value directly (`Enter` confirms). Start with `+` `-` `*` `/` for a relative operation (for example `*0.5` or `+0.1`).
 - Drag — select a range (`Shift + Drag` adds, `Ctrl + Drag` removes).
-- Right-click — clear the cell selection.
-- `Ctrl + Shift + Click` — cell-selects the whole column of that cell (same as from the column header).
+- Right-click, or click empty grid space — clear the cell selection.
+- `Ctrl + Shift + Click` — adds the cell’s whole column to the existing selection, including displayed rows on later pages (also available from the column header).
 - With several cells selected, the entered value applies to all at once. While a cell selection remains, every value-changing operation (slider / wheel / presets / Apply) prioritizes the selected cells over the live mesh selection.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/cell_edit.gif" alt="Cell editing">
-</p>
 
 ### Column tabs
 
 <p align="left">
-  <img width="562" alt="image" src="https://github.com/user-attachments/assets/9a6f941e-05c7-4855-812e-7f618001c662" />
-  <img width="1186" alt="Image" src="https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9" />
+  <img width="562" alt="image" src="../images/en/column-tabs-01.png" />
+  <img width="1186" alt="Image" src="../images/shared/column-tabs-01.gif" />
 </p>
 
 The tabs below the grid choose which columns are shown.
@@ -137,18 +130,23 @@ The tabs below the grid choose which columns are shown.
 - `Deform` — only deform vertex groups whose names match a bone.
 - `Other` — only non-bone vertex groups that do not match a bone name.
 
+Use the scrollbars to move vertically or horizontally. Over the grid, the wheel scrolls vertically and `Shift + Wheel` scrolls horizontally. The footer shows the current column and selected-vertex count.
+
 Per-tab options.
 
-- `Ignore Non-Bone Columns` (All tab) — marks non-bone groups as ignored.
+- `Ignore Non-Bone Columns` (All tab) — excludes non-bone columns from totals, normalization and cleanup. Manual Ignore choices survive target changes.
+- `Hierarchy` (All tab, on by default) — includes armatures along the object’s parent chain when classifying bone columns. When off, only Armature modifiers are used.
 - `Always Show` (Other tab) — always shows existing non-bone columns even when the selection has no values for them.
 - `Allow >1` (Other tab) — when on, Other columns are not treated as violations at a total of 1 or more, and are not normalized.
-- `Hidden Words` — hides specified words from the group-name display (actual names are unchanged).
+- `Hidden Words` — removes only the specified text from displayed column names. It does not hide columns or rename actual vertex groups.
+
+In multi-edit, a shared name is a bone column if any edited mesh’s applicable armature contains that bone. The `Other` tab has its own independent Ignore state.
 
 ### Column right-click weight transfer
 
 <p align="left">
-  <img width="515" alt="image" src="https://github.com/user-attachments/assets/08b1ca77-55aa-438a-bb2d-dab1ee1afd59" />
-  <img width="577" alt="image" src="https://github.com/user-attachments/assets/a38e5d23-7c4a-4102-971a-b54873d67845" />
+  <img width="515" alt="image" src="../images/en/column-right-click-weight-transfer-01.png" />
+  <img width="577" alt="image" src="../images/en/column-right-click-weight-transfer-02.png" />
 </p>
 
 Right-clicking a column header opens the vertex-group transfer menu.

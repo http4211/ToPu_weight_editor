@@ -1,7 +1,7 @@
 # ToPu:Weight Editor
 
 <p align="center">
-  <img width="420" alt="ToPu Weight Editor" src="https://github.com/user-attachments/assets/e69834b9-3d6d-47b2-b239-baccc06b948f">
+  <img width="420" alt="ToPu Weight Editor" src="../images/en/interface.png">
 </p>
 
 A Blender add-on for reviewing and editing skin weights.
@@ -9,7 +9,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 
 No external framework or extra Python package is required.
 
-> **This documentation describes version 1.5.187.**
+> **This documentation describes version 1.5.244.**
 
 ## Start here
 

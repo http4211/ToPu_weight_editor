@@ -1,13 +1,15 @@
 # ウェイトコピー
 
-<img width="152" alt="image" src="https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5" />
+<img width="152" alt="image" src="../images/ja/weight-copy-01.png" />
 
 <p align="left">
-  <img width="1042" alt="Image" src="https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042" />
+  <img width="1042" alt="Image" src="../images/shared/weight-copy-01.gif" />
 </p>
 
 - `頂点コピー` / `頂点貼付` : アクティブ頂点のウェイトをコピーし、選択頂点へ貼り付け。
-- `近接コピー` / `近接貼付` : 選択頂点の位置とウェイトを保存し、選択頂点に最も近いウェイトを貼り付け。
+- `近接コピー` : 選択頂点の位置とウェイトを保存。
+- `近接貼付` : 保存した位置をもとに、選択頂点へウェイトを貼り付け。`Shift + クリック` では、その貼り付けだけ `衣装裏面モード` を有効にします。
+- 近接貼付の通常操作と `Shift + クリック` は、どちらも選択頂点が対象で、`オブジェクト転送` の詳細設定を共用します。Shift 操作で保存済み設定は変わりません。
 - `自動ウェイト` : 選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当て。
 - `オブジェクト転送` : アクティブメッシュのウェイトを他の選択メッシュへ転送。
 
@@ -32,11 +34,11 @@
 ### 自動ウェイト
 
 <p align="left">
-  <img width="552" alt="Image" src="https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e" />
-  <img width="438" alt="image" src="https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b" />
+  <img width="552" alt="Image" src="../images/ja/auto-weight-01.png" />
+  <img width="438" alt="image" src="../images/ja/auto-weight-02.png" />
 </p>
 
-選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。親子関係を維持でき、選択頂点の部位だけを部分的にウェイト付けすることもできます。詳細設定で、Blender 公式方式と Voxel Heat Skinning を切り替えます。
+選択メッシュをアーマチュアへ紐づけ、自動ウェイトを割り当てます。オブジェクトモードでは選択メッシュ間の親子関係を維持できます（初期設定 ON）。選択頂点の部位だけを部分的にウェイト付けすることもできます。詳細設定で、Blender 公式方式と Voxel Heat Skinning を切り替えます。
 
 **Voxel Heat Skinning の主な設定**
 

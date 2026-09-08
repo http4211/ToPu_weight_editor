@@ -1,20 +1,23 @@
 # ブラシ
 
 <p align="left">
-  <img width="192" alt="Image" src="https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3" />
+  <img width="192" alt="Image" src="../images/ja/brushes-01.png" />
 </p>
 
 GPU オーバーレイから、ビューポート上で使う独自のウェイトブラシを開始できます。編集モード / ウェイトペイントモードの両方で使え、ブラシ中でも骨取得や骨トランスフォームを併用できます。
 
 - `F` でサイズ変更、`Tab` / `Q` / `Esc` で元のツールへ戻る。
 - ツールヘッダーで、サイズ・選択マスク・各ブラシ値などを調整。
+- HUD の `サイズ` 欄 : 左右ドラッグで変更、`Shift + ドラッグ` で微調整、クリックで直接入力。範囲は `1〜1000 px` で、`F` とツールヘッダーのサイズに連動します。
+- 編集モードは複数メッシュ、ウェイトペイントモードはアクティブメッシュが対象です。
+- 4 種類とも編集設定の正規化・小数点・閾値・影響数に対応します。
 
 ### 通常ブラシ
 
-<img width="436" alt="Image" src="https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2" />
+<img width="436" alt="Image" src="../images/ja/normal-brush-01.png" />
 
 <p align="left">
-  <img width="898" alt="Image" src="https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40" />
+  <img width="898" alt="Image" src="../images/shared/normal-brush-01.gif" />
 </p>
 
 選択列のウェイトを加算 / 減算する基本ブラシです。
@@ -24,19 +27,23 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 - `通常量` : 1 ストロークあたりの変化量。
 - `一定塗` : 同じ頂点に重ねても塗りすぎないように塗る。
 - `重ね塗` : 当たるたびに `通常量` を加減算し、なぞるほど強くなる。
+- ツール設定の `貫通` : 手前の面に加え、奥に重なった面も塗ります。
 
 ### スムーズブラシ
 
-<img width="719" alt="image" src="https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587" />
+<img width="719" alt="image" src="../images/ja/smoothing-brush-01.png" />
 
 <p align="left">
-  <img width="1268" alt="Image" src="https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a" />
+  <img width="1268" alt="Image" src="../images/shared/smoothing-brush-01.gif" />
 </p>
 
-選択列のウェイトを周囲になじませるブラシです。塗り跡の硬い部分やミラー後の境界を整えるのに向いています。
+ウェイトを周囲になじませるブラシです。通常は編集可能なグループをまとめて処理し、塗り跡やミラー後の境界を整えます。
 
 - 左ドラッグでなめらかにする。
-- `Shift + 左ドラッグ` で指先でなぞるようにスミア、`Ctrl + 左ドラッグ` で選択列の強いウェイトを周囲へ広げる、`Alt + 左ドラッグ` で選択列の弱いウェイトを周囲へなじませながら広げる。
+- `Shift + 左ドラッグ` : 指先でなぞるようにウェイトを移動。
+- `Ctrl + 左ドラッグ` : 選択列の強いウェイトを周囲へ広げる。
+- `Alt + 左ドラッグ` : 周囲の弱い値になじませ、選択列の影響を縮小。
+- `アクティブグループのみ` : 選択列の既存ウェイトだけをスムーズにし、0 の頂点へは広げません。
 - `強さ` で寄せ具合、`回数` で反復回数を調整。
 - 無視列を選択している場合は、その無視列だけを処理。
 
@@ -48,14 +55,15 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### グラデーションブラシ
 
-<img width="640" alt="Image" src="https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603" />
+<img width="640" alt="Image" src="../images/ja/gradient-brush-01.png" />
 
 <p align="left">
-  <img width="1234" alt="Image" src="https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a" />
+  <img width="1234" alt="Image" src="../images/shared/gradient-brush-01.gif" />
 </p>
 
 ドラッグ方向に沿って、選択列のウェイトにグラデーションを作るブラシです。
 
+- 通常の左ドラッグはグラデーションで置き換えます。
 - `グラデ値` で最大値を調整（減衰カーブに沿ってこの値から 0 へ）。
 - `Ctrl` で減算方向、`Shift` で加算方向。
 - 種類 : `リニア`（直線）/ `放射`（開始点から外側へ）/ `線放射`（線から広がる）。
@@ -63,10 +71,10 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 
 ### 投げ縄ブラシ
 
-<img width="384" alt="Image" src="https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0" />
+<img width="384" alt="Image" src="../images/ja/lasso-brush-01.png" />
 
 <p align="left">
-  <img width="1154" alt="Image" src="https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f" />
+  <img width="1154" alt="Image" src="../images/shared/lasso-brush-01.gif" />
 </p>
 
 囲んだ範囲を指定値で塗るブラシです。広い範囲を一気に 0 / 0.5 / 1.0 などへそろえたいときに向いています。
@@ -78,11 +86,7 @@ GPU オーバーレイから、ビューポート上で使う独自のウェイ�
 ### 選択マスク
 
 <p align="left">
-  <img width="1208" alt="Image" src="https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d" />
+  <img width="1208" alt="Image" src="../images/shared/selection-mask-01.gif" />
 </p>
 
-`マスク` を ON にすると、ブラシの影響先を選択中の頂点だけに制限します。近い別パーツや裏側の頂点へ意図せず塗るのを防げます。すべてのブラシで共通して使えます。
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/brush_tools.gif" alt="ブラシ操作">
-</p>
+`マスク` を ON にすると、ブラシの影響先を選択中の頂点だけに制限します。近い別パーツや裏側の頂点へ意図せず塗るのを防げます。すべてのブラシで共通して使えます。頂点が未選択の場合は塗れません。

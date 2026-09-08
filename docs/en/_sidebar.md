@@ -41,7 +41,7 @@
     - [Column State & Visibility (Lock / Ignore / Force Show)](/en/grid.md?id=column-state-visibility-lock-ignore-force-show)
     - [Grid Controls & Bottom Tabs](/en/grid.md?id=grid-controls-bottom-tabs)
       - [Column headers](/en/grid.md?id=column-headers)
-      - [L / Vertex / Sum](/en/grid.md?id=l-vertex-sum)
+      - [L / Ver / Sum](/en/grid.md?id=l-ver-sum)
       - [Cells](/en/grid.md?id=cells)
       - [Column tabs](/en/grid.md?id=column-tabs)
       - [Column right-click weight transfer](/en/grid.md?id=column-right-click-weight-transfer)

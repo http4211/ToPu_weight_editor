@@ -4,7 +4,7 @@
 
 Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Add-ons`.
 
-- `Display Language` — `Auto` / `Japanese` / `English` (Auto follows Blender's language setting).
+- UI language follows Blender's `Preferences > Interface > Translation` settings.
 - `Display Settings` — whether the GPU overlay button is shown in the tool header.
 - `GPU Overlay UI Scale` — separate scales for the `3D View HUD` and the `Dedicated Area / Window HUD`.
 - `GPU Overlay UI Style` — `Slightly Round UI Corners`.
@@ -20,8 +20,8 @@ Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Ad
 > `Auto` scale can be turned off to enter a manual value from `0.50` to `4.00`, kept in sync with the HUD scale buttons.
 
 <p align="left">
-  <img width="600" alt="image" src="https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71" />
-  <img width="590" alt="image" src="https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30" />
+  <img width="600" alt="image" src="../images/en/add-on-preferences-01.png" />
+  <img width="590" alt="image" src="../images/en/add-on-preferences-02.png" />
 </p>
 
 ---
@@ -32,8 +32,9 @@ Open them with the `⚙` button in the overlay, or from `Edit > Preferences > Ad
 | --- | --- | --- |
 | Show / hide the GPU overlay | `Ctrl + W` | Enabled |
 | Close the GPU overlay | `Ctrl + W` / `Esc` | Enabled |
-| Add to / subtract from the selected column | `Ctrl + Wheel` | Enabled |
-| Fine adjustment of the selected column | `Ctrl + Shift + Wheel` | Enabled |
+| Add / subtract weights in selected cells or the current column | `Ctrl + Wheel` | Enabled |
+| Fine weight adjustment in selected cells or the current column | `Ctrl + Shift + Wheel` | Enabled |
+| Add a whole column to the cell selection | `Ctrl + Shift + Click` (header / cell) | Enabled |
 | Pick a bone while the overlay is open | `Alt + Right Click` | Enabled |
 | Smooth Weights | `Ctrl + Alt + S` | Disabled |
 | Pick an influence from a bone | `Ctrl + Alt + B` | Disabled |

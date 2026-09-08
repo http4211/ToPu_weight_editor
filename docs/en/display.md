@@ -2,28 +2,28 @@
 
 ## Display helpers
 
-<img width="524" alt="image" src="https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020" />
+<img width="524" alt="image" src="../images/en/display-helpers-01.png" />
 
 <p align="left">
-  <img width="1380" alt="Image" src="https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296" />
+  <img width="1380" alt="Image" src="../images/shared/display-helpers-01.gif" />
 </p>
 
-- `Modifier` — toggles the Armature modifier display (pose deformation).
-- `Rest` — switches the armature between Pose and Rest Position.
+- `Mod` — toggles Armature modifier display (pose deformation) across the current targets, including multi-edit and Object Mode multi-selection. Meshes without an Armature modifier are skipped.
+- `Rest` — on for Rest Position, off for Pose Position. `Rest` and `In Front` are unavailable without a target armature.
 - `In Front` — toggles In Front display for the armatures.
 - `Overlay` — toggles Blender's Vertex Group Weights display.
 - `Bone Hi` — highlights the bone matching the active vertex group (or the selected column), in Edit / Weight Paint Mode only. Its enabled state is restored on reload.
 - `Material` — toggles the weight-color preview. The `…` next to it configures color (hue / saturation / value) and material replacement.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/http4211/ToPu_weight_editor/main/README_images/display_tools.gif" alt="Display helpers">
-</p>
-
 ### Weight-color preview
 
-`Material` toggles a preview that shows weights as colors.
+`Material` previews weights on selected meshes. Deselected meshes return to their original display.
+
+- `Active Weight` (default) — shows the active group from blue to red, with zero weights in dark gray.
+- `Colorful Blend` — combines colors from multiple groups.
+- Use the adjacent `…` to choose the mode, colors and material replacement.
 
 - Creates a uniquely named, add-on-owned color attribute (it never overwrites or deletes a same-named user attribute).
 - `Replace Materials` (off by default) — only when on does it temporarily replace material slots, restoring them when the preview is disabled. Skipped on shared mesh data.
 
-> The `Material` preview is heavy; constant use is not recommended.
+> Preview performance depends on mesh size and the number of selected meshes.

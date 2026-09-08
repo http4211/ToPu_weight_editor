@@ -3,10 +3,10 @@
 ## GPU オーバーレイ / ヘッダー行
 
 <p align="left">
-  <img width="500" alt="image" src="https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc" />
+  <img width="500" alt="image" src="../images/ja/gpu-overlay-header-row-01.png" />
 </p>
 
-- `ドラッグで移動` : オーバーレイの位置を移動します。
+- タイトル欄をドラッグして位置を移動し、四隅をドラッグして大きさを変更します。
 - `グリッド表示` : グリッド表示とリアルタイム更新を切り替えます。
 - `▣` `↶` `🗑` : **ウェイトスナップショット**の保存 / 復元 / 削除。
 - `⚙` : アドオンプリファレンスを開きます。
@@ -20,16 +20,16 @@
 ## ウェイトスナップショット
 
 <p align="left">
-  <img width="69" alt="image" src="https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80" />
+  <img width="69" alt="image" src="../images/ja/weight-snapshots-01.png" />
 </p>
 
 ヘッダー行の `▣` `↶` `🗑` で、ウェイトを一時保存・復元できます。
 
 - `▣` : 対象オブジェクトの全ウェイトに名前を付けて保存。
-- `↶` : 一覧から復元。オブジェクトモードは対象全体、編集 / ウェイトペイントモードは選択頂点へ復元。
+- `↶` : 一覧から復元。オブジェクトモードでは対象全体、編集 / ウェイトペイントモードでは全体または選択頂点だけに復元できます（選択頂点のみは初期設定 OFF）。
 - `🗑` : 一覧から選んで削除（個別 / 一括）。
 
-復元先が保存元と同じオブジェクトで頂点数も同じ場合は頂点番号でそのまま復元し、別オブジェクトや異なるトポロジーへは保存した位置・法線で空間転送します（補間などは `オブジェクト転送` の詳細設定に従います）。
+`復元方式` は `自動` / `頂点番号` / `近接転送` から選べます。`自動` は、保存元と同じオブジェクトで頂点数も同じなら頂点番号で復元し、別オブジェクトや異なるトポロジーへは位置・法線で空間転送します（補間などは `オブジェクト転送` の詳細設定に従います）。
 
 > ※ スナップショットは圧縮して `.blend` 内に保存されます。大きなスナップショットはファイルサイズを増やします。
 
@@ -37,10 +37,10 @@
 
 ## 骨トランスフォーム
 
-<img width="532" alt="Image" src="https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae" />
+<img width="532" alt="Image" src="../images/shared/bone-transform-01.png" />
 
 <p align="left">
-  <img width="1314" alt="Image" src="https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22" />
+  <img width="1314" alt="Image" src="../images/shared/bone-transform-02.gif" />
 </p>
 
 選択列に対応する骨があれば、その `位置` `回転` `スケール` を確認・編集できます。ポーズを少し動かしてウェイトの効き方を確認したいときに使います。
