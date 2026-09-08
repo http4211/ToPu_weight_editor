@@ -268,6 +268,15 @@
       loadSidebar: true,
       loadNavbar: false,
 
+      plugins: [function (hook) {
+        hook.beforeEach(function (content) {
+          return content.replace(
+            /(<(?:img|video|source|a)\b[^>]*?\b(?:src|poster|href)=["'])\.\.\/images\//gi,
+            '$1images/'
+          );
+        });
+      }],
+
       // GitHub Pages (Jekyll) refuses to serve files starting with "_".
       // Point every _sidebar.md request at an underscore-free copy.
       alias: {

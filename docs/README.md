@@ -1,7 +1,7 @@
 # ToPu:Weight Editor
 
 <p align="center">
-  <img width="420" alt="ToPu Weight Editor" src="https://github.com/user-attachments/assets/cd95a546-837b-4e1a-8a5a-165b7273fba1">
+  <img width="420" alt="ToPu Weight Editor" src="images/ja/interface.png">
 </p>
 
 Blender 上でスキンウェイトを確認・編集するアドオンです。
@@ -9,7 +9,7 @@ Blender 上でスキンウェイトを確認・編集するアドオンです。
 
 外部フレームワークや追加の Python パッケージは不要です。
 
-> **バージョン 1.5.187 時点の仕様です。**
+> **バージョン 1.5.244 時点の仕様です。**
 
 ## はじめての方へ
 
