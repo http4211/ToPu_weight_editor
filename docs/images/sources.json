@@ -1,0 +1,679 @@
+[
+  {
+    "file": "en/interface.png",
+    "section": "ToPu_weight_editor",
+    "original_url": "https://github.com/user-attachments/assets/e69834b9-3d6d-47b2-b239-baccc06b948f",
+    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
+    "sha256": "8c82e8968a367193a938b88270fcd3afbe8ca5504b50b11ca6a9ef2eb05825cd"
+  },
+  {
+    "file": "en/quick-reference.png",
+    "section": "Features",
+    "original_url": "https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c",
+    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
+    "sha256": "2892468f0de33cb9ee80bb7458e9cd5ea1ba4339644ffe079e0ca7619d4453ad"
+  },
+  {
+    "file": "shared/opening-the-editor-01.gif",
+    "section": "Opening the editor",
+    "original_url": "https://github.com/user-attachments/assets/15f610fb-c21a-4d02-bc4e-715a7f0f310b",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "a1b18111270fdbded1a666ca8efc291aaf90f9af3f166799d2c23736b427aa0a"
+  },
+  {
+    "file": "en/opening-the-editor-01.png",
+    "section": "Opening the editor",
+    "original_url": "https://github.com/user-attachments/assets/4303fa20-bf9e-4f50-bdae-3d7d5c8e28ea",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ece061249d7097627ddd548055210ea474706ef7633b1096a4b8707e748ae529"
+  },
+  {
+    "file": "shared/quick-start.mp4",
+    "section": "Quick start",
+    "original_url": "https://github.com/user-attachments/assets/39c5e757-1003-4f13-8ad1-2b021f5474c6",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "9c6b1161e0cb9121040016b42da685305cb4f60ff2b08864b5fb1a6c2331aedb"
+  },
+  {
+    "file": "shared/bone-transform-01.png",
+    "section": "Bone transform",
+    "original_url": "https://github.com/user-attachments/assets/18661bf8-2ccc-4e3c-9481-de04e75502ae",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "a56a1843aa58c3dafec3a58f69a54c98cc21eaeedb63a15eb25332b53fdb0d89"
+  },
+  {
+    "file": "shared/bone-transform-02.gif",
+    "section": "Bone transform",
+    "original_url": "https://github.com/user-attachments/assets/0b5ab8d2-1abd-4378-9fcc-268317d0ef22",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "d50beaa9fdc760ea22cdf5e3cb87a345faf3866895150d19c8aad3a825a1c4bb"
+  },
+  {
+    "file": "en/edit-01.png",
+    "section": "Edit",
+    "original_url": "https://github.com/user-attachments/assets/c63dd83d-edeb-476b-8a78-c8a682264b16",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "4d70f3bf27a0a8076f5bb84e924fca2fced620915b84203a6d428b85ff88b336"
+  },
+  {
+    "file": "shared/selecting-vertices-by-x-side-01.png",
+    "section": "Selecting vertices by X side",
+    "original_url": "https://github.com/user-attachments/assets/b50216db-62f4-4d14-b880-35172f970311",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "faeb538f2c40cb0091310e5fe8004a57cc81ee1fff2f7b53e04c709dc394e58b"
+  },
+  {
+    "file": "shared/selecting-vertices-by-x-side-02.gif",
+    "section": "Selecting vertices by X side",
+    "original_url": "https://github.com/user-attachments/assets/e224cfe8-1ec2-4d8d-92ce-7dbead312eb4",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "c8a0607379186fdfb4baeb85b1d56ab22b406cf8b98342c895c42ccc8c30a7f5"
+  },
+  {
+    "file": "en/smooth-weights-01.png",
+    "section": "Smooth Weights",
+    "original_url": "https://github.com/user-attachments/assets/df0b567d-c156-4139-9d88-2e4b572a6dcd",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ce3ccff00bc42ca977aacca2a4532c33159a354f522e4914b31e1b385472b931"
+  },
+  {
+    "file": "shared/smooth-weights-01.gif",
+    "section": "Smooth Weights",
+    "original_url": "https://github.com/user-attachments/assets/ba09f7df-ebff-4b3c-886e-9c563eec4936",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "052fe3c1d2a45adfeefb8dff69e341160061020b124b4351270927b5144d2501"
+  },
+  {
+    "file": "en/mirror-01.png",
+    "section": "Mirror",
+    "original_url": "https://github.com/user-attachments/assets/ab59df15-6f02-46ab-9c79-0ed322987407",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "2532645ef44729f98e0826aa69c6bf4ba5ea197a2c64005d1a5988899554a2b3"
+  },
+  {
+    "file": "en/mirror-02.png",
+    "section": "Mirror",
+    "original_url": "https://github.com/user-attachments/assets/ba82830e-3339-474e-87a3-989f86abf288",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "0e29708e1b8d7cc280574f936479d4428ed3bd562a9ddda787a349e246b9ade1"
+  },
+  {
+    "file": "shared/mirror-01.gif",
+    "section": "Mirror",
+    "original_url": "https://github.com/user-attachments/assets/f45e4116-7cf0-4867-9eca-9b5b7fdc8ead",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "7f47e495836e383285d1a4274155e08892c84d7a49b1b5be1d32b1502ef75a86"
+  },
+  {
+    "file": "en/bone-creation-01.png",
+    "section": "Bone Creation",
+    "original_url": "https://github.com/user-attachments/assets/e8583f09-280f-4af6-a9bc-19f993d039c6",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "cd79336a695a9dff7ad91be77b8fa05af0cde26ed66d4cfafbabeaecb01b5d75"
+  },
+  {
+    "file": "shared/bone-creation-01.gif",
+    "section": "Bone Creation",
+    "original_url": "https://github.com/user-attachments/assets/752b69ab-1cc3-4801-9613-42bcd4463eb1",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "5f5ebfb7aafb83eb90bbe15c1a0a35029b4890b516694fe3eab17a914a911486"
+  },
+  {
+    "file": "en/split-bone-and-weights-01.png",
+    "section": "Split Bone and Weights",
+    "original_url": "https://github.com/user-attachments/assets/d02ef477-5d14-4015-a27f-b6a44dc5cc26",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6d5917d9868f18e98a07a7e9a344d54e55610bfe2c75a2e7b08876a4abb381d6"
+  },
+  {
+    "file": "shared/apply-rest-pose-01.gif",
+    "section": "Apply Rest Pose",
+    "original_url": "https://github.com/user-attachments/assets/9f61975e-ab08-4fa3-a47d-47aefd04bfdf",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6792294f3cceb71ef65fef17dea7d3f55b4504d7c33e3dd83952d16071095ac9"
+  },
+  {
+    "file": "en/weight-copy-01.png",
+    "section": "Weight Copy",
+    "original_url": "https://github.com/user-attachments/assets/7dffb678-b146-43cb-9fb5-e6b892af89b1",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "2fb1a900123644d2d3b5bbdbb7ec0f6d9113cf9029ad8f148a07d8e1e2643ff7"
+  },
+  {
+    "file": "shared/weight-copy-01.gif",
+    "section": "Weight Copy",
+    "original_url": "https://github.com/user-attachments/assets/b8453e66-c226-46db-b887-b2e01a3a3042",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "2b9d21b03136eab74063d95467adab3db326e3cd39db7d300fd09886bab7457b"
+  },
+  {
+    "file": "en/auto-weight-01.png",
+    "section": "Auto Weight",
+    "original_url": "https://github.com/user-attachments/assets/08be9571-5c7e-44ce-b7a9-0c6531d67393",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "e347cbc8d532745dca73825e7dc23d3c5673d8315e7254e479126e3e953a2375"
+  },
+  {
+    "file": "en/auto-weight-02.png",
+    "section": "Auto Weight",
+    "original_url": "https://github.com/user-attachments/assets/7634218e-d086-4b3c-a080-26a5ac5cfca1",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "358179b23401f44e5d8c181c25849db6424b0fdda8d9178643f7c623c046b441"
+  },
+  {
+    "file": "en/brushes-01.png",
+    "section": "Brushes",
+    "original_url": "https://github.com/user-attachments/assets/64ef486e-415f-48ef-8e13-97b9cac42136",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "64e56c605084fc29a414c96bc012612eb02832df8e9621cffac8c94edcdbeb57"
+  },
+  {
+    "file": "en/normal-brush-01.png",
+    "section": "Normal brush",
+    "original_url": "https://github.com/user-attachments/assets/9d3ade5f-ecc5-4456-babc-703c9596b5ec",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "d2e22af4894a3b35349b434694d9b061f605867fba9584752ed3c5cbe21fc5b3"
+  },
+  {
+    "file": "shared/normal-brush-01.gif",
+    "section": "Normal brush",
+    "original_url": "https://github.com/user-attachments/assets/51d508d6-5c53-45cc-88a1-5d793de41f40",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "09270a806de18d02ca80e414ab85ebb6ba7a8367533328374303a860596326b0"
+  },
+  {
+    "file": "en/smoothing-brush-01.png",
+    "section": "Smoothing brush",
+    "original_url": "https://github.com/user-attachments/assets/47dadabd-d050-464c-95d4-e702ca28b778",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "dd4cf23736ef4989927bbfb49f4628d89f61bc41f2ce9d51a367de357ba91c0a"
+  },
+  {
+    "file": "shared/smoothing-brush-01.gif",
+    "section": "Smoothing brush",
+    "original_url": "https://github.com/user-attachments/assets/fe1cc575-10d5-49c8-884a-3b3351182f5a",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "f366d4d695888c3374b2727d6fd12bf54b2443371eb06090e80465dfc92d9326"
+  },
+  {
+    "file": "en/gradient-brush-01.png",
+    "section": "Gradient brush",
+    "original_url": "https://github.com/user-attachments/assets/ea890ba2-f618-4a65-98df-af87c8946b0c",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "a56401f36885dfab3a80321313e3e247c41f463892692e5fa4dc7b595f19af47"
+  },
+  {
+    "file": "shared/gradient-brush-01.gif",
+    "section": "Gradient brush",
+    "original_url": "https://github.com/user-attachments/assets/df2d5bc8-1fbb-4c8d-90ff-31e5a5a0b02a",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "8ef4279f46b2490d1ddb9165b5327ff6484cda7cf8bcbe54c063e87063bc7329"
+  },
+  {
+    "file": "en/lasso-brush-01.png",
+    "section": "Lasso brush",
+    "original_url": "https://github.com/user-attachments/assets/a9f066a5-c5c9-4e4d-9bf8-93cdc9dc093d",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "0c8fb984a9486ff76901d198fe56b9f2743be8e19ceffbc2f04714d5fce58a68"
+  },
+  {
+    "file": "shared/lasso-brush-01.gif",
+    "section": "Lasso brush",
+    "original_url": "https://github.com/user-attachments/assets/9c2046e0-adc7-49cd-98e2-7e854064ee5f",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "71afcb378814cf736fff27db9e117a858ca32139729ab6ca04f3efafb60cd92b"
+  },
+  {
+    "file": "shared/selection-mask-01.gif",
+    "section": "Selection mask",
+    "original_url": "https://github.com/user-attachments/assets/4c9e47f7-afae-4fa9-9dfe-8d135c61ee2d",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ff567cbcdb6954ff0d374dac74c73dd58492f6febc687afb96e74cf6887e8a98"
+  },
+  {
+    "file": "en/cleanup-01.png",
+    "section": "Cleanup",
+    "original_url": "https://github.com/user-attachments/assets/946e636f-8162-4b77-9f79-58ce49000510",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "abd7992664ff52ff6077c627be8bfde9980012afbc0d57c48fd4e1dabb6dbc71"
+  },
+  {
+    "file": "en/display-helpers-01.png",
+    "section": "Display helpers",
+    "original_url": "https://github.com/user-attachments/assets/0b801af1-7993-4ce6-b328-5d2e16eb6020",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "89a8c97c762fb69219ac981021bbc531fee66a9131df9465d510b5a09b3b7e9b"
+  },
+  {
+    "file": "shared/display-helpers-01.gif",
+    "section": "Display helpers",
+    "original_url": "https://github.com/user-attachments/assets/e0581f1f-0fc1-4dc9-8fab-e7d581c1d296",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "d31b5d0531b2b30299388e65fa93f9999097c5dc45616c7b15eef7138d4bf2eb"
+  },
+  {
+    "file": "en/edit-settings-auto-cleanup-reference-values-01.png",
+    "section": "Edit Settings / Auto-cleanup reference values",
+    "original_url": "https://github.com/user-attachments/assets/610329e6-337a-4cb1-aea2-13453394c95f",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ff0321cc99c16519b3ec44f7c6fb8ee9a3f21b4aaca84448292eadec5f59a831"
+  },
+  {
+    "file": "en/preset-buttons-01.png",
+    "section": "Preset buttons",
+    "original_url": "https://github.com/user-attachments/assets/11f48284-8a22-4133-b3e9-a97db0e69445",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "f6f9bb3cce4ecb15ee02c1c3c5fee4ffe95489a992f4b881cdaae591820b4b1d"
+  },
+  {
+    "file": "shared/preset-buttons-01.png",
+    "section": "Preset buttons",
+    "original_url": "https://github.com/user-attachments/assets/463b655c-5b92-4641-89bd-a3abeff80b92",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "68d350cf4e984ad974b3e77f876c50ccc8c0a410efbb84fde463c9b8ffdc3d32"
+  },
+  {
+    "file": "shared/preset-buttons-02.gif",
+    "section": "Preset buttons",
+    "original_url": "https://github.com/user-attachments/assets/df656172-edbc-4420-9059-4b3932b18cf3",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "4b47c26e38baef046a4eff762417477e9ab49d5d940bc9e773eb02269e31edfe"
+  },
+  {
+    "file": "en/input-mode-slider-and-value-field-01.png",
+    "section": "Input mode, slider and value field",
+    "original_url": "https://github.com/user-attachments/assets/c3a9a157-9ab5-4a09-a081-183b39b28a99",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "42f3d7453e513b4b6826e7d2a13c56c28b6ac496db5718b5565ab0efa52402e4"
+  },
+  {
+    "file": "shared/input-mode-slider-and-value-field-01.png",
+    "section": "Input mode, slider and value field",
+    "original_url": "https://github.com/user-attachments/assets/56fd28a7-e82b-4c60-a4ee-034649542502",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "894e21c7d3c85e3c3624bf385d7e5796b25078c878095b8dd739c08c74f4dd63"
+  },
+  {
+    "file": "shared/input-mode-slider-and-value-field-02.gif",
+    "section": "Input mode, slider and value field",
+    "original_url": "https://github.com/user-attachments/assets/e0c3594f-f8f7-43d0-a298-a64aca7c210e",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "2c14f0c5eb3c564a1251256f5989e2df576383c392b9bf3113a64d5e24f8ec32"
+  },
+  {
+    "file": "en/special-group-selection-pick-bone-01.png",
+    "section": "Special Group Selection / Pick Bone",
+    "original_url": "https://github.com/user-attachments/assets/3f38bdb8-8fc5-48c9-ae62-89f9627bb8ee",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "b04b02d15a949f7199ecbba02bff1138b62ecde09802b89363624863f3de3c31"
+  },
+  {
+    "file": "shared/special-group-selection-pick-bone-01.png",
+    "section": "Special Group Selection / Pick Bone",
+    "original_url": "https://github.com/user-attachments/assets/3257c432-2a43-482e-8eef-dddd109b300b",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "261c3233b5614bd56319fa742c5333cc270707b80865eb32f8470fe562067958"
+  },
+  {
+    "file": "shared/special-group-selection-pick-bone-02.gif",
+    "section": "Special Group Selection / Pick Bone",
+    "original_url": "https://github.com/user-attachments/assets/4324d885-a267-470a-b215-f4b7ef63ed39",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "1b66d50fcbef992d7403e971fd224f3c514958b15f80ea177b0b9185ed2d9ec3"
+  },
+  {
+    "file": "en/column-state-visibility-lock-ignore-force-show-01.png",
+    "section": "Column State & Visibility (Lock / Ignore / Force Show)",
+    "original_url": "https://github.com/user-attachments/assets/1abf4eb8-5e6b-46e5-8fb4-13e5b1e48628",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "2a6a58560e3deca80d56dd511478c6be564516940a36882f5692df7a1580a010"
+  },
+  {
+    "file": "en/column-state-visibility-lock-ignore-force-show-02.png",
+    "section": "Column State & Visibility (Lock / Ignore / Force Show)",
+    "original_url": "https://github.com/user-attachments/assets/997d4dac-03f2-4866-a578-2b15df0007d8",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "04d3e13b9435782762841a2113a7ab0f5937b18bf9cb05616c67bb33cd73c844"
+  },
+  {
+    "file": "shared/column-state-visibility-lock-ignore-force-show-01.gif",
+    "section": "Column State & Visibility (Lock / Ignore / Force Show)",
+    "original_url": "https://github.com/user-attachments/assets/5d1c7790-e614-45b6-8d47-9243c6fb875a",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "acfd3b8cd5e3eba043dc5a11694e2690b07c15adfad869c0199679e3634157c8"
+  },
+  {
+    "file": "shared/column-headers-01.gif",
+    "section": "Column headers",
+    "original_url": "https://github.com/user-attachments/assets/e5329a73-88bd-48c9-92db-512e42d478b0",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "21bdacdefc8e8e1e196af96375567231b20c046ea005e3c31d705e7468b3b7ae"
+  },
+  {
+    "file": "en/l-vertex-sum-01.png",
+    "section": "L / Vertex / Sum",
+    "original_url": "https://github.com/user-attachments/assets/7af6fa19-7275-46ae-972a-25e2ab45ceb2",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "0ac07e6a5564e4f1d5680f76bd6932b732f7ffaf062c9fe68b56c33b9eefdbe8"
+  },
+  {
+    "file": "shared/l-vertex-sum-01.gif",
+    "section": "L / Vertex / Sum",
+    "original_url": "https://github.com/user-attachments/assets/1f944500-6102-4533-915b-c1667d87732d",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6c369ed94d8bb306358574f6a41717495ee95b7f3e6c1928e46a4ddbfee7ffa4"
+  },
+  {
+    "file": "shared/cells-01.gif",
+    "section": "Cells",
+    "original_url": "https://github.com/user-attachments/assets/d40e61e9-ae42-4cf0-b916-46545d88c886",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "0e630d051555b6fbfc4214002b740539f5a54799f560944290fa4ac46945cbf8"
+  },
+  {
+    "file": "en/column-tabs-01.png",
+    "section": "Column tabs",
+    "original_url": "https://github.com/user-attachments/assets/9a6f941e-05c7-4855-812e-7f618001c662",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "7e1f2e4e3e8902f633e9d4ec13148ecf76681949128e2c0c5d13b31a5a4a9557"
+  },
+  {
+    "file": "shared/column-tabs-01.gif",
+    "section": "Column tabs",
+    "original_url": "https://github.com/user-attachments/assets/153b50ac-3af7-404e-9795-18da04257bc9",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ffa6d7fa74fa25bf1ec9189eaa043425293d3ace6a5ff30084808d54b7794496"
+  },
+  {
+    "file": "en/column-right-click-weight-transfer-01.png",
+    "section": "Column right-click weight transfer",
+    "original_url": "https://github.com/user-attachments/assets/08b1ca77-55aa-438a-bb2d-dab1ee1afd59",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "03db206506715e0d6acc59ea4705832d7c83cea8f3d31391feee851351d9af10"
+  },
+  {
+    "file": "en/column-right-click-weight-transfer-02.png",
+    "section": "Column right-click weight transfer",
+    "original_url": "https://github.com/user-attachments/assets/a38e5d23-7c4a-4102-971a-b54873d67845",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "45b5e85a60a20342b0676910559892b3ca4d725be02d36ccd67b50bdbdff8ca1"
+  },
+  {
+    "file": "en/add-on-preferences-01.png",
+    "section": "Add-on preferences",
+    "original_url": "https://github.com/user-attachments/assets/f0ac612a-ab84-45df-a610-46dc28a2aa71",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "a3f01c90a13533fbce936f9328b33d6030e7467f042d1437dcb6108907d4f265"
+  },
+  {
+    "file": "en/add-on-preferences-02.png",
+    "section": "Add-on preferences",
+    "original_url": "https://github.com/user-attachments/assets/97659a50-1ff6-46e6-affe-a22991584f30",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "7de1c6e4f0bcf7774f10673fe741f98dba4656d57398e04631922a4fdff9555a"
+  },
+  {
+    "file": "ja/interface.png",
+    "section": "ToPu_weight_editor",
+    "original_url": "https://github.com/user-attachments/assets/cd95a546-837b-4e1a-8a5a-165b7273fba1",
+    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
+    "sha256": "ef9d358011eec832a1225b1fa4ccf13beb9d5bc2a41ed463623ca1860435bdf4"
+  },
+  {
+    "file": "ja/quick-reference.png",
+    "section": "Features",
+    "original_url": "https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b",
+    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
+    "sha256": "803ed9cfbdb8231e03dfa263c5791b92a947e7779fe371ef863143b6c227ecf2"
+  },
+  {
+    "file": "ja/opening-the-editor-01.png",
+    "section": "Opening the editor",
+    "original_url": "https://github.com/user-attachments/assets/06b31e51-68da-4cf4-a228-10104cc5a101",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "1ddcfbc12187e9185780b4b8525b705b5f1885e4e819a4036eb1ab9b862552eb"
+  },
+  {
+    "file": "ja/gpu-overlay-header-row-01.png",
+    "section": "GPU overlay / Header row",
+    "original_url": "https://github.com/user-attachments/assets/5771bd25-16c1-485b-8315-70fec62febfc",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "936a34800389ee3d2f57298141a7febe449f70f7ff3dca6cca4988f5efcdb0ef"
+  },
+  {
+    "file": "ja/weight-snapshots-01.png",
+    "section": "Weight snapshots",
+    "original_url": "https://github.com/user-attachments/assets/f1f3a83a-dd35-413e-8955-8ddf4daacd80",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "74d0529d118f80e06491d77ecbe0f2d494dfb04bafa5e625e363285ad22efc12"
+  },
+  {
+    "file": "ja/edit-01.png",
+    "section": "Edit",
+    "original_url": "https://github.com/user-attachments/assets/6ed02355-6c1f-4a9a-8922-f1d12c5de4de",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "00b83e8f99c0fe23599e7e887ac3930ba58008025130ae96a0743d19b2331cf3"
+  },
+  {
+    "file": "ja/smooth-weights-01.png",
+    "section": "Smooth Weights",
+    "original_url": "https://github.com/user-attachments/assets/9b1fc7b0-366f-4646-b56b-dacad2702608",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "5180c65ab74b811f433ac5ab241f1612edb2bf54ecf15455da756e37158987dd"
+  },
+  {
+    "file": "ja/mirror-01.png",
+    "section": "Mirror",
+    "original_url": "https://github.com/user-attachments/assets/b6c7b993-1e28-4ab3-925b-db2b697cd7b8",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ff10ce14ec4d25f6073ec67e160393d9b721d6777a7ddbd3290dc66067413870"
+  },
+  {
+    "file": "ja/mirror-02.png",
+    "section": "Mirror",
+    "original_url": "https://github.com/user-attachments/assets/b0c1e84f-6dbd-4a73-9186-fa0eee9e6912",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "8c1a7bf6ab01af5a1801bd8f862c710c83486528601130104e88334b02805be1"
+  },
+  {
+    "file": "ja/bone-creation-01.png",
+    "section": "Bone Creation",
+    "original_url": "https://github.com/user-attachments/assets/53b3d388-e046-4716-915d-9f0663bf8ec5",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "413593ab2f65c69549c7a09231b31a3c16d409bbc97532e9401e55134f709761"
+  },
+  {
+    "file": "ja/split-bone-and-weights-01.png",
+    "section": "Split Bone and Weights",
+    "original_url": "https://github.com/user-attachments/assets/f674e8d4-612d-4ff7-bc64-723289b3a73b",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6eb01cc46c581ce93b2f8335ee56dd8247768fe22cf4bfb2495d1761af47a6b7"
+  },
+  {
+    "file": "ja/weight-copy-01.png",
+    "section": "Weight Copy",
+    "original_url": "https://github.com/user-attachments/assets/e669a094-8de3-4ae7-9bc8-2d4af63c37a5",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "bfe0dc6725a87ca5a86dbf035a74f81b6bc974d4bd3f981744f3fb187d10d8cd"
+  },
+  {
+    "file": "ja/auto-weight-01.png",
+    "section": "Auto Weight",
+    "original_url": "https://github.com/user-attachments/assets/6f5d9511-81a5-4bed-84a8-b8a937823c8e",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "723d1abe2d627afc26889b61c00ca51d7400f26c6673ac32c37690408ca0b76a"
+  },
+  {
+    "file": "ja/auto-weight-02.png",
+    "section": "Auto Weight",
+    "original_url": "https://github.com/user-attachments/assets/0e5ccde7-2528-4d22-809d-38c535ad8d5b",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "775ff1feef5b9793fb7b97e8ce6eeb90ccd3a921836270d3f345e5fd0c40c1b6"
+  },
+  {
+    "file": "ja/brushes-01.png",
+    "section": "Brushes",
+    "original_url": "https://github.com/user-attachments/assets/2e57f831-8509-4954-81cc-e75aed5e66c3",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "32b3d22dca8fd391285fc28b4366918541e8b9cddfa822095f02857e728ada01"
+  },
+  {
+    "file": "ja/normal-brush-01.png",
+    "section": "Normal brush",
+    "original_url": "https://github.com/user-attachments/assets/714c3d89-c99d-47ab-b348-2b36a4712cb2",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "10cb7439695856608b91927c870be26994f54ca5982e0f2f0a435eb05d9f0c75"
+  },
+  {
+    "file": "ja/smoothing-brush-01.png",
+    "section": "Smoothing brush",
+    "original_url": "https://github.com/user-attachments/assets/753ab833-efb9-4ae2-b11c-810763683587",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "8f22c2fe205b4c89450b60b064e4e4edde7f3acf845db1d87f5b413a833a2264"
+  },
+  {
+    "file": "ja/gradient-brush-01.png",
+    "section": "Gradient brush",
+    "original_url": "https://github.com/user-attachments/assets/a15031da-149f-49f5-84be-c73567c54603",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "ca96293bbec66d3c4f166f816162219830a69f40a08ffa6385045ac496407cff"
+  },
+  {
+    "file": "ja/lasso-brush-01.png",
+    "section": "Lasso brush",
+    "original_url": "https://github.com/user-attachments/assets/4756f60d-3580-463b-bf3a-96aeaafadef0",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "cf81062728a58262e1b333ccb24985629a5f03b214a68901d060460ddc3d8f91"
+  },
+  {
+    "file": "ja/cleanup-01.png",
+    "section": "Cleanup",
+    "original_url": "https://github.com/user-attachments/assets/2b5f0b8b-ccc2-4990-9883-d3e8e2c873cb",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "7824cf847786bdb4ad96e6ec0b9d74a95a8853b4b2641c89cb1d25c00100ca27"
+  },
+  {
+    "file": "ja/display-helpers-01.png",
+    "section": "Display helpers",
+    "original_url": "https://github.com/user-attachments/assets/fb306577-a3d4-467f-8ba0-261e4183ef3d",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "bc2e4bfd0e9345d238bdd4c384092453a801a308266a65abc72fdc3117987f8d"
+  },
+  {
+    "file": "ja/weight-color-preview-01.png",
+    "section": "Weight-color preview",
+    "original_url": "https://github.com/user-attachments/assets/c92a022d-92b4-486b-990c-a56aa7ea6098",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "913c715db479c2e0d917e6ec365bfff72be083621b1e3fe5d21022d317dd0b4d"
+  },
+  {
+    "file": "ja/edit-settings-auto-cleanup-reference-values-01.png",
+    "section": "Edit Settings / Auto-cleanup reference values",
+    "original_url": "https://github.com/user-attachments/assets/416d1946-2607-42b6-a038-2b816687af63",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "fdb91fa12a0480823b52e4b9480d96df8869294c616ae47a213defd17dd37b04"
+  },
+  {
+    "file": "ja/preset-buttons-01.png",
+    "section": "Preset buttons",
+    "original_url": "https://github.com/user-attachments/assets/061633e4-e2cf-471f-b9ad-c0c0ed909aaa",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "bd224e6cf24f70717801c659af31c9d3e8fdfdda0270d8982f70acff01b7b757"
+  },
+  {
+    "file": "ja/input-mode-slider-and-value-field-01.png",
+    "section": "Input mode, slider and value field",
+    "original_url": "https://github.com/user-attachments/assets/3ff92ec4-e965-47e9-a535-421889cac398",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "e84f2fb15a7bbc0d05b3c1b55f123ef6071a11d37a9f8b8447ea9e3fad5d39f9"
+  },
+  {
+    "file": "ja/special-group-selection-pick-bone-01.png",
+    "section": "Special Group Selection / Pick Bone",
+    "original_url": "https://github.com/user-attachments/assets/a12b4d19-3c24-4d61-b7e5-18f19bf57710",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "86a6b6bbada7ea68d11417bc61524cf53a2fa06e5a3621d980b1e126ef44e3ec"
+  },
+  {
+    "file": "ja/column-state-visibility-lock-ignore-force-show-01.png",
+    "section": "Column State & Visibility (Lock / Ignore / Force Show)",
+    "original_url": "https://github.com/user-attachments/assets/7d078ee1-5d84-48fb-b533-4b6c889e2c08",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "81f7c36426a51d1c607e7739e5e35c66c6764332c6e79021324f2d18e9289ec0"
+  },
+  {
+    "file": "ja/column-state-visibility-lock-ignore-force-show-02.png",
+    "section": "Column State & Visibility (Lock / Ignore / Force Show)",
+    "original_url": "https://github.com/user-attachments/assets/fccbf13f-6dc1-4dc8-97e1-cae4aaf6f785",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "13871fbcedab28e82af8601b82ab0808041e03075e6ffbeb1217b188b3b998ea"
+  },
+  {
+    "file": "ja/column-headers-01.png",
+    "section": "Column headers",
+    "original_url": "https://github.com/user-attachments/assets/6fb96f9a-399e-4b02-8338-2133fac54b9a",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "c4d762df6d8f038b7321b9d3df9a2d797f054059115796c1b79345fbd08d0242"
+  },
+  {
+    "file": "ja/column-headers-02.png",
+    "section": "Column headers",
+    "original_url": "https://github.com/user-attachments/assets/3d1f2be4-fb64-4ea1-a3c7-91dd255371d7",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "c2264d96b157a947ce803204f2a9e1d2e9f4ee1c2d9ece364d2b288a69183f29"
+  },
+  {
+    "file": "ja/l-vertex-sum-01.png",
+    "section": "L / Vertex / Sum",
+    "original_url": "https://github.com/user-attachments/assets/20e5f137-204f-4693-84a6-e9f5455eb703",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "914a5b7f903e70ca548269e05f89c17f525e283ffacc71e96c923bb27fa7a3cf"
+  },
+  {
+    "file": "ja/column-tabs-01.png",
+    "section": "Column tabs",
+    "original_url": "https://github.com/user-attachments/assets/d9a3ea5b-4ce8-4942-994f-391fd78fc45b",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "a11f5e48485ee1da6b26fa1522161d5bb403e088c66d982b2e0cb3e1312ec5a2"
+  },
+  {
+    "file": "ja/column-right-click-weight-transfer-01.png",
+    "section": "Column right-click weight transfer",
+    "original_url": "https://github.com/user-attachments/assets/61f1ca69-668d-49d1-96f2-128bed527655",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "1d3d0c5ecb9e5cf32a736f0b39f937062d04ae808bd4a809eade69c9eb29fd30"
+  },
+  {
+    "file": "ja/column-right-click-weight-transfer-02.png",
+    "section": "Column right-click weight transfer",
+    "original_url": "https://github.com/user-attachments/assets/4fb738b0-aad8-4714-93ca-a4320140b8db",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "4518a05c6ec3617822bb0be08a5e5bd255d2e1489e049aab3842c7294d3d9328"
+  },
+  {
+    "file": "ja/column-right-click-weight-transfer-03.png",
+    "section": "Column right-click weight transfer",
+    "original_url": "https://github.com/user-attachments/assets/7d405982-882b-4299-a31f-460828fcdfae",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6b8b2d206517e6dbaebedfcfcef10d7e67f25dce4814d9fefaa523fcbbe00920"
+  },
+  {
+    "file": "ja/add-on-preferences-01.png",
+    "section": "Add-on preferences",
+    "original_url": "https://github.com/user-attachments/assets/a30d6a86-39f5-44b6-8f93-50cddf2d6c81",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "6c00474d7ab3441c281771eb5a0879b66caee4fef033658a843ed7ebf2cacdfb"
+  },
+  {
+    "file": "ja/add-on-preferences-02.png",
+    "section": "Add-on preferences",
+    "original_url": "https://github.com/user-attachments/assets/5e14ec8b-8405-4a27-919f-2b2e5d25ed34",
+    "note": "Downloaded from the original README URL; original bytes preserved.",
+    "sha256": "13da9b10031ed4e386770a3a0bb875904a4bf1a6461b2293c45078467341eef7"
+  },
+  {
+    "file": "shared/quick-start.gif",
+    "section": "Quick start",
+    "note": "Full 48-second animated preview derived from the downloaded MP4; 800 px wide, 8 fps."
+  }
+]
