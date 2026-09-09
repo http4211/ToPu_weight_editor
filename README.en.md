@@ -374,7 +374,7 @@ Blends weights with the surrounding vertices. By default, it processes editable 
 - `Shift + Left-drag` — moves weights like a fingertip.
 - `Ctrl + Left-drag` — spreads the selected column’s stronger weights outward.
 - `Alt + Left-drag` — blends toward weaker nearby values to shrink the selected column’s influence.
-- `Active Group Only` — smooths only existing weights in the active group, without spreading to zero-weight vertices.
+- `Active Group Only` — smooths only the active group, allowing its weights to spread to zero-weight vertices when neighbors have weight in the same group.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
 - When an ignored column is selected, only that ignored column is processed.
 
