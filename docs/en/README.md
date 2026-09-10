@@ -9,7 +9,7 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 
 No external framework or extra Python package is required.
 
-> **This documentation describes version 1.5.244.**
+> **This documentation describes version 1.5.251.**
 
 ## Start here
 

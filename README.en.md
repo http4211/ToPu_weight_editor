@@ -11,7 +11,7 @@
 ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
-> **This document describes version 1.5.244.**
+> **This document describes version 1.5.251.**
 > The N-panel and Pie Menu from the 1.4 series have been removed; all operations now live in the GPU overlay. The overlay shortcut also changed from `W` to `Ctrl + W`.
 
 ## Table of contents
@@ -373,10 +373,12 @@ Blends weights with the surrounding vertices. By default, it processes editable 
 - Left-drag smooths the weights around the cursor.
 - `Shift + Left-drag` — moves weights like a fingertip.
 - `Ctrl + Left-drag` — spreads the selected column’s stronger weights outward.
-- `Alt + Left-drag` — blends toward weaker nearby values to shrink the selected column’s influence.
+- `Ctrl + Shift + Left-drag` — blends toward weaker nearby values to shrink the selected column’s influence.
 - `Active Group Only` — smooths only the active group, allowing its weights to spread to zero-weight vertices when neighbors have weight in the same group.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
 - When an ignored column is selected, only that ignored column is processed.
+
+In v1.5.251, shrink changes from `Alt + Left-drag` to `Ctrl + Shift + Left-drag`. On the Normal brush, `Ctrl + Shift + Left-drag` still spreads the active influence. In Weight Paint Mode, `Alt + Left-click` is passed to Blender for bone / vertex-group selection, according to Blender’s keymap.
 
 `Work Mode` switches the behavior.
 

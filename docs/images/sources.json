@@ -10,8 +10,8 @@
     "file": "en/quick-reference.png",
     "section": "Features",
     "original_url": "https://github.com/user-attachments/assets/d79350fc-493b-4ed0-adac-0435dc3ce42c",
-    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
-    "sha256": "2892468f0de33cb9ee80bb7458e9cd5ea1ba4339644ffe079e0ca7619d4453ad"
+    "note": "Quick reference updated for the v1.5.251 Smooth brush shortcuts; v1.5.244 UI screenshot retained.",
+    "sha256": "d212efd3d11a87990bfb1ae2fcfe572c9ffed41851238cb3a7ede706cf1af458"
   },
   {
     "file": "shared/opening-the-editor-01.gif",
@@ -423,8 +423,8 @@
     "file": "ja/quick-reference.png",
     "section": "Features",
     "original_url": "https://github.com/user-attachments/assets/414e373e-47eb-47fb-937c-37b4bb21383b",
-    "note": "Downloaded original; display replaced with the supplied v1.5.244 image.",
-    "sha256": "803ed9cfbdb8231e03dfa263c5791b92a947e7779fe371ef863143b6c227ecf2"
+    "note": "Quick reference updated for the v1.5.251 Smooth brush shortcuts; v1.5.244 UI screenshot retained.",
+    "sha256": "85949c0cf917d1f9281ceea47188be025407fc4bc989457bca3466fd9a14ecf7"
   },
   {
     "file": "ja/opening-the-editor-01.png",

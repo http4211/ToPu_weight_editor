@@ -26,9 +26,9 @@ GIF はそのままアニメーション表示します。クイックスター�
 
 GIFs retain their animation. Quick start includes both the original MP4 and an inline GIF preview.
 
-現在のメインUIと早見表は v1.5.244 です。その他の操作画像・GIFは、元のREADMEのURLから取得したものを保持しています。古いUIが含まれる場合は、下の一覧から該当ファイルを差し替えてください。
+早見表は v1.5.251 のスムーズブラシのショートカットを反映しています。メインUI画像は v1.5.244 のものです。その他の操作画像・GIFは、元のREADMEのURLから取得したものを保持しています。古いUIが含まれる場合は、下の一覧から該当ファイルを差し替えてください。
 
-The main UI and quick reference show v1.5.244. Other screenshots and GIFs were downloaded from the original README URLs and preserved. Use the list below to replace any older UI captures.
+The quick reference includes the v1.5.251 Smooth brush shortcuts. The main UI screenshots are from v1.5.244. Other screenshots and GIFs were downloaded from the original README URLs and preserved. Use the list below to replace any older UI captures.
 
 リポジトリへ反映するときは、README と `docs/` をフォルダ構成ごとコピーしてください。ファイル名や拡張子を変える場合は、README と対応する `docs/ja/`・`docs/en/` ページの参照も変更します。GitHub Pages のURLやリポジトリ名に依存しない相対パスを使用しています。
 
