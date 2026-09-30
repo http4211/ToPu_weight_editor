@@ -71,8 +71,8 @@ Usage.
 - `Lock` — makes the selected column non-editable.
 - `Ignore` — excludes the column from totals, normalization and cleanup.
 - `Force Show` — keeps a column in the grid even when its weights are zero.
-- `Shift + Click` applies to every column except the selected one; `Alt + Click` clears the state everywhere.
-- `Ctrl + Force Show` opens a text filter to force-show every group matching comma-separated fragments.
+- `Ctrl + Click` on Lock, Ignore or Force Show applies the state to every column except the selected one; `Alt + Click` clears the state everywhere.
+- `Shift + Click` on Force Show opens a text filter to force-show every group matching comma-separated fragments.
 
 ---
 
