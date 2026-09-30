@@ -2,9 +2,15 @@ name: Update Blender Extension Repository
 on:
   release:
     types: [published, edited]
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'scripts/build_extension_index.py'
+      - '.github/workflows/update-extension-repository.yml'
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
   pages: read
 concurrency:
   group: blender-extension-index
@@ -12,7 +18,7 @@ concurrency:
 jobs:
   update-index:
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' || (github.event.release.prerelease == false && github.event.release.draft == false)
+    if: github.event_name != 'release' || (github.event.release.prerelease == false && github.event.release.draft == false)
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,38 +26,41 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Stage Wiki from docs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f docs/index.html
+          mkdir -p "$RUNNER_TEMP/tpwe-pages"
+          cp -a docs/. "$RUNNER_TEMP/tpwe-pages/"
+          touch "$RUNNER_TEMP/tpwe-pages/.nojekyll"
       - name: Generate index from latest stable release
         env:
           GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
-        run: python scripts/build_extension_index.py --repository "$REPOSITORY" --output "$RUNNER_TEMP/tpwe-index.json"
-      - name: Update gh-pages (preserve existing site files)
+        run: python scripts/build_extension_index.py --repository "$REPOSITORY" --output "$RUNNER_TEMP/tpwe-pages/index.json"
+      - name: Check Wiki and repository index
         shell: bash
         run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git ls-remote --exit-code --heads origin gh-pages > /dev/null; then
-            git fetch origin gh-pages
-            git checkout -B gh-pages FETCH_HEAD
-          else
-            git checkout --orphan gh-pages
-            git rm -rf .
-          fi
-          cp "$RUNNER_TEMP/tpwe-index.json" index.json
-          git add index.json
-          if git diff --cached --quiet; then
-            echo "Index is already up to date."
-          else
-            git commit -m "Update Blender extension repository index"
-            git push origin HEAD:gh-pages
-          fi
-      # A GITHUB_TOKEN commit does not trigger a branch-based Pages build.
-      # Deploy the complete preserved gh-pages tree explicitly instead.
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          source = Path('docs')
+          site = Path(os.environ['RUNNER_TEMP']) / 'tpwe-pages'
+          for path in source.rglob('*'):
+              if path.is_file() and path.relative_to(source).as_posix() not in ('index.json', '.nojekyll'):
+                  assert (site / path.relative_to(source)).read_bytes() == path.read_bytes(), str(path)
+          assert (site / 'index.html').is_file()
+          index = json.loads((site / 'index.json').read_text())
+          assert index['version'] == 'v1'
+          assert index['data'][0]['id'] == 'topu_weight_editor'
+          print('Wiki and extension index are ready for deployment.')
+          PY
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ${{ runner.temp }}/tpwe-pages
   deploy:
     needs: update-index
     runs-on: ubuntu-latest
