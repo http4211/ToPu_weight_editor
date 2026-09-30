@@ -33,6 +33,24 @@
 
 ## インストール
 
+### リポジトリからインストール
+
+以下のURLをBlenderのリポジトリに登録すると、Blender内からToPu Weight Editorをダウンロード・インストールできます。登録後は、更新の確認・適用もBlender内で行えます。
+
+```text
+https://http4211.github.io/ToPu_weight_editor/index.json
+```
+
+1. `編集 > プリファレンス > エクステンションを入手` を開きます。オンラインアクセスの許可を求められた場合は許可してください。
+2. 右上のリポジトリ設定から `＋ > リモートリポジトリを追加` を選び、上記URLを入力して追加します。
+3. 一覧で `ToPu:Weight Editor` を検索し、`インストール` をクリックします。
+
+<p align="center">
+  <img width="694" alt="Blenderのエクステンションリポジトリ登録画面（日本語）" src="../images/ja/repository-registration.gif" />
+</p>
+
+### ZIPから手動でインストール
+
 1. [リリースページ](https://github.com/http4211/ToPu_weight_editor/releases)の最新版 `Assets` から配布 ZIP をダウンロード。
 2. ZIP を Blender のウィンドウへドラッグ&ドロップ（または `編集 > プリファレンス > アドオン > ディスクからインストール` で ZIP を選択）。
 3. アドオン一覧で `ToPu:Weight Editor` を有効化。
