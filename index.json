@@ -1,0 +1,34 @@
+{
+  "version": "v1",
+  "blocklist": [],
+  "data": [
+    {
+      "schema_version": "1.0.0",
+      "id": "topu_weight_editor",
+      "name": "ToPu:Weight Editor",
+      "tagline": "Edit skin weights with a GPU overlay and precision tools",
+      "version": "1.5.255",
+      "type": "add-on",
+      "maintainer": "http4211",
+      "license": [
+        "SPDX:GPL-3.0-or-later"
+      ],
+      "blender_version_min": "4.2.0",
+      "website": "https://github.com/http4211/ToPu_weight_editor",
+      "permissions": {
+        "files": "Import and export user-selected overlay color presets"
+      },
+      "tags": [
+        "Rigging"
+      ],
+      "copyright": [
+        "2026 http4211",
+        "2026 Jay Friesen",
+        "2024 Rinat Abdrashitov"
+      ],
+      "archive_url": "https://github.com/http4211/ToPu_weight_editor/releases/download/1.5.255/ToPu_weight_editor_1.5.255.zip",
+      "archive_size": 1127227,
+      "archive_hash": "sha256:c417628b7e13bf63e20e1bdc81d776411cf46f53176a0a65460dafcf074f9241"
+    }
+  ]
+}
