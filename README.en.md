@@ -69,6 +69,24 @@ From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, s
 
 ## Installation
 
+### Install from a repository
+
+Add the following URL as a repository in Blender to download and install ToPu Weight Editor directly from Blender. Once registered, you can also check for and apply updates within Blender.
+
+```text
+https://http4211.github.io/ToPu_weight_editor/index.json
+```
+
+1. Open `Edit > Preferences > Get Extensions`. Allow online access if prompted.
+2. Open the repository settings at the top right, choose `+ > Add Remote Repository`, and add the URL above.
+3. Search for `ToPu:Weight Editor` in the list and click `Install`.
+
+<p align="center">
+  <img width="694" alt="Blender extension repository registration screen (English)" src="docs/images/en/repository-registration.gif" />
+</p>
+
+### Install manually from a ZIP
+
 1. Download the distribution ZIP from `Assets` of the latest [release](https://github.com/http4211/ToPu_weight_editor/releases).
 2. Drag & drop the ZIP onto the Blender window (or choose `Edit > Preferences > Add-ons > Install from Disk` and select the ZIP).
 3. Enable `ToPu:Weight Editor` in the add-on list.
