@@ -137,7 +137,7 @@ Per-tab options.
 - `Ignore Non-Bone Columns` (All tab) — excludes non-bone columns from totals, normalization and cleanup. Manual Ignore choices survive target changes.
 - `Hierarchy` (All tab, on by default) — includes armatures along the object’s parent chain when classifying bone columns. When off, only Armature modifiers are used.
 - `Always Show` (Other tab) — always shows existing non-bone columns even when the selection has no values for them.
-- `Allow >1` (Other tab) — when on, Other columns are not treated as violations at a total of 1 or more, and are not normalized.
+- `Allow Violations` (Other tab) — when on, totals that differ from 1.0 and influence counts above the limit are not flagged in the Sum column. Automatic cleanup during editing and `Fix Violations` skip normalization and influence-count cleanup, even if those options are enabled. Decimal and threshold checks and cleanup work as usual.
 - `Hidden Words` — removes only the specified text from displayed column names. It does not hide columns or rename actual vertex groups.
 
 In multi-edit, a shared name is a bone column if any edited mesh’s applicable armature contains that bone. The `Other` tab has its own independent Ignore state.

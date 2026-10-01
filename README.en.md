@@ -11,7 +11,7 @@
 ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
-> **The Smoothing brush instructions are up to date for version 1.5.276.**
+> **Smoothing brush controls cover v1.5.276; Allow Violations covers v1.5.277 and later.**
 > The N-panel and Pie Menu from the 1.4 series have been removed; all operations now live in the GPU overlay. The overlay shortcut also changed from `W` to `Ctrl + W`.
 
 ## Table of contents
@@ -506,6 +506,8 @@ Turning `Mask` on restricts the brush to the currently selected vertices. Helps 
 - `Decimal Places` ranges from `0–7`. `0` disables decimal cleanup and decimal violations; normalization, threshold and influence-count checks remain active.
 - The `…` on `Influence Count` opens `Influence Cleanup Settings`.
 
+With `Allow Violations` enabled in the `Other` tab, automatic cleanup and `Fix Violations` skip normalization and influence-count cleanup even when those options are enabled. The Sum column does not flag total or influence-count violations. Decimal and threshold rules still apply. You can still run `Limit Influences` explicitly from its cleanup button.
+
 **Influence Cleanup Settings** (which bones to keep when a vertex exceeds the influence limit)
 
 - `Consider Bone Hierarchy` (default) — keeps influences spread across the separate chains that branch off a shared parent bone (for example the left and right legs splitting from the hip), so a vertex driven by several chains (a skirt influenced by both legs) is less likely to lose one whole chain.
@@ -646,7 +648,7 @@ Per-tab options.
 - `Ignore Non-Bone Columns` (All tab) — excludes non-bone columns from totals, normalization and cleanup. Manual Ignore choices survive target changes.
 - `Hierarchy` (All tab, on by default) — includes armatures along the object’s parent chain when classifying bone columns. When off, only Armature modifiers are used.
 - `Always Show` (Other tab) — always shows existing non-bone columns even when the selection has no values for them.
-- `Allow >1` (Other tab) — when on, Other columns are not treated as violations at a total of 1 or more, and are not normalized.
+- `Allow Violations` (Other tab) — when on, totals that differ from 1.0 and influence counts above the limit are not flagged in the Sum column. Automatic cleanup during editing and `Fix Violations` skip normalization and influence-count cleanup, even if those options are enabled. Decimal and threshold checks and cleanup work as usual.
 - `Hidden Words` — removes only the specified text from displayed column names. It does not hide columns or rename actual vertex groups.
 
 In multi-edit, a shared name is a bone column if any edited mesh’s applicable armature contains that bone. The `Other` tab has its own independent Ignore state.

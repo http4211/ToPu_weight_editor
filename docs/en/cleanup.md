@@ -29,6 +29,8 @@
 - `Decimal Places` ranges from `0–7`. `0` disables decimal cleanup and decimal violations; normalization, threshold and influence-count checks remain active.
 - The `…` on `Influence Count` opens `Influence Cleanup Settings`.
 
+With `Allow Violations` enabled in the `Other` tab, automatic cleanup and `Fix Violations` skip normalization and influence-count cleanup even when those options are enabled. The Sum column does not flag total or influence-count violations. Decimal and threshold rules still apply. You can still run `Limit Influences` explicitly from its cleanup button.
+
 **Influence Cleanup Settings** (which bones to keep when a vertex exceeds the influence limit)
 
 - `Consider Bone Hierarchy` (default) — keeps influences spread across the separate chains that branch off a shared parent bone (for example the left and right legs splitting from the hip), so a vertex driven by several chains (a skirt influenced by both legs) is less likely to lose one whole chain.
