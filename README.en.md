@@ -11,7 +11,7 @@
 ToPu:Weight Editor is a Blender add-on for reviewing and editing skin weights.
 From a **GPU overlay** drawn in the 3D View, it puts numeric editing, cleanup, smoothing, mirroring, copy / transfer, bone picking, bone creation and display helpers into one place. No external framework or extra Python package is required.
 
-> **This document describes version 1.5.251.**
+> **The Smoothing brush instructions are up to date for version 1.5.276.**
 > The N-panel and Pie Menu from the 1.4 series have been removed; all operations now live in the GPU overlay. The overlay shortcut also changed from `W` to `Ctrl + W`.
 
 ## Table of contents
@@ -388,15 +388,22 @@ The basic brush that adds to or subtracts from the selected column.
 
 Blends weights with the surrounding vertices. By default, it processes editable groups together to soften paint edges and seams left after mirroring.
 
-- Left-drag smooths the weights around the cursor.
-- `Shift + Left-drag` — moves weights like a fingertip.
-- `Ctrl + Left-drag` — spreads the selected column’s stronger weights outward.
-- `Ctrl + Shift + Left-drag` — blends toward weaker nearby values to shrink the selected column’s influence.
+These controls apply in both Edit Mode and Weight Paint Mode.
+
+| Control | Action |
+| --- | --- |
+| Left-drag | Smooth weights toward the surrounding values. |
+| `Shift + Left-drag` | **Fingertip**: pull the selected column’s weights along the drag direction. |
+| `Ctrl + Left-drag` | **Shrink**: blend toward weaker nearby values to reduce the selected column’s influence. |
+| `Ctrl + Shift + Left-drag` | **Spread**: spread the selected column’s stronger weights outward. |
+
+Fingertip mode retains the values picked up where the drag begins. Adjust `Strength` to control the effect; the same controls work on the mirrored side.
+
 - `Active Group Only` — smooths only the active group, allowing its weights to spread to zero-weight vertices when neighbors have weight in the same group.
 - `Strength` — how far values move toward their neighbours; `Iterations` — how many passes run.
 - When an ignored column is selected, only that ignored column is processed.
 
-In v1.5.251, shrink changes from `Alt + Left-drag` to `Ctrl + Shift + Left-drag`. On the Normal brush, `Ctrl + Shift + Left-drag` still spreads the active influence. In Weight Paint Mode, `Alt + Left-click` is passed to Blender for bone / vertex-group selection, according to Blender’s keymap.
+On the Normal brush, `Ctrl + Shift + Left-drag` still spreads the active influence. In Weight Paint Mode, `Alt + Left-click` is passed to Blender for bone / vertex-group selection, according to Blender’s keymap.
 
 `Work Mode` switches the behavior.
 
